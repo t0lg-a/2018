@@ -98,6 +98,13 @@ body{background:#0a0e1a;font-family:'Inter',system-ui,sans-serif;-webkit-font-sm
   .header h1{font-size:20px}
   .prov-grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
 }
+
+/* Map */
+.map-section{margin-bottom:20px}
+.mapwrap{background:#111827;border-radius:16px;border:1px solid #1e293b;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.4);position:relative}
+.mapwrap canvas{display:block;width:100%;cursor:crosshair}
+.maptip{position:absolute;pointer-events:none;background:rgba(15,23,42,0.95);backdrop-filter:blur(12px);border-radius:10px;padding:10px 14px;box-shadow:0 8px 24px rgba(0,0,0,0.4);border:1px solid #334155;z-index:10;min-width:240px;display:none;font-family:'JetBrains Mono',monospace;font-size:11px;color:#e2e8f0}
+.maptip.show{display:block}
 </style></head><body>
 <div class="wrap">
   <div class="header">
@@ -147,6 +154,13 @@ body{background:#0a0e1a;font-family:'Inter',system-ui,sans-serif;-webkit-font-sm
     </div>
   </div>
 
+  <div class="map-section">
+    <div class="mapwrap">
+      <canvas id="mapCanvas"></canvas>
+      <div class="maptip" id="maptip"></div>
+    </div>
+  </div>
+
   <div class="controls">
     <button class="btn btn-play" id="playBtn" onclick="togglePlay()">&#9654; Başlat</button>
     <button class="btn btn-reset" onclick="resetSim()">&#8635; Sıfırla</button>
@@ -182,6 +196,14 @@ const D=[["Adana","Aladağ",37.5485,35.396,"AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAA","06
 const B="0123456789abcdefghijklmnopqrstuvwxyz";
 const d1=c=>B.indexOf(c),d3=(s,o)=>d1(s[o])*1296+d1(s[o+1])*36+d1(s[o+2]);
 
+
+// Hex map constants
+const d2=(s,o)=>d1(s[o])*36+d1(s[o+1]);
+const R0=1.45,DX0=R0*Math.sqrt(3),DY0=R0*1.5,MAP_W=1200,MAP_H=600;
+const CR_E="#f59e0b",CR_O="#dc2626",CR_UNCOUNTED="#1e293b";
+function c2p(c,r){return[c*DX0+(r%2?DX0/2:0)+R0+4,r*DY0+R0+4];}
+function nbs(c,r){const o=r%2?1:0;return[[c+1,r],[c-1,r],[c-1+o,r-1],[c+o,r-1],[c-1+o,r+1],[c+o,r+1]];}
+
 function decCB(vs,i){
   const o=i*12,e=d3(vs,o),n=d3(vs,o+3),k=d3(vs,o+6),dd=d3(vs,o+9),t=e+n+k+dd||1;
   return{e,n,k,d:dd,v:e+n+k+dd,ep:Math.round(e/t*100),np:Math.round(n/t*100),kp:Math.round(k/t*100),dp:Math.round(dd/t*100)};
@@ -212,6 +234,189 @@ mahalles.sort((a,b)=>{
   if(b.ePct!==a.ePct) return b.ePct-a.ePct;
   return b.eVotes-a.eVotes;
 });
+
+
+// Build hex grid data structures
+const ci=new Map(), allH=[];
+for(let i=0;i<D.length;i++){
+  const pos=D[i][9], n=Math.min(D[i][4].length, pos.length/4|0);
+  for(let j=0;j<n;j++){
+    const po=j*4, gc=d2(pos,po), gr=d2(pos,po+2);
+    const [px,py]=c2p(gc,gr), k=gc+","+gr;
+    ci.set(k,{di:i,pv:D[i][0]});
+    allH.push({x:px, y:py, di:i, hi:j, gc, gr, k});
+  }
+}
+
+// Pre-compute bounding box, scale, screen positions (no zoom)
+let mapMinX=1e9,mapMaxX=-1e9,mapMinY=1e9,mapMaxY=-1e9;
+for(const h of allH){
+  if(h.x<mapMinX)mapMinX=h.x; if(h.x>mapMaxX)mapMaxX=h.x;
+  if(h.y<mapMinY)mapMinY=h.y; if(h.y>mapMaxY)mapMaxY=h.y;
+}
+const mapPad=R0*6;
+mapMinX-=mapPad; mapMaxX+=mapPad; mapMinY-=mapPad; mapMaxY+=mapPad;
+const mapBW=mapMaxX-mapMinX||1, mapBH=mapMaxY-mapMinY||1;
+const mapSc=Math.min(MAP_W/mapBW,MAP_H/mapBH);
+const mapOX=(MAP_W-mapBW*mapSc)/2-mapMinX*mapSc;
+const mapOY=(MAP_H-mapBH*mapSc)/2-mapMinY*mapSc;
+const hr0=R0*mapSc;
+
+const hexScreen=allH.map(h=>({
+  sx: h.x*mapSc+mapOX, sy: h.y*mapSc+mapOY,
+  di: h.di, hi: h.hi, gc: h.gc, gr: h.gr, k: h.k
+}));
+
+// Pre-render province/district outlines to offscreen canvas
+function renderOutlines(){
+  const dpr=window.devicePixelRatio||1;
+  const oc=document.createElement('canvas');
+  oc.width=MAP_W*dpr; oc.height=MAP_H*dpr;
+  const ctx=oc.getContext('2d');
+  ctx.scale(dpr,dpr);
+  const hexSet=new Set(allH.map(h=>h.k));
+
+  // District outlines
+  ctx.lineWidth=Math.max(0.6,0.8*mapSc);
+  ctx.strokeStyle="rgba(255,255,255,0.2)";
+  for(const hs of hexScreen){
+    for(const[nc,nr] of nbs(hs.gc,hs.gr)){
+      const nk=nc+","+nr, ni=ci.get(nk);
+      if(ni && ni.pv===D[hs.di][0] && ni.di!==hs.di && hexSet.has(nk)){
+        const[npx,npy]=c2p(nc,nr);
+        const nsx=npx*mapSc+mapOX, nsy=npy*mapSc+mapOY;
+        const mx=(hs.sx+nsx)/2, my=(hs.sy+nsy)/2;
+        const dx=nsx-hs.sx, dy=nsy-hs.sy;
+        const len=Math.sqrt(dx*dx+dy*dy)||1;
+        ctx.beginPath();
+        ctx.moveTo(mx-dy/len*hr0*.8, my+dx/len*hr0*.8);
+        ctx.lineTo(mx+dy/len*hr0*.8, my-dx/len*hr0*.8);
+        ctx.stroke();
+      }
+    }
+  }
+
+  // Province outlines
+  ctx.lineWidth=Math.max(1.0,1.6*mapSc);
+  ctx.strokeStyle="rgba(255,255,255,0.45)";
+  for(const hs of hexScreen){
+    for(const[nc,nr] of nbs(hs.gc,hs.gr)){
+      const nk=nc+","+nr, ni=ci.get(nk);
+      if(!ni || ni.pv!==D[hs.di][0] || !hexSet.has(nk)){
+        const[npx,npy]=c2p(nc,nr);
+        const nsx=npx*mapSc+mapOX, nsy=npy*mapSc+mapOY;
+        const mx=(hs.sx+nsx)/2, my=(hs.sy+nsy)/2;
+        const dx=nsx-hs.sx, dy=nsy-hs.sy;
+        const len=Math.sqrt(dx*dx+dy*dy)||1;
+        ctx.beginPath();
+        ctx.moveTo(mx-dy/len*hr0*.95, my+dx/len*hr0*.95);
+        ctx.lineTo(mx+dy/len*hr0*.95, my-dx/len*hr0*.95);
+        ctx.stroke();
+      }
+    }
+  }
+  return oc;
+}
+const outlineCanvas=renderOutlines();
+
+// countedSet tracks which mahalles have been counted
+const countedSet=new Set();
+
+// Pre-compute hex angles for drawing
+const hexAngles=[];
+for(let a=0;a<6;a++){const ang=Math.PI/6+Math.PI/3*a;hexAngles.push([Math.cos(ang),Math.sin(ang)]);}
+const hexR=hr0-0.1*mapSc;
+
+function drawMap(){
+  const cv=document.getElementById("mapCanvas");
+  const dpr=window.devicePixelRatio||1;
+  cv.width=MAP_W*dpr; cv.height=MAP_H*dpr;
+  cv.style.width=MAP_W+"px"; cv.style.height=MAP_H+"px";
+  const ctx=cv.getContext("2d");
+  ctx.scale(dpr,dpr);
+  ctx.clearRect(0,0,MAP_W,MAP_H);
+
+  // Batch hexes by color using Path2D
+  const pathE=new Path2D();
+  const pathO=new Path2D();
+  const pathU=new Path2D();
+
+  for(let i=0;i<hexScreen.length;i++){
+    const hs=hexScreen[i];
+    const key=hs.di+","+hs.hi;
+    let path;
+    if(!countedSet.has(key)){
+      path=pathU;
+    } else {
+      const cb=decCB(D[hs.di][7],hs.hi);
+      path = cb.e>(cb.n+cb.k+cb.d) ? pathE : pathO;
+    }
+    path.moveTo(hs.sx+hexR*hexAngles[0][0], hs.sy+hexR*hexAngles[0][1]);
+    for(let a=1;a<6;a++) path.lineTo(hs.sx+hexR*hexAngles[a][0], hs.sy+hexR*hexAngles[a][1]);
+    path.closePath();
+  }
+
+  ctx.fillStyle=CR_UNCOUNTED; ctx.fill(pathU);
+  ctx.fillStyle=CR_E; ctx.fill(pathE);
+  ctx.fillStyle=CR_O; ctx.fill(pathO);
+
+  // Overlay outlines
+  ctx.drawImage(outlineCanvas,0,0,MAP_W,MAP_H);
+}
+
+let mapDirty=false;
+function requestMapDraw(){
+  if(!mapDirty){mapDirty=true;requestAnimationFrame(()=>{drawMap();mapDirty=false;});}
+}
+
+// Map tooltip
+function findMapH(e){
+  const cv=document.getElementById("mapCanvas");
+  const rc=cv.getBoundingClientRect();
+  const mx=(e.clientX-rc.left)*(MAP_W/rc.width);
+  const my=(e.clientY-rc.top)*(MAP_H/rc.height);
+  let best=null, bd=1e9;
+  for(const hs of hexScreen){
+    const dd=(hs.sx-mx)**2+(hs.sy-my)**2;
+    if(dd<bd){bd=dd;best=hs;}
+  }
+  return best && bd<hr0*hr0*4 ? best : null;
+}
+
+document.getElementById("mapCanvas").addEventListener("mousemove",function(e){
+  const hs=findMapH(e);
+  const tip=document.getElementById("maptip");
+  if(!hs){tip.className="maptip";return;}
+  const d=D[hs.di], names=d[8].split("|"), mn=names[hs.hi]||"\u2014";
+  const key=hs.di+","+hs.hi;
+  const counted=countedSet.has(key);
+  let html='<div style="color:#64748b;font-size:10px">'+d[0]+' / '+d[1]+'</div>';
+  html+='<div style="font-size:14px;font-weight:800;color:#f8fafc;margin:2px 0">'+mn+'</div>';
+  if(counted){
+    const cb=decCB(d[7],hs.hi);
+    const opp=cb.n+cb.k+cb.d, t=cb.v||1;
+    const ep=Math.round(cb.e/t*100), op=Math.round(opp/t*100);
+    const winner=cb.e>opp;
+    html+='<div style="display:flex;height:8px;border-radius:4px;overflow:hidden;margin:4px 0">';
+    html+='<div style="width:'+ep+'%;background:#f59e0b"></div>';
+    html+='<div style="width:'+op+'%;background:#dc2626"></div></div>';
+    html+='<div style="color:'+(winner?'#f59e0b':'#dc2626')+';font-weight:700">'+(winner?'Erdo\u011fan':'Muhalefet')+' '+Math.max(ep,op)+'%</div>';
+    html+='<div style="color:#475569;font-size:10px">'+cb.v.toLocaleString('tr-TR')+' oy</div>';
+  } else {
+    html+='<div style="color:#475569;font-style:italic">Hen\u00fcz say\u0131lmad\u0131</div>';
+  }
+  tip.innerHTML=html;
+  tip.className="maptip show";
+  const cv=document.getElementById("mapCanvas");
+  const pr=cv.parentElement.getBoundingClientRect();
+  tip.style.left=Math.min(e.clientX-pr.left+14,pr.width-260)+"px";
+  tip.style.top=Math.max(e.clientY-pr.top-tip.offsetHeight/2,4)+"px";
+});
+
+document.getElementById("mapCanvas").addEventListener("mouseleave",function(){
+  document.getElementById("maptip").className="maptip";
+});
+
 
 const totalMahalles=mahalles.length;
 const totalVotesAll=mahalles.reduce((s,m)=>s+m.total,0);
@@ -281,6 +486,7 @@ function updateDisplay(){
   document.getElementById('liveBadge').style.background=currentIdx>=totalMahalles?'#16a34a':'#dc2626';
 
   updateProvinces();
+  requestMapDraw();
 }
 
 function addFeedItems(startIdx,endIdx){
@@ -336,6 +542,7 @@ function tick(){
   const batchSize=Math.max(1,Math.min(speed,totalMahalles-currentIdx));
   const prevIdx=currentIdx;
   currentIdx=Math.min(currentIdx+batchSize,totalMahalles);
+  for(let i=prevIdx;i<currentIdx;i++){const m=mahalles[i];countedSet.add(m.di+','+m.hi);}
   addFeedItems(prevIdx,currentIdx);
   updateDisplay();
 }
@@ -374,6 +581,8 @@ function sliderMove(val){
   const wasPlaying=playing;
   if(playing){playing=false;if(timer){clearInterval(timer);timer=null;}}
   currentIdx=Math.round(val/1000*totalMahalles);
+  countedSet.clear();
+  for(let i=0;i<currentIdx;i++){const m=mahalles[i];countedSet.add(m.di+','+m.hi);}
   // Rebuild feed for current position
   document.getElementById('feed').innerHTML='';
   const feedStart=Math.max(0,currentIdx-8);
@@ -386,12 +595,14 @@ function resetSim(){
   playing=false;
   if(timer){clearInterval(timer);timer=null;}
   currentIdx=0;
+  countedSet.clear();
   document.getElementById('feed').innerHTML='';
   updateDisplay();
   updatePlayBtn();
 }
 
 // Init
+drawMap();
 updateDisplay();
 updatePlayBtn();
 </script></body></html>
