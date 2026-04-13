@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Türkiye Seçim Arşivi — 1954–2024</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<style>
+:root{
+  --bg:#f3f4f6; --card:#fff; --ink:#111827; --dim:#374151;
+  --muted:#6b7280; --faint:#9ca3af; --rule:#e5e7eb;
+  --shadow:4px 4px 0 0 var(--ink);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:'Inter',system-ui,sans-serif;
+  -webkit-font-smoothing:antialiased;color:var(--ink);
+  background:
+    radial-gradient(circle at 10% 10%, #eef2ff 0%, transparent 40%),
+    radial-gradient(circle at 90% 20%, #fff1f2 0%, transparent 40%),
+    var(--bg);
+  min-height:100vh;}
+.wrap{max-width:1320px;margin:0 auto;padding:24px 20px 60px}
+header{display:flex;align-items:baseline;justify-content:space-between;
+  gap:16px;flex-wrap:wrap;margin-bottom:18px}
+.title{font-weight:900;font-size:32px;letter-spacing:-0.04em;line-height:1}
+.title .sep{color:var(--muted);font-weight:800}
+.nav{display:flex;gap:6px}
+.nav a{font-weight:700;font-size:12px;letter-spacing:-0.01em;
+  padding:6px 10px;background:#fff;border:1px solid var(--ink);
+  color:var(--ink);text-decoration:none;box-shadow:2px 2px 0 0 var(--ink)}
+.nav a.active{background:var(--ink);color:#fff}
+.controls{background:#fff;border:1px solid var(--ink);box-shadow:var(--shadow);
+  padding:14px 16px;margin-bottom:14px;display:flex;gap:14px;
+  align-items:center;flex-wrap:wrap}
+.controls label{font-weight:800;font-size:10px;letter-spacing:0.07em;
+  text-transform:uppercase;color:var(--muted);margin-right:6px}
+select{font-family:inherit;font-weight:700;font-size:13px;
+  border:1px solid var(--ink);background:#fff;padding:6px 10px;
+  color:var(--ink);border-radius:0;min-width:280px}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:14px}
+@media(max-width:900px){.layout{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid var(--ink);box-shadow:var(--shadow);
+  padding:16px}
+.card h2{margin:0 0 12px;font-size:13px;font-weight:700;letter-spacing:-0.01em}
+.mapwrap{position:relative}
+svg{display:block;width:100%;height:auto}
+.province{stroke:var(--ink);stroke-width:0.6;cursor:pointer;
+  transition:opacity .12s}
+.province:hover{opacity:0.75}
+.province.sel{stroke-width:2.2}
+.tooltip{position:absolute;pointer-events:none;background:#fff;
+  border:1px solid var(--ink);box-shadow:2px 2px 0 0 var(--ink);
+  padding:8px 10px;font-size:12px;font-weight:500;display:none;z-index:10;
+  min-width:180px}
+.tooltip .tprov{font-weight:800;font-size:13px;margin-bottom:4px}
+.tooltip .trow{display:flex;justify-content:space-between;gap:10px;
+  font-variant-numeric:tabular-nums}
+.chip{display:inline-block;width:10px;height:10px;border:1px solid var(--ink);
+  vertical-align:middle;margin-right:6px}
+.totals{display:flex;flex-direction:column;gap:8px}
+.totrow{display:grid;grid-template-columns:18px 1fr auto;gap:8px;
+  align-items:center;font-size:13px}
+.totrow .bar{height:18px;background:#f3f4f6;position:relative;
+  border:1px solid var(--ink)}
+.totrow .fill{height:100%}
+.totrow .label{font-weight:700;font-size:12px}
+.totrow .pct{font-weight:800;font-size:13px;font-variant-numeric:tabular-nums}
+.meta{font-size:11px;color:var(--muted);font-weight:600;
+  letter-spacing:0.04em;text-transform:uppercase;margin-bottom:10px}
+.provdetail h3{margin:0 0 4px;font-size:18px;font-weight:900;
+  letter-spacing:-0.03em}
+.provdetail .hint{font-size:11px;color:var(--muted);font-weight:600;
+  letter-spacing:0.04em;text-transform:uppercase}
+.partylist{display:flex;flex-direction:column;gap:6px;margin-top:10px}
+.partyrow{display:grid;grid-template-columns:18px 1fr auto auto;gap:8px;
+  align-items:center;font-size:12px;padding:4px 0;
+  border-bottom:1px dashed var(--rule)}
+.partyrow:last-child{border-bottom:0}
+.partyrow .pn{font-weight:700}
+.partyrow .pp{font-weight:800;font-variant-numeric:tabular-nums;
+  min-width:48px;text-align:right}
+.partyrow .pv{font-size:11px;color:var(--muted);
+  font-variant-numeric:tabular-nums;min-width:64px;text-align:right}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="title">Türkiye Seçim Arşivi <span class="sep">/</span> 1954–2024</div>
+  <nav class="nav">
+    <a href="index.html" class="active">Arşiv</a>
+    <a href="swing.html">Salınım</a>
+    <a href="trend.html">Trend</a>
+  </nav>
+</header>
+
+<div class="controls">
+  <label for="election">Seçim</label>
+  <select id="election"></select>
+  <div class="meta" id="emeta"></div>
+</div>
+
+<div class="layout">
+  <div class="card mapwrap">
+    <h2>Kazanan parti (il bazında)</h2>
+    <svg id="map" viewBox="0 0 900 420"></svg>
+    <div class="tooltip" id="tt"></div>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:14px">
+    <div class="card">
+      <h2>Türkiye geneli</h2>
+      <div class="meta" id="natmeta"></div>
+      <div class="totals" id="totals"></div>
+    </div>
+    <div class="card provdetail">
+      <h2>İl detayı</h2>
+      <div id="provbody"><div class="hint">Haritadan bir il seçin.</div></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+const STATE = {elections:[], partyMeta:{}, geo:null, current:null, selected:null};
+const TYPE_LABEL = {
+  "genel":"Genel Seçim","yerel":"Yerel Seçim",
+  "cumhurbaskanligi":"Cumhurbaşkanlığı","referandum":"Referandum",
+  "milletvekili":"Milletvekili","yerel-istanbul":"İstanbul Yenileme"
+};
+
+async function load(){
+  const [elections, partyMeta, geo] = await Promise.all([
+    fetch("data/elections.json").then(r=>r.json()),
+    fetch("data/party_meta.json").then(r=>r.json()),
+    fetch("tr_provinces.geojson").then(r=>r.json())
+  ]);
+  STATE.elections = elections; STATE.partyMeta = partyMeta; STATE.geo = geo;
+  buildSelector();
+  // land on most recent
+  const latest = elections[elections.length-1].id;
+  document.getElementById("election").value = latest;
+  await loadElection(latest);
+}
+
+function buildSelector(){
+  const sel = document.getElementById("election");
+  const byType = d3.group(STATE.elections, d=>d.type);
+  const typeOrder = ["genel","milletvekili","cumhurbaskanligi","yerel",
+                     "referandum","yerel-istanbul"];
+  for(const t of typeOrder){
+    if(!byType.has(t)) continue;
+    const og = document.createElement("optgroup");
+    og.label = TYPE_LABEL[t] || t;
+    // sort elections within type, newest first
+    const list = [...byType.get(t)].sort((a,b)=>d3.descending(a.date,b.date));
+    for(const e of list){
+      const o = document.createElement("option");
+      o.value = e.id; o.textContent = e.label;
+      og.appendChild(o);
+    }
+    sel.appendChild(og);
+  }
+  sel.onchange = ()=>loadElection(sel.value);
+}
+
+async function loadElection(id){
+  const data = await fetch(`data/results/${id}.json`).then(r=>r.json());
+  STATE.current = data;
+  STATE.selected = null;
+  const meta = STATE.elections.find(e=>e.id===id);
+  document.getElementById("emeta").textContent =
+    `${TYPE_LABEL[meta.type]||meta.type} · ${meta.date}`;
+  drawMap();
+  drawTotals();
+  drawProvince(null);
+}
+
+function winnerFor(provData){
+  if(!provData) return null;
+  let best = null;
+  for(const [code, v] of Object.entries(provData)){
+    if(!best || v.pct > best.pct){ best = {code, ...v}; }
+  }
+  return best;
+}
+
+function colorOf(code){
+  return STATE.partyMeta[code]?.color || "#bbb";
+}
+function nameOf(code){
+  return STATE.partyMeta[code]?.name || code;
+}
+
+function drawMap(){
+  const svg = d3.select("#map");
+  svg.selectAll("*").remove();
+  const w = 900, h = 420;
+  const proj = d3.geoMercator().fitSize([w,h], STATE.geo);
+  const path = d3.geoPath(proj);
+
+  svg.selectAll("path.province")
+    .data(STATE.geo.features)
+    .join("path")
+    .attr("class","province")
+    .attr("d", path)
+    .attr("fill", f=>{
+      const pd = STATE.current.provinces[f.properties.name];
+      const w = winnerFor(pd);
+      return w ? colorOf(w.code) : "#e5e7eb";
+    })
+    .on("mousemove", (ev, f)=>tooltip(ev, f))
+    .on("mouseleave", ()=>document.getElementById("tt").style.display="none")
+    .on("click", (ev, f)=>{
+      STATE.selected = f.properties.name;
+      svg.selectAll("path.province").classed("sel", d=>d.properties.name===STATE.selected);
+      drawProvince(STATE.selected);
+    });
+}
+
+function tooltip(ev, f){
+  const tt = document.getElementById("tt");
+  const name = f.properties.name;
+  const pd = STATE.current.provinces[name];
+  if(!pd){
+    tt.innerHTML = `<div class="tprov">${name}</div><div class="trow"><span>Veri yok</span></div>`;
+  } else {
+    const entries = Object.entries(pd).sort((a,b)=>b[1].pct-a[1].pct).slice(0,4);
+    tt.innerHTML = `<div class="tprov">${name}</div>` + entries.map(([c,v])=>
+      `<div class="trow"><span><span class="chip" style="background:${colorOf(c)}"></span>${c}</span><span>%${v.pct.toFixed(1)}</span></div>`).join("");
+  }
+  tt.style.display = "block";
+  const wrap = document.querySelector(".mapwrap").getBoundingClientRect();
+  tt.style.left = (ev.clientX - wrap.left + 12) + "px";
+  tt.style.top  = (ev.clientY - wrap.top + 12) + "px";
+}
+
+function drawTotals(){
+  // Aggregate votes across provinces. If votes missing, fall back to
+  // mean of pct (weighted by 1) — noted in meta.
+  const totals = {}; let totalVotes = 0; let missingVotes = false;
+  for(const pd of Object.values(STATE.current.provinces)){
+    for(const [code, v] of Object.entries(pd)){
+      if(v.votes == null){ missingVotes = true; continue; }
+      totals[code] = (totals[code]||0) + v.votes;
+      totalVotes += v.votes;
+    }
+  }
+  const rows = Object.entries(totals).map(([c,v])=>({code:c,votes:v,pct:100*v/totalVotes}))
+    .sort((a,b)=>b.votes-a.votes).slice(0,8);
+  document.getElementById("natmeta").textContent =
+    missingVotes ? `Toplam oy: ${fmt(totalVotes)} (bazı hücrelerde oy yok)`
+                 : `Toplam oy: ${fmt(totalVotes)}`;
+  const max = rows[0]?.pct || 1;
+  document.getElementById("totals").innerHTML = rows.map(r=>`
+    <div class="totrow">
+      <span class="chip" style="background:${colorOf(r.code)}"></span>
+      <div><div class="label">${r.code} <span style="color:var(--muted);font-weight:500">${nameOf(r.code)}</span></div>
+        <div class="bar"><div class="fill" style="width:${(100*r.pct/max).toFixed(1)}%;background:${colorOf(r.code)}"></div></div>
+      </div>
+      <div class="pct">%${r.pct.toFixed(1)}</div>
+    </div>`).join("");
+}
+
+function drawProvince(name){
+  const body = document.getElementById("provbody");
+  if(!name){ body.innerHTML = '<div class="hint">Haritadan bir il seçin.</div>'; return; }
+  const pd = STATE.current.provinces[name];
+  if(!pd){
+    body.innerHTML = `<h3>${name}</h3><div class="hint">Bu seçim için veri yok.</div>`; return;
+  }
+  const rows = Object.entries(pd).sort((a,b)=>b[1].pct-a[1].pct);
+  body.innerHTML = `<h3>${name}</h3>
+    <div class="hint">${STATE.current.label}</div>
+    <div class="partylist">${rows.map(([c,v])=>`
+      <div class="partyrow">
+        <span class="chip" style="background:${colorOf(c)}"></span>
+        <span class="pn">${c} <span style="color:var(--muted);font-weight:500">${nameOf(c)}</span></span>
+        <span class="pp">%${v.pct.toFixed(1)}</span>
+        <span class="pv">${v.votes!=null?fmt(v.votes):"—"}</span>
+      </div>`).join("")}</div>`;
+}
+
+function fmt(n){ return n.toLocaleString("tr-TR"); }
+
+load();
+</script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+[
+  {
+    "id": "1954-05-genel",
+    "date": "1954-05-02",
+    "type": "genel",
+    "label": "2 May 1954 Genel Seçimleri"
+  },
+  {
+    "id": "1957-10-genel",
+    "date": "1957-10-17",
+    "type": "genel",
+    "label": "17 Eki 1957 Genel Seçimleri"
+  },
+  {
+    "id": "1961-10-genel",
+    "date": "1961-10-15",
+    "type": "genel",
+    "label": "15 Eki 1961 Genel Seçimleri"
+  },
+  {
+    "id": "1965-10-genel",
+    "date": "1965-10-10",
+    "type": "genel",
+    "label": "10 Eki 1965 Genel Seçimleri"
+  },
+  {
+    "id": "1969-10-genel",
+    "date": "1969-10-12",
+    "type": "genel",
+    "label": "12 Eki 1969 Genel Seçimleri"
+  },
+  {
+    "id": "1973-10-genel",
+    "date": "1973-10-14",
+    "type": "genel",
+    "label": "14 Eki 1973 Genel Seçimleri"
+  },
+  {
+    "id": "1977-06-genel",
+    "date": "1977-06-05",
+    "type": "genel",
+    "label": "5 Haz 1977 Genel Seçimleri"
+  },
+  {
+    "id": "1983-11-genel",
+    "date": "1983-11-06",
+    "type": "genel",
+    "label": "6 Kas 1983 Genel Seçimleri"
+  },
+  {
+    "id": "1987-11-genel",
+    "date": "1987-11-29",
+    "type": "genel",
+    "label": "29 Kas 1987 Genel Seçimleri"
+  },
+  {
+    "id": "1991-10-genel",
+    "date": "1991-10-20",
+    "type": "genel",
+    "label": "20 Eki 1991 Genel Seçimleri"
+  },
+  {
+    "id": "1995-12-genel",
+    "date": "1995-12-24",
+    "type": "genel",
+    "label": "24 Ara 1995 Genel Seçimleri"
+  },
+  {
+    "id": "1999-04-genel",
+    "date": "1999-04-18",
+    "type": "genel",
+    "label": "18 Nis 1999 Genel Seçimleri"
+  },
+  {
+    "id": "2002-11-genel",
+    "date": "2002-11-03",
+    "type": "genel",
+    "label": "3 Kas 2002 Genel Seçimleri"
+  },
+  {
+    "id": "2007-07-genel",
+    "date": "2007-07-22",
+    "type": "genel",
+    "label": "22 Tem 2007 Genel Seçimi"
+  },
+  {
+    "id": "2009-03-yerel",
+    "date": "2009-03-29",
+    "type": "yerel",
+    "label": "29 Mart 2009 Yerel Seçimleri"
+  },
+  {
+    "id": "2010-09-referandum",
+    "date": "2010-09-12",
+    "type": "referandum",
+    "label": "12 Eyl 2010 Referandumu"
+  },
+  {
+    "id": "2011-06-genel",
+    "date": "2011-06-12",
+    "type": "genel",
+    "label": "12 Haz 2011 Genel Seçimleri"
+  },
+  {
+    "id": "2014-03-yerel",
+    "date": "2014-03-30",
+    "type": "yerel",
+    "label": "30 Mart 2014 Yerel Seçimi"
+  },
+  {
+    "id": "2014-08-cumhurbaskanligi",
+    "date": "2014-08-10",
+    "type": "cumhurbaskanligi",
+    "label": "10 Ağu 2014 C.Başkanlığı Seçimi"
+  },
+  {
+    "id": "2015-06-genel",
+    "date": "2015-06-07",
+    "type": "genel",
+    "label": "7 Haz 2015 Genel Seçimi"
+  },
+  {
+    "id": "2015-11-genel",
+    "date": "2015-11-01",
+    "type": "genel",
+    "label": "1 Kas 2015 Genel Seçimi"
+  },
+  {
+    "id": "2017-04-referandum",
+    "date": "2017-04-16",
+    "type": "referandum",
+    "label": "16 Nis 2017 Referandum"
+  },
+  {
+    "id": "2018-06-milletvekili",
+    "date": "2018-06-24",
+    "type": "milletvekili",
+    "label": "24 Haz 2018 Milletvekili Seçimi"
+  },
+  {
+    "id": "2018-06-cumhurbaskanligi",
+    "date": "2018-06-24",
+    "type": "cumhurbaskanligi",
+    "label": "24 Haz 2018 C.Başkanlığı Seçimi"
+  },
+  {
+    "id": "2019-03-yerel",
+    "date": "2019-03-31",
+    "type": "yerel",
+    "label": "31 Mart 2019 Yerel Seçimi"
+  }
+]
