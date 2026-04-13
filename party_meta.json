@@ -249,4 +249,25 @@
     "family": "referendum-no",
     "color": "#b03a3a"
   }
+{
+  "IP": {
+    "name": "İYİ Parti",
+    "family": "nationalist",
+    "color": "#3b82bf"
+  },
+  "MEMLEKET": {
+    "name": "Memleket Partisi",
+    "family": "center-left",
+    "color": "#c04050"
+  },
+  "YRP": {
+    "name": "Yeniden Refah Partisi",
+    "family": "islamist",
+    "color": "#2a7f44"
+  },
+  "ZP": {
+    "name": "Zafer Partisi",
+    "family": "nationalist",
+    "color": "#6a2d1a"
+  }
 }
