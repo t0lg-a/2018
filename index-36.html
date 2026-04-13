@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Türkiye Seçim Arşivi — 1954–2024</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<style>
+:root{--bg:#f3f4f6;--card:#fff;--ink:#111827;--dim:#374151;--muted:#6b7280;
+  --faint:#9ca3af;--rule:#e5e7eb;--shadow:4px 4px 0 0 var(--ink);}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:'Inter',system-ui,sans-serif;
+  -webkit-font-smoothing:antialiased;color:var(--ink);
+  background:radial-gradient(circle at 10% 10%,#eef2ff 0%,transparent 40%),
+    radial-gradient(circle at 90% 20%,#fff1f2 0%,transparent 40%),var(--bg);
+  min-height:100vh}
+.wrap{max-width:1320px;margin:0 auto;padding:24px 20px 60px}
+header{display:flex;align-items:baseline;justify-content:space-between;
+  gap:16px;flex-wrap:wrap;margin-bottom:18px}
+.title{font-weight:900;font-size:32px;letter-spacing:-0.04em;line-height:1}
+.title .sep{color:var(--muted);font-weight:800}
+.nav{display:flex;gap:6px}
+.nav button{font-family:inherit;font-weight:700;font-size:12px;
+  letter-spacing:-0.01em;padding:6px 12px;background:#fff;
+  border:1px solid var(--ink);color:var(--ink);cursor:pointer;
+  box-shadow:2px 2px 0 0 var(--ink);border-radius:0}
+.nav button.active{background:var(--ink);color:#fff}
+.controls{background:#fff;border:1px solid var(--ink);box-shadow:var(--shadow);
+  padding:14px 16px;margin-bottom:14px;display:flex;gap:14px;
+  align-items:center;flex-wrap:wrap}
+.controls label{font-weight:800;font-size:10px;letter-spacing:0.07em;
+  text-transform:uppercase;color:var(--muted);margin-right:4px}
+select{font-family:inherit;font-weight:700;font-size:13px;
+  border:1px solid var(--ink);background:#fff;padding:6px 10px;
+  color:var(--ink);border-radius:0;min-width:240px}
+.meta{font-size:11px;color:var(--muted);font-weight:600;
+  letter-spacing:0.04em;text-transform:uppercase}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:14px}
+@media(max-width:900px){.layout{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid var(--ink);box-shadow:var(--shadow);
+  padding:16px}
+.card h2{margin:0 0 12px;font-size:13px;font-weight:700;letter-spacing:-0.01em}
+.mapwrap{position:relative}
+svg{display:block;width:100%;height:auto}
+.province{stroke:var(--ink);stroke-width:0.6;cursor:pointer;transition:opacity .12s}
+.province:hover{opacity:0.75}
+.province.sel{stroke-width:2.2}
+.tooltip{position:absolute;pointer-events:none;background:#fff;
+  border:1px solid var(--ink);box-shadow:2px 2px 0 0 var(--ink);
+  padding:8px 10px;font-size:12px;font-weight:500;display:none;z-index:10;
+  min-width:180px}
+.tooltip .tprov{font-weight:800;font-size:13px;margin-bottom:4px}
+.tooltip .trow{display:flex;justify-content:space-between;gap:10px;
+  font-variant-numeric:tabular-nums}
+.chip{display:inline-block;width:10px;height:10px;border:1px solid var(--ink);
+  vertical-align:middle;margin-right:6px}
+.totals{display:flex;flex-direction:column;gap:8px}
+.totrow{display:grid;grid-template-columns:18px 1fr auto;gap:8px;align-items:center;font-size:13px}
+.totrow .bar{height:18px;background:#f3f4f6;border:1px solid var(--ink)}
+.totrow .fill{height:100%}
+.totrow .label{font-weight:700;font-size:12px}
+.totrow .pct{font-weight:800;font-size:13px;font-variant-numeric:tabular-nums}
+.provdetail h3{margin:0 0 4px;font-size:18px;font-weight:900;letter-spacing:-0.03em}
+.provdetail .hint{font-size:11px;color:var(--muted);font-weight:600;letter-spacing:0.04em;text-transform:uppercase}
+.partylist{display:flex;flex-direction:column;gap:6px;margin-top:10px}
+.partyrow{display:grid;grid-template-columns:18px 1fr auto auto;gap:8px;
+  align-items:center;font-size:12px;padding:4px 0;border-bottom:1px dashed var(--rule)}
+.partyrow:last-child{border-bottom:0}
+.partyrow .pn{font-weight:700}
+.partyrow .pp{font-weight:800;font-variant-numeric:tabular-nums;min-width:48px;text-align:right}
+.partyrow .pv{font-size:11px;color:var(--muted);font-variant-numeric:tabular-nums;min-width:64px;text-align:right}
+.legend{display:flex;gap:14px;align-items:center;font-size:11px;
+  color:var(--muted);font-weight:600;margin-top:8px;flex-wrap:wrap}
+.legend .sw{display:inline-block;width:22px;height:10px;border:1px solid var(--ink);margin-right:4px;vertical-align:middle}
+.trendchart{width:100%;height:160px}
+.spark{width:100%;height:100px;margin-top:10px}
+.hide{display:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="title">Türkiye Seçim Arşivi <span class="sep">/</span> 1954–2024</div>
+  <nav class="nav">
+    <button data-view="archive" class="active">Arşiv</button>
+    <button data-view="swing">Salınım</button>
+    <button data-view="trend">Trend</button>
+  </nav>
+</header>
+
+<!-- ARCHIVE VIEW -->
+<section id="view-archive">
+  <div class="controls">
+    <label>Seçim</label><select id="a-election"></select>
+    <span class="meta" id="a-meta"></span>
+  </div>
+  <div class="layout">
+    <div class="card mapwrap">
+      <h2>Kazanan parti (il bazında)</h2>
+      <svg id="a-map" viewBox="0 0 900 420"></svg>
+      <div class="tooltip" id="a-tt"></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <div class="card">
+        <h2>Türkiye geneli</h2>
+        <div class="meta" id="a-natmeta"></div>
+        <div class="totals" id="a-totals"></div>
+      </div>
+      <div class="card provdetail">
+        <h2>İl detayı</h2>
+        <div id="a-provbody"><div class="hint">Haritadan bir il seçin.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SWING VIEW -->
+<section id="view-swing" class="hide">
+  <div class="controls">
+    <label>Baz seçim</label><select id="s-from"></select>
+    <label>Hedef seçim</label><select id="s-to"></select>
+    <label>Parti</label><select id="s-party"></select>
+  </div>
+  <div class="layout">
+    <div class="card mapwrap">
+      <h2>Salınım: hedef − baz (yüzde puan)</h2>
+      <svg id="s-map" viewBox="0 0 900 420"></svg>
+      <div class="tooltip" id="s-tt"></div>
+      <div class="legend" id="s-legend"></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <div class="card">
+        <h2>Özet</h2>
+        <div id="s-summary" class="meta"></div>
+        <div class="totals" id="s-top" style="margin-top:10px"></div>
+      </div>
+      <div class="card">
+        <h2>İl detayı</h2>
+        <div id="s-provbody"><div class="hint">Haritadan bir il seçin.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TREND VIEW -->
+<section id="view-trend" class="hide">
+  <div class="controls">
+    <label>Parti / Aile</label><select id="t-target"></select>
+    <label>Yıl</label><select id="t-election"></select>
+  </div>
+  <div class="layout">
+    <div class="card mapwrap">
+      <h2>Oy payı (%)</h2>
+      <svg id="t-map" viewBox="0 0 900 420"></svg>
+      <div class="tooltip" id="t-tt"></div>
+      <div class="legend" id="t-legend"></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <div class="card">
+        <h2>Ulusal trend</h2>
+        <svg id="t-chart" class="trendchart"></svg>
+      </div>
+      <div class="card">
+        <h2>İl detayı</h2>
+        <div id="t-provbody"><div class="hint">Haritadan bir il seçin.</div></div>
+        <svg id="t-spark" class="spark"></svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<script>
+const S = {elections:[], partyMeta:{}, geo:null, resultsCache:{},
+           current:null, view:"archive", sel:{archive:null,swing:null,trend:null}};
+const TYPE_LABEL = {"genel":"Genel","yerel":"Yerel","cumhurbaskanligi":"Cumhurbaşkanlığı",
+  "referandum":"Referandum","milletvekili":"Milletvekili","yerel-istanbul":"İstanbul Yenileme"};
+
+const fmt = n => n==null?"—":n.toLocaleString("tr-TR");
+const colorOf = c => S.partyMeta[c]?.color || "#bbb";
+const nameOf  = c => S.partyMeta[c]?.name || c;
+const familyOf = c => S.partyMeta[c]?.family || "other";
+
+async function load(){
+  const [elections, partyMeta, geo] = await Promise.all([
+    fetch("elections.json").then(r=>r.json()),
+    fetch("party_meta.json").then(r=>r.json()),
+    fetch("tr_provinces.geojson").then(r=>r.json())]);
+  S.elections = elections; S.partyMeta = partyMeta; S.geo = geo;
+  buildNav(); buildArchive(); buildSwing(); buildTrend();
+  // initial loads
+  await loadElection(elections[elections.length-1].id);
+  document.getElementById("a-election").value = S.current.id;
+  drawArchive();
+}
+
+function buildNav(){
+  document.querySelectorAll(".nav button").forEach(b=>{
+    b.onclick = ()=>{
+      S.view = b.dataset.view;
+      document.querySelectorAll(".nav button").forEach(x=>x.classList.toggle("active",x===b));
+      for(const v of ["archive","swing","trend"]){
+        document.getElementById(`view-${v}`).classList.toggle("hide", v!==S.view);
+      }
+      if(S.view==="swing") drawSwing();
+      if(S.view==="trend") drawTrend();
+    };
+  });
+}
+
+async function loadElection(id){
+  if(!S.resultsCache[id]){
+    S.resultsCache[id] = await fetch(`${id}.json`).then(r=>r.json());
+  }
+  S.current = S.resultsCache[id];
+  return S.current;
+}
+
+function fillElectionSelect(sel, defaultId){
+  const byType = d3.group(S.elections, d=>d.type);
+  const order = ["genel","milletvekili","cumhurbaskanligi","yerel","referandum","yerel-istanbul"];
+  sel.innerHTML = "";
+  for(const t of order){
+    if(!byType.has(t)) continue;
+    const og = document.createElement("optgroup"); og.label = TYPE_LABEL[t]||t;
+    [...byType.get(t)].sort((a,b)=>d3.descending(a.date,b.date)).forEach(e=>{
+      const o = document.createElement("option"); o.value=e.id; o.textContent=e.label;
+      og.appendChild(o);
+    });
+    sel.appendChild(og);
+  }
+  if(defaultId) sel.value = defaultId;
+}
+
+// ---------- SHARED MAP ----------
+function drawMap(svgSel, ttId, fillFn, clickFn, hoverFn){
+  const svg = d3.select(svgSel); svg.selectAll("*").remove();
+  const proj = d3.geoMercator().fitSize([900,420], S.geo);
+  const path = d3.geoPath(proj);
+  svg.selectAll("path.province").data(S.geo.features).join("path")
+    .attr("class","province").attr("d",path)
+    .attr("fill", f=>fillFn(f.properties.name))
+    .on("mousemove",(ev,f)=>hoverFn(ev,f,ttId))
+    .on("mouseleave",()=>{document.getElementById(ttId).style.display="none";})
+    .on("click",(ev,f)=>clickFn(f.properties.name));
+}
+function moveTooltip(ev, ttId, wrapSel){
+  const tt = document.getElementById(ttId);
+  const wrap = document.querySelector(wrapSel).getBoundingClientRect();
+  tt.style.left = (ev.clientX-wrap.left+12)+"px";
+  tt.style.top  = (ev.clientY-wrap.top+12)+"px";
+  tt.style.display = "block";
+}
+
+// ---------- ARCHIVE ----------
+function buildArchive(){
+  fillElectionSelect(document.getElementById("a-election"));
+  document.getElementById("a-election").onchange = async e=>{
+    await loadElection(e.target.value); drawArchive();
+  };
+}
+function winnerFor(pd){ if(!pd) return null;
+  let b=null; for(const[c,v] of Object.entries(pd)){ if(!b||v.pct>b.pct) b={code:c,...v}; } return b; }
+
+function drawArchive(){
+  const meta = S.elections.find(e=>e.id===S.current.id);
+  document.getElementById("a-meta").textContent = `${TYPE_LABEL[meta.type]||meta.type} · ${meta.date}`;
+  drawMap("#a-map","a-tt",
+    name=>{ const w=winnerFor(S.current.provinces[name]); return w?colorOf(w.code):"#e5e7eb"; },
+    name=>{ S.sel.archive=name;
+      d3.select("#a-map").selectAll("path.province").classed("sel",d=>d.properties.name===name);
+      drawArchiveProv(name);
+    },
+    (ev,f,ttId)=>{ const pd=S.current.provinces[f.properties.name]; const tt=document.getElementById(ttId);
+      if(!pd){ tt.innerHTML=`<div class="tprov">${f.properties.name}</div><div class="trow">Veri yok</div>`;}
+      else { const rows=Object.entries(pd).sort((a,b)=>b[1].pct-a[1].pct).slice(0,4);
+        tt.innerHTML=`<div class="tprov">${f.properties.name}</div>`+rows.map(([c,v])=>
+          `<div class="trow"><span><span class="chip" style="background:${colorOf(c)}"></span>${c}</span><span>%${v.pct.toFixed(1)}</span></div>`).join(""); }
+      moveTooltip(ev,ttId,"#view-archive .mapwrap");
+    });
+  drawArchiveTotals(); drawArchiveProv(S.sel.archive);
+}
+function drawArchiveTotals(){
+  const totals={}; let total=0; let miss=false;
+  for(const pd of Object.values(S.current.provinces)) for(const[c,v] of Object.entries(pd)){
+    if(v.votes==null){ miss=true; continue; } totals[c]=(totals[c]||0)+v.votes; total+=v.votes; }
+  const rows=Object.entries(totals).map(([c,v])=>({code:c,votes:v,pct:100*v/total}))
+    .sort((a,b)=>b.votes-a.votes).slice(0,8);
+  document.getElementById("a-natmeta").textContent = miss?`Toplam oy: ${fmt(total)} (kısmi)`:`Toplam oy: ${fmt(total)}`;
+  const mx=rows[0]?.pct||1;
+  document.getElementById("a-totals").innerHTML = rows.map(r=>`
+    <div class="totrow"><span class="chip" style="background:${colorOf(r.code)}"></span>
+      <div><div class="label">${r.code} <span style="color:var(--muted);font-weight:500">${nameOf(r.code)}</span></div>
+        <div class="bar"><div class="fill" style="width:${(100*r.pct/mx).toFixed(1)}%;background:${colorOf(r.code)}"></div></div></div>
+      <div class="pct">%${r.pct.toFixed(1)}</div></div>`).join("");
+}
+function drawArchiveProv(name){
+  const body=document.getElementById("a-provbody");
+  if(!name){ body.innerHTML='<div class="hint">Haritadan bir il seçin.</div>'; return; }
+  const pd=S.current.provinces[name];
+  if(!pd){ body.innerHTML=`<h3>${name}</h3><div class="hint">Bu seçim için veri yok.</div>`; return; }
+  const rows=Object.entries(pd).sort((a,b)=>b[1].pct-a[1].pct);
+  body.innerHTML=`<h3>${name}</h3><div class="hint">${S.current.label}</div>
+    <div class="partylist">${rows.map(([c,v])=>`<div class="partyrow">
+      <span class="chip" style="background:${colorOf(c)}"></span>
+      <span class="pn">${c} <span style="color:var(--muted);font-weight:500">${nameOf(c)}</span></span>
+      <span class="pp">%${v.pct.toFixed(1)}</span>
+      <span class="pv">${fmt(v.votes)}</span></div>`).join("")}</div>`;
+}
+
+// ---------- SWING ----------
+function buildSwing(){
+  fillElectionSelect(document.getElementById("s-from"));
+  fillElectionSelect(document.getElementById("s-to"));
+  // default: most recent general vs prior general
+  const genels = S.elections.filter(e=>e.type==="genel");
+  if(genels.length>=2){
+    document.getElementById("s-to").value = genels[genels.length-1].id;
+    document.getElementById("s-from").value = genels[genels.length-2].id;
+  }
+  ["s-from","s-to","s-party"].forEach(id=>{
+    document.getElementById(id).onchange = ()=>drawSwing();
+  });
+}
+
+async function drawSwing(){
+  const from = document.getElementById("s-from").value;
+  const to   = document.getElementById("s-to").value;
+  const [A,B] = await Promise.all([loadElection(from), loadElection(to)]);
+  // party picker: intersection of parties present in both
+  const common = [...new Set(A.parties)].filter(p=>B.parties.includes(p));
+  const psel = document.getElementById("s-party");
+  const prev = psel.value;
+  psel.innerHTML = common.sort().map(p=>`<option value="${p}">${p} — ${nameOf(p)}</option>`).join("");
+  if(common.includes(prev)) psel.value = prev;
+  else if(common.includes("CHP")) psel.value = "CHP";
+  const party = psel.value;
+  // restore from/to after loadElection (which sets S.current)
+  S.current = B;
+  const maxAbs = 25; // fixed for stable palette
+  const scale = d3.scaleDiverging(d3.interpolateRdBu).domain([maxAbs,0,-maxAbs]);
+  // drawSwingMap
+  drawMap("#s-map","s-tt",
+    name=>{ const a=A.provinces[name]?.[party]?.pct; const b=B.provinces[name]?.[party]?.pct;
+      if(a==null||b==null) return "#e5e7eb"; return scale(b-a); },
+    name=>{ S.sel.swing=name;
+      d3.select("#s-map").selectAll("path.province").classed("sel",d=>d.properties.name===name);
+      drawSwingProv(name, A, B, party); },
+    (ev,f,ttId)=>{ const n=f.properties.name;
+      const a=A.provinces[n]?.[party]?.pct; const b=B.provinces[n]?.[party]?.pct;
+      const tt=document.getElementById(ttId);
+      const d=(a!=null&&b!=null)?(b-a):null;
+      tt.innerHTML=`<div class="tprov">${n}</div>
+        <div class="trow"><span>Baz (${from.slice(0,4)})</span><span>${a!=null?"%"+a.toFixed(1):"—"}</span></div>
+        <div class="trow"><span>Hedef (${to.slice(0,4)})</span><span>${b!=null?"%"+b.toFixed(1):"—"}</span></div>
+        <div class="trow" style="border-top:1px solid var(--rule);padding-top:4px;margin-top:4px"><b>Δ</b><span>${d!=null?(d>=0?"+":"")+d.toFixed(1)+" pp":"—"}</span></div>`;
+      moveTooltip(ev,ttId,"#view-swing .mapwrap");
+    });
+  // Legend
+  document.getElementById("s-legend").innerHTML = `
+    <span><span class="sw" style="background:${scale(-maxAbs)}"></span>−${maxAbs}</span>
+    <span><span class="sw" style="background:${scale(-maxAbs/2)}"></span>−${maxAbs/2}</span>
+    <span><span class="sw" style="background:${scale(0)}"></span>0</span>
+    <span><span class="sw" style="background:${scale(maxAbs/2)}"></span>+${maxAbs/2}</span>
+    <span><span class="sw" style="background:${scale(maxAbs)}"></span>+${maxAbs}</span>
+    <span style="color:var(--faint)">yüzde puan, ${party}</span>`;
+  // Summary
+  const swings=[]; for(const n of Object.keys(A.provinces)){
+    const a=A.provinces[n]?.[party]?.pct; const b=B.provinces[n]?.[party]?.pct;
+    if(a!=null&&b!=null) swings.push({name:n,delta:b-a});
+  }
+  swings.sort((x,y)=>y.delta-x.delta);
+  const mean = d3.mean(swings,d=>d.delta)||0;
+  document.getElementById("s-summary").innerHTML =
+    `${party} · ortalama Δ: ${mean>=0?"+":""}${mean.toFixed(1)} pp · ${swings.length} il`;
+  const tops = [...swings.slice(0,5), ...swings.slice(-5).reverse()];
+  document.getElementById("s-top").innerHTML = tops.map(r=>`
+    <div class="totrow"><span class="chip" style="background:${scale(r.delta)}"></span>
+      <div class="label">${r.name}</div>
+      <div class="pct">${r.delta>=0?"+":""}${r.delta.toFixed(1)}</div></div>`).join("");
+  drawSwingProv(S.sel.swing, A, B, party);
+}
+function drawSwingProv(name, A, B, party){
+  const body=document.getElementById("s-provbody");
+  if(!name){ body.innerHTML='<div class="hint">Haritadan bir il seçin.</div>'; return; }
+  const a=A.provinces[name]?.[party]; const b=B.provinces[name]?.[party];
+  body.innerHTML=`<h3>${name}</h3>
+    <div class="hint">${party} — ${nameOf(party)}</div>
+    <div class="partylist">
+      <div class="partyrow"><span></span><span class="pn">Baz (${A.label})</span>
+        <span class="pp">${a?"%"+a.pct.toFixed(1):"—"}</span><span class="pv">${fmt(a?.votes)}</span></div>
+      <div class="partyrow"><span></span><span class="pn">Hedef (${B.label})</span>
+        <span class="pp">${b?"%"+b.pct.toFixed(1):"—"}</span><span class="pv">${fmt(b?.votes)}</span></div>
+      <div class="partyrow"><span></span><span class="pn">Δ</span>
+        <span class="pp">${(a&&b)?((b.pct-a.pct)>=0?"+":"")+(b.pct-a.pct).toFixed(1)+" pp":"—"}</span><span class="pv"></span></div>
+    </div>`;
+}
+
+// ---------- TREND ----------
+function buildTrend(){
+  // target options: individual parties + families
+  const families = [...new Set(Object.values(S.partyMeta).map(m=>m.family))].sort();
+  const parties  = Object.keys(S.partyMeta).sort();
+  const tsel = document.getElementById("t-target");
+  tsel.innerHTML = "";
+  const ogF = document.createElement("optgroup"); ogF.label = "Aile";
+  families.forEach(f=>{ const o=document.createElement("option"); o.value="fam:"+f; o.textContent=f; ogF.appendChild(o); });
+  tsel.appendChild(ogF);
+  const ogP = document.createElement("optgroup"); ogP.label = "Parti";
+  parties.forEach(p=>{ const o=document.createElement("option"); o.value="party:"+p; o.textContent=`${p} — ${nameOf(p)}`; ogP.appendChild(o); });
+  tsel.appendChild(ogP);
+  tsel.value = "fam:center-right";
+  // year selector: only genel+milletvekili (parliamentary-equivalent)
+  const esel = document.getElementById("t-election");
+  const list = S.elections.filter(e=>["genel","milletvekili"].includes(e.type))
+    .sort((a,b)=>d3.descending(a.date,b.date));
+  esel.innerHTML = list.map(e=>`<option value="${e.id}">${e.label}</option>`).join("");
+  [tsel, esel].forEach(s=> s.onchange = ()=>drawTrend());
+}
+
+function shareOf(provData, target){
+  if(!provData) return null;
+  if(target.startsWith("party:")){ const p=target.slice(6); return provData[p]?.pct ?? null; }
+  const fam = target.slice(4);
+  let s=0, any=false;
+  for(const[c,v] of Object.entries(provData)){ if(familyOf(c)===fam){ s+=v.pct; any=true; } }
+  return any?s:null;
+}
+
+async function drawTrend(){
+  const target = document.getElementById("t-target").value;
+  const eid = document.getElementById("t-election").value;
+  // load selected + all parliamentary elections for the national chart
+  const parliamentary = S.elections.filter(e=>["genel","milletvekili"].includes(e.type))
+    .sort((a,b)=>d3.ascending(a.date,b.date));
+  await Promise.all(parliamentary.map(e=>loadElection(e.id)));
+  const data = S.resultsCache[eid];
+  S.current = data;
+
+  const scale = d3.scaleSequential(d3.interpolateYlOrBr).domain([0,60]);
+  drawMap("#t-map","t-tt",
+    name=>{ const v=shareOf(data.provinces[name], target); return v==null?"#e5e7eb":scale(v); },
+    name=>{ S.sel.trend=name;
+      d3.select("#t-map").selectAll("path.province").classed("sel",d=>d.properties.name===name);
+      drawTrendProv(name, target, parliamentary);
+    },
+    (ev,f,ttId)=>{ const v=shareOf(data.provinces[f.properties.name], target);
+      document.getElementById(ttId).innerHTML=`<div class="tprov">${f.properties.name}</div>
+        <div class="trow"><span>${target.replace(/^(fam|party):/,"")}</span><span>${v!=null?"%"+v.toFixed(1):"—"}</span></div>`;
+      moveTooltip(ev,ttId,"#view-trend .mapwrap"); });
+  document.getElementById("t-legend").innerHTML =
+    [0,15,30,45,60].map(v=>`<span><span class="sw" style="background:${scale(v)}"></span>%${v}</span>`).join("")
+    + `<span style="color:var(--faint)">${target.replace(/^(fam|party):/,"")}</span>`;
+
+  // National trend line
+  const natl = parliamentary.map(e=>{
+    const d=S.resultsCache[e.id]; let num=0,den=0;
+    for(const pd of Object.values(d.provinces)) for(const[c,v] of Object.entries(pd)){
+      if(v.votes==null) continue;
+      const inc = target.startsWith("party:") ? (c===target.slice(6)) : (familyOf(c)===target.slice(4));
+      if(inc) num+=v.votes; den+=v.votes;
+    }
+    return {date:new Date(e.date), pct: den? 100*num/den : null, label:e.label, id:e.id};
+  }).filter(d=>d.pct!=null);
+  drawTrendChart(natl, eid);
+  drawTrendProv(S.sel.trend, target, parliamentary);
+}
+function drawTrendChart(series, eid){
+  const svg=d3.select("#t-chart"); svg.selectAll("*").remove();
+  const w=svg.node().clientWidth||600, h=160, m={l:30,r:10,t:14,b:22};
+  const x=d3.scaleTime().domain(d3.extent(series,d=>d.date)).range([m.l,w-m.r]);
+  const y=d3.scaleLinear().domain([0, d3.max(series,d=>d.pct)*1.2||60]).range([h-m.b,m.t]);
+  svg.attr("viewBox",`0 0 ${w} ${h}`);
+  svg.append("g").attr("transform",`translate(0,${h-m.b})`).call(d3.axisBottom(x).ticks(6).tickSizeOuter(0))
+    .selectAll("text").style("font-family","Inter").style("font-size","10px");
+  svg.append("g").attr("transform",`translate(${m.l},0)`).call(d3.axisLeft(y).ticks(4).tickFormat(v=>"%"+v))
+    .selectAll("text").style("font-family","Inter").style("font-size","10px");
+  svg.append("path").datum(series).attr("fill","none").attr("stroke","#111827").attr("stroke-width",1.5)
+    .attr("d", d3.line().x(d=>x(d.date)).y(d=>y(d.pct)));
+  svg.selectAll("circle").data(series).join("circle").attr("cx",d=>x(d.date)).attr("cy",d=>y(d.pct))
+    .attr("r",d=>d.id===eid?5:3).attr("fill",d=>d.id===eid?"#dc2626":"#111827").attr("stroke","#111827");
+}
+function drawTrendProv(name, target, parliamentary){
+  const body=document.getElementById("t-provbody");
+  const spark=d3.select("#t-spark"); spark.selectAll("*").remove();
+  if(!name){ body.innerHTML='<div class="hint">Haritadan bir il seçin.</div>'; return; }
+  const series=parliamentary.map(e=>({date:new Date(e.date),pct:shareOf(S.resultsCache[e.id].provinces[name],target),label:e.label}))
+    .filter(d=>d.pct!=null);
+  body.innerHTML=`<h3>${name}</h3><div class="hint">${target.replace(/^(fam|party):/,"")}</div>`;
+  if(!series.length){ body.innerHTML+='<div class="hint">Veri yok.</div>'; return; }
+  const w=spark.node().clientWidth||300, h=100, m={l:28,r:6,t:10,b:18};
+  const x=d3.scaleTime().domain(d3.extent(series,d=>d.date)).range([m.l,w-m.r]);
+  const y=d3.scaleLinear().domain([0,Math.max(60,d3.max(series,d=>d.pct))]).range([h-m.b,m.t]);
+  spark.attr("viewBox",`0 0 ${w} ${h}`);
+  spark.append("g").attr("transform",`translate(0,${h-m.b})`).call(d3.axisBottom(x).ticks(5).tickSizeOuter(0))
+    .selectAll("text").style("font-family","Inter").style("font-size","9px");
+  spark.append("g").attr("transform",`translate(${m.l},0)`).call(d3.axisLeft(y).ticks(3).tickFormat(v=>"%"+v))
+    .selectAll("text").style("font-family","Inter").style("font-size","9px");
+  spark.append("path").datum(series).attr("fill","none").attr("stroke","#111827").attr("stroke-width",1.2)
+    .attr("d",d3.line().x(d=>x(d.date)).y(d=>y(d.pct)));
+  spark.selectAll("circle").data(series).join("circle").attr("cx",d=>x(d.date)).attr("cy",d=>y(d.pct))
+    .attr("r",2.5).attr("fill","#111827");
+}
+
+load();
+</script>
+</body>
+</html>
