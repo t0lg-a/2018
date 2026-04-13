@@ -143,6 +143,8 @@
     "type": "cumhurbaskanligi",
     "label": "24 Haz 2018 C.Başkanlığı Seçimi"
   },
+{"id":"2023-05-milletvekili","date":"2023-05-14","type":"milletvekili","label":"14 May 2023 Milletvekili Seçimi"},
+{"id":"2024-03-yerel","date":"2024-03-31","type":"yerel","label":"31 Mart 2024 Yerel Seçimi"},
   {
     "id": "2019-03-yerel",
     "date": "2019-03-31",
