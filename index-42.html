@@ -1,0 +1,877 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Türkiye Seçim Arşivi — 1954–2024</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<style>
+:root{--bg:#f3f4f6;--card:#fff;--ink:#111827;--dim:#374151;--muted:#6b7280;
+  --faint:#9ca3af;--rule:#e5e7eb;--shadow:4px 4px 0 0 var(--ink);}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:'Inter',system-ui,sans-serif;
+  -webkit-font-smoothing:antialiased;color:var(--ink);
+  background:radial-gradient(circle at 10% 10%,#eef2ff 0%,transparent 40%),
+    radial-gradient(circle at 90% 20%,#fff1f2 0%,transparent 40%),var(--bg);min-height:100vh}
+.wrap{max-width:1320px;margin:0 auto;padding:24px 20px 60px}
+header{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:18px}
+.title{font-weight:900;font-size:32px;letter-spacing:-0.04em;line-height:1}
+.title .sep{color:var(--muted);font-weight:800}
+.nav{display:flex;gap:6px;flex-wrap:wrap}
+.nav button{font-family:inherit;font-weight:700;font-size:12px;letter-spacing:-0.01em;
+  padding:6px 12px;background:#fff;border:1px solid var(--ink);color:var(--ink);
+  cursor:pointer;box-shadow:2px 2px 0 0 var(--ink);border-radius:0}
+.nav button.active{background:var(--ink);color:#fff}
+.nav .gbtn{background:#fef3c7}
+.controls{background:#fff;border:1px solid var(--ink);box-shadow:var(--shadow);
+  padding:14px 16px;margin-bottom:14px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.controls label{font-weight:800;font-size:10px;letter-spacing:0.07em;
+  text-transform:uppercase;color:var(--muted);margin-right:4px}
+select,input[type=text],input[type=color]{font-family:inherit;font-weight:700;font-size:13px;
+  border:1px solid var(--ink);background:#fff;padding:6px 10px;color:var(--ink);border-radius:0}
+select{min-width:220px}
+.meta{font-size:11px;color:var(--muted);font-weight:600;letter-spacing:0.04em;text-transform:uppercase}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:14px}
+@media(max-width:900px){.layout{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid var(--ink);box-shadow:var(--shadow);padding:16px}
+.card h2{margin:0 0 12px;font-size:13px;font-weight:700;letter-spacing:-0.01em}
+.mapwrap{position:relative}
+svg{display:block;width:100%;height:auto}
+.province{stroke:var(--ink);stroke-width:0.6;cursor:pointer;transition:opacity .12s}
+.province:hover{opacity:0.75}
+.province.sel{stroke-width:2.2}
+.tooltip{position:absolute;pointer-events:none;background:#fff;border:1px solid var(--ink);
+  box-shadow:2px 2px 0 0 var(--ink);padding:8px 10px;font-size:12px;font-weight:500;
+  display:none;z-index:10;min-width:180px}
+.tooltip .tprov{font-weight:800;font-size:13px;margin-bottom:4px}
+.tooltip .trow{display:flex;justify-content:space-between;gap:10px;font-variant-numeric:tabular-nums}
+.chip{display:inline-block;width:10px;height:10px;border:1px solid var(--ink);vertical-align:middle;margin-right:6px}
+.totals{display:flex;flex-direction:column;gap:8px}
+.totrow{display:grid;grid-template-columns:18px 1fr auto;gap:8px;align-items:center;font-size:13px}
+.totrow .bar{height:18px;background:#f3f4f6;border:1px solid var(--ink)}
+.totrow .fill{height:100%}
+.totrow .label{font-weight:700;font-size:12px}
+.totrow .pct{font-weight:800;font-size:13px;font-variant-numeric:tabular-nums}
+.provdetail h3{margin:0 0 4px;font-size:18px;font-weight:900;letter-spacing:-0.03em}
+.provdetail .hint{font-size:11px;color:var(--muted);font-weight:600;letter-spacing:0.04em;text-transform:uppercase}
+.partylist{display:flex;flex-direction:column;gap:6px;margin-top:10px}
+.partyrow{display:grid;grid-template-columns:18px 1fr auto auto;gap:8px;align-items:center;
+  font-size:12px;padding:4px 0;border-bottom:1px dashed var(--rule)}
+.partyrow:last-child{border-bottom:0}
+.partyrow .pn{font-weight:700}
+.partyrow .pp{font-weight:800;font-variant-numeric:tabular-nums;min-width:48px;text-align:right}
+.partyrow .pv{font-size:11px;color:var(--muted);font-variant-numeric:tabular-nums;min-width:64px;text-align:right}
+.legend{display:flex;gap:14px;align-items:center;font-size:11px;color:var(--muted);
+  font-weight:600;margin-top:8px;flex-wrap:wrap}
+.legend .sw{display:inline-block;width:22px;height:10px;border:1px solid var(--ink);margin-right:4px;vertical-align:middle}
+.trendchart{width:100%;height:160px}
+.spark{width:100%;height:110px;margin-top:10px}
+.hide{display:none}
+
+/* Group manager modal */
+.modal-bg{position:fixed;inset:0;background:rgba(0,0,0,0.4);display:none;z-index:100;align-items:flex-start;justify-content:center;padding:40px 20px;overflow:auto}
+.modal-bg.open{display:flex}
+.modal{background:#fff;border:1px solid var(--ink);box-shadow:var(--shadow);
+  padding:20px;width:100%;max-width:680px}
+.modal h2{margin:0 0 14px;font-weight:900;font-size:20px;letter-spacing:-0.03em}
+.modal .close{float:right;background:#fff;border:1px solid var(--ink);
+  padding:4px 10px;font-weight:800;cursor:pointer;box-shadow:2px 2px 0 0 var(--ink)}
+.grouplist{display:flex;flex-direction:column;gap:8px;margin-bottom:14px}
+.grow{border:1px solid var(--ink);padding:10px;display:flex;gap:10px;align-items:flex-start}
+.grow .gname{font-weight:800;font-size:14px;min-width:120px;display:flex;align-items:center;gap:6px}
+.grow .gmembers{flex:1;font-size:11px;color:var(--muted);line-height:1.5}
+.grow .gact{display:flex;gap:6px}
+.grow button{font-family:inherit;font-size:11px;font-weight:700;padding:4px 8px;
+  background:#fff;border:1px solid var(--ink);cursor:pointer;box-shadow:1px 1px 0 0 var(--ink)}
+.ged{border:1px solid var(--ink);padding:12px;margin-top:12px}
+.ged .r{display:flex;gap:8px;align-items:center;margin-bottom:8px;flex-wrap:wrap}
+.ged input[type=text]{min-width:160px}
+.partygrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));
+  gap:4px;max-height:240px;overflow:auto;border:1px solid var(--rule);padding:8px}
+.partygrid label{font-size:11px;font-weight:600;display:flex;align-items:center;gap:4px;cursor:pointer}
+.primary{background:var(--ink)!important;color:#fff!important}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="title">Türkiye Seçim Arşivi <span class="sep">/</span> 1954–2024</div>
+  <nav class="nav">
+    <button data-view="archive" class="active">Arşiv</button>
+    <button data-view="swing">Salınım</button>
+    <button data-view="trend">Trend</button>
+    <button data-view="trendchange">Trend Değişimi</button>
+    <button class="gbtn" id="gbtn">Gruplar</button>
+  </nav>
+</header>
+
+<!-- ARCHIVE -->
+<section id="view-archive">
+  <div class="controls">
+    <label>Seçim</label><select id="a-election"></select>
+    <label>Mod</label>
+    <select id="a-mode"><option value="party">Parti bazlı</option><option value="group">Grup bazlı</option></select>
+    <label style="display:flex;align-items:center;gap:4px;cursor:pointer">
+      <input type="checkbox" id="a-margin" style="margin:0"> Marj renklendirmesi
+    </label>
+    <span class="meta" id="a-meta"></span>
+  </div>
+  <div class="layout">
+    <div class="card mapwrap"><h2 id="a-h2">Kazanan parti (il bazında)</h2>
+      <svg id="a-map" viewBox="0 0 900 460"></svg><div class="tooltip" id="a-tt"></div>
+      <div class="legend" id="a-legend"></div></div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <div class="card"><h2>Türkiye geneli</h2>
+        <div class="meta" id="a-natmeta"></div><div class="totals" id="a-totals"></div></div>
+      <div class="card provdetail"><h2>İl detayı</h2>
+        <div id="a-provbody"><div class="hint">Haritadan bir il seçin.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SWING -->
+<section id="view-swing" class="hide">
+  <div class="controls">
+    <label>Baz seçim</label><select id="s-from"></select>
+    <label>Baz hedef</label><select id="s-tgtA"></select>
+    <label>Hedef seçim</label><select id="s-to"></select>
+    <label>Hedef parti</label><select id="s-tgtB"></select>
+  </div>
+  <div class="layout">
+    <div class="card mapwrap"><h2>Salınım: hedef − baz (yüzde puan)</h2>
+      <svg id="s-map" viewBox="0 0 900 460"></svg><div class="tooltip" id="s-tt"></div>
+      <div class="legend" id="s-legend"></div></div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <div class="card"><h2>Özet</h2>
+        <div id="s-summary" class="meta"></div>
+        <div class="totals" id="s-top" style="margin-top:10px"></div></div>
+      <div class="card"><h2>İl detayı</h2>
+        <div id="s-provbody"><div class="hint">Haritadan bir il seçin.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TREND -->
+<section id="view-trend" class="hide">
+  <div class="controls">
+    <label>Hedef</label><select id="t-target"></select>
+    <label>Yıl</label><select id="t-election"></select>
+  </div>
+  <div class="layout">
+    <div class="card mapwrap"><h2>Endeks: il oyu / ülke oyu × 50</h2>
+      <svg id="t-map" viewBox="0 0 900 460"></svg><div class="tooltip" id="t-tt"></div>
+      <div class="legend" id="t-legend"></div></div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <div class="card"><h2>Ulusal trend</h2><svg id="t-chart" class="trendchart"></svg></div>
+      <div class="card"><h2>İl detayı</h2>
+        <div id="t-provbody"><div class="hint">Haritadan bir il seçin.</div></div>
+        <svg id="t-spark" class="spark"></svg></div>
+    </div>
+  </div>
+</section>
+
+<!-- TREND CHANGE -->
+<section id="view-trendchange" class="hide">
+  <div class="controls">
+    <label>Baz seçim</label><select id="tc-from"></select>
+    <label>Baz hedef</label><select id="tc-tgtA"></select>
+    <label>Hedef seçim</label><select id="tc-to"></select>
+    <label>Hedef hedef</label><select id="tc-tgtB"></select>
+  </div>
+  <div class="layout">
+    <div class="card mapwrap"><h2>Endeks değişimi: hedef endeks − baz endeks</h2>
+      <svg id="tc-map" viewBox="0 0 900 460"></svg><div class="tooltip" id="tc-tt"></div>
+      <div class="legend" id="tc-legend"></div></div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <div class="card"><h2>Özet</h2>
+        <div id="tc-summary" class="meta"></div>
+        <div class="totals" id="tc-top" style="margin-top:10px"></div></div>
+      <div class="card"><h2>İl detayı</h2>
+        <div id="tc-provbody"><div class="hint">Haritadan bir il seçin.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- GROUP MANAGER -->
+<div class="modal-bg" id="gmodal"><div class="modal">
+  <button class="close" onclick="closeGroups()">Kapat</button>
+  <h2>Parti Grupları & Renkler</h2>
+  <div style="display:flex;gap:6px;margin-bottom:14px">
+    <button id="tab-groups" class="primary" style="padding:6px 12px;font-weight:800;cursor:pointer;border:1px solid var(--ink);box-shadow:2px 2px 0 0 var(--ink)" onclick="showGTab('groups')">Gruplar</button>
+    <button id="tab-colors" style="padding:6px 12px;cursor:pointer;border:1px solid var(--ink);background:#fff;box-shadow:2px 2px 0 0 var(--ink)" onclick="showGTab('colors')">Parti Renkleri</button>
+  </div>
+  <div id="tab-groups-body">
+    <div class="grouplist" id="glist"></div>
+    <button onclick="newGroup()" class="primary" style="padding:8px 14px;font-weight:800;cursor:pointer;border:1px solid var(--ink);box-shadow:2px 2px 0 0 var(--ink)">+ Yeni Grup</button>
+    <div id="geditor"></div>
+  </div>
+  <div id="tab-colors-body" style="display:none">
+    <div style="font-size:11px;color:var(--muted);margin-bottom:10px">Parti rengi değişiklikleri localStorage'a kaydedilir.</div>
+    <div id="pclist" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:6px;max-height:400px;overflow:auto"></div>
+    <button onclick="resetPartyColors()" style="margin-top:10px;padding:6px 12px;cursor:pointer;border:1px solid var(--ink);background:#fff;box-shadow:2px 2px 0 0 var(--ink);font-weight:700">Tüm renkleri sıfırla</button>
+  </div>
+</div></div>
+
+</div>
+
+<script>
+const S = {elections:[], partyMeta:{}, geo:null, resultsCache:{},
+           current:null, view:"archive", sel:{archive:null,swing:null,trend:null,trendchange:null},
+           groups:{}, partyColors:{}};
+const TYPE_LABEL = {"genel":"Genel","yerel":"Yerel","cumhurbaskanligi":"Cumhurbaşkanlığı",
+  "referandum":"Referandum","milletvekili":"Milletvekili","yerel-istanbul":"İstanbul Yenileme"};
+
+const DEFAULT_GROUPS = {
+  "sag": {name:"Sağ", color:"#dc2626", parties:["AKP","AP","DP","DYP","ANAP","MHP","CKMP","MSP","RP","FP","SP","MNP","BBP","MCP","IP","YTP","MP","MDP","DTP83","GP","LDP","DEVA","GELECEK"]},
+  "sol": {name:"Sol", color:"#2563eb", parties:["CHP","SHP","DSP","SODEP","HP","CGP","CMP","HEP","DEP","HADEP","DEHAP","DTP","BDP","HDP","HDK","DBP","DEM","TIP","TBP","TKP","ODP","EMEP","MEMLEKET"]}
+};
+
+const fmt = n => n==null?"—":n.toLocaleString("tr-TR");
+const colorOf = c => S.partyColors[c] || S.partyMeta[c]?.color || "#bbb";
+const nameOf  = c => S.partyMeta[c]?.name || c;
+
+const PCKEY = "tr_elections_party_colors_v1";
+function loadPartyColors(){
+  try{ S.partyColors = JSON.parse(localStorage.getItem(PCKEY) || "{}"); }
+  catch(e){ S.partyColors = {}; }
+}
+function savePartyColors(){ localStorage.setItem(PCKEY, JSON.stringify(S.partyColors)); }
+
+// ---- groups (localStorage) ----
+const GKEY = "tr_elections_groups_v1";
+function loadGroups(){
+  try{ const stored = JSON.parse(localStorage.getItem(GKEY) || "null");
+    S.groups = stored || structuredClone(DEFAULT_GROUPS);
+  }catch(e){ S.groups = structuredClone(DEFAULT_GROUPS); }
+}
+function saveGroups(){ localStorage.setItem(GKEY, JSON.stringify(S.groups)); }
+
+// target = "party:CODE" or "group:GID"
+function targetLabel(t){
+  if(t.startsWith("party:")) { const c=t.slice(6); return `${c} — ${nameOf(c)}`; }
+  const g = S.groups[t.slice(6)]; return g ? `${g.name} (grup)` : t;
+}
+function targetColor(t){
+  if(t.startsWith("party:")) return colorOf(t.slice(6));
+  return S.groups[t.slice(6)]?.color || "#2563eb";
+}
+function targetMembers(t){
+  if(t.startsWith("party:")) return [t.slice(6)];
+  return S.groups[t.slice(6)]?.parties || [];
+}
+function shareOf(provData, target){
+  if(!provData) return null;
+  const members = new Set(targetMembers(target));
+  let s=0, any=false;
+  for(const [c,v] of Object.entries(provData)){
+    if(members.has(c)){ s += v.pct; any=true; }
+  }
+  return any ? s : null;
+}
+function nationalShare(data, target){
+  const members = new Set(targetMembers(target));
+  let num=0, den=0;
+  for(const pd of Object.values(data.provinces)) for(const [c,v] of Object.entries(pd)){
+    if(v.votes==null) continue;
+    if(members.has(c)) num += v.votes;
+    den += v.votes;
+  }
+  return den? 100*num/den : 0;
+}
+
+function fillTargetSelect(sel, defaultVal){
+  sel.innerHTML = "";
+  const ogG = document.createElement("optgroup"); ogG.label = "Gruplar";
+  for(const [gid,g] of Object.entries(S.groups)){
+    const o = document.createElement("option"); o.value = "group:"+gid; o.textContent = g.name;
+    ogG.appendChild(o);
+  }
+  sel.appendChild(ogG);
+  const ogP = document.createElement("optgroup"); ogP.label = "Partiler";
+  Object.keys(S.partyMeta).sort().forEach(p=>{
+    const o = document.createElement("option"); o.value = "party:"+p; o.textContent = `${p} — ${nameOf(p)}`;
+    ogP.appendChild(o);
+  });
+  sel.appendChild(ogP);
+  if(defaultVal) sel.value = defaultVal;
+}
+
+// ---- load ----
+async function load(){
+  loadGroups();
+  loadPartyColors();
+  const [elections, partyMeta, geo] = await Promise.all([
+    fetch("elections.json").then(r=>r.json()),
+    fetch("party_meta.json").then(r=>r.json()),
+    fetch("tr_provinces.geojson").then(r=>r.json())]);
+  S.elections = elections; S.partyMeta = partyMeta; S.geo = geo;
+  buildNav(); buildArchive(); buildSwing(); buildTrend(); buildTrendChange();
+  await loadElection(elections[elections.length-1].id);
+  document.getElementById("a-election").value = S.current.id;
+  drawArchive();
+}
+
+function buildNav(){
+  document.querySelectorAll(".nav button[data-view]").forEach(b=>{
+    b.onclick = ()=>{
+      S.view = b.dataset.view;
+      document.querySelectorAll(".nav button[data-view]").forEach(x=>x.classList.toggle("active",x===b));
+      for(const v of ["archive","swing","trend","trendchange"]){
+        document.getElementById(`view-${v}`).classList.toggle("hide", v!==S.view);
+      }
+      if(S.view==="swing") drawSwing();
+      if(S.view==="trend") drawTrend();
+      if(S.view==="trendchange") drawTrendChange();
+    };
+  });
+  document.getElementById("gbtn").onclick = openGroups;
+}
+
+async function loadElection(id){
+  if(!S.resultsCache[id]) S.resultsCache[id] = await fetch(`${id}.json`).then(r=>r.json());
+  S.current = S.resultsCache[id];
+  return S.current;
+}
+
+function fillElectionSelect(sel, defaultId){
+  const byType = d3.group(S.elections, d=>d.type);
+  const order = ["genel","milletvekili","cumhurbaskanligi","yerel","referandum","yerel-istanbul"];
+  sel.innerHTML = "";
+  for(const t of order){
+    if(!byType.has(t)) continue;
+    const og = document.createElement("optgroup"); og.label = TYPE_LABEL[t]||t;
+    [...byType.get(t)].sort((a,b)=>d3.descending(a.date,b.date)).forEach(e=>{
+      const o = document.createElement("option"); o.value=e.id; o.textContent=e.label;
+      og.appendChild(o);
+    });
+    sel.appendChild(og);
+  }
+  if(defaultId) sel.value = defaultId;
+}
+
+// ---- shared map ----
+function drawMap(svgSel, ttId, fillFn, clickFn, hoverFn){
+  const svg = d3.select(svgSel); svg.selectAll("*").remove();
+  let xmin=Infinity,ymin=Infinity,xmax=-Infinity,ymax=-Infinity;
+  const ingest = ring => { for(const [x,y] of ring){
+    if(x<xmin)xmin=x; if(x>xmax)xmax=x; if(y<ymin)ymin=y; if(y>ymax)ymax=y; }};
+  S.geo.features.forEach(f=>{
+    const g=f.geometry;
+    if(g.type==="Polygon") ingest(g.coordinates[0]);
+    else if(g.type==="MultiPolygon") g.coordinates.forEach(p=>ingest(p[0]));
+  });
+  const meanLat = (ymin+ymax)/2, kx = Math.cos(meanLat*Math.PI/180);
+  const xminC = xmin*kx, xmaxC = xmax*kx;
+  const W=900, H=460, pad=10;
+  const sx = (W-2*pad)/(xmaxC-xminC), sy = (H-2*pad)/(ymax-ymin);
+  const s = Math.min(sx,sy);
+  const tx = pad + (W-2*pad - s*(xmaxC-xminC))/2 - s*xminC;
+  const ty = pad + (H-2*pad - s*(ymax-ymin))/2 + s*ymax;
+  const project = ([x,y]) => [tx + s*x*kx, ty - s*y];
+  const ringToPath = ring => "M" + ring.map(project).map(p=>p.join(",")).join("L") + "Z";
+  const geomToPath = g => {
+    if(g.type==="Polygon") return ringToPath(g.coordinates[0]);
+    if(g.type==="MultiPolygon") return g.coordinates.map(p=>ringToPath(p[0])).join("");
+    return "";
+  };
+  svg.selectAll("path.province").data(S.geo.features).join("path")
+    .attr("class","province").attr("d",f=>geomToPath(f.geometry))
+    .attr("fill", f=>fillFn(f.properties.name))
+    .on("mousemove",(ev,f)=>hoverFn(ev,f,ttId))
+    .on("mouseleave",()=>{document.getElementById(ttId).style.display="none";})
+    .on("click",(ev,f)=>clickFn(f.properties.name));
+}
+function moveTooltip(ev, ttId, wrapSel){
+  const tt = document.getElementById(ttId);
+  const wrap = document.querySelector(wrapSel).getBoundingClientRect();
+  tt.style.left = (ev.clientX-wrap.left+12)+"px";
+  tt.style.top  = (ev.clientY-wrap.top+12)+"px";
+  tt.style.display = "block";
+}
+
+// ---- ARCHIVE (party/group + margin) ----
+function buildArchive(){
+  fillElectionSelect(document.getElementById("a-election"));
+  document.getElementById("a-election").onchange = async e=>{ await loadElection(e.target.value); drawArchive(); };
+  document.getElementById("a-mode").onchange = ()=>drawArchive();
+  document.getElementById("a-margin").onchange = ()=>drawArchive();
+}
+
+// Compute shares per "entity" in a province. In party mode, entities are
+// raw party codes. In group mode, entities are group IDs (sum of member
+// party shares) plus any parties that aren't in any group.
+function entityShares(pd, mode){
+  if(!pd) return null;
+  if(mode === "party"){
+    return Object.entries(pd).map(([c,v])=>({id:"party:"+c, code:c, pct:v.pct, color:colorOf(c), label:c}));
+  }
+  // group mode
+  const memberOfGroup = {};
+  for(const [gid, g] of Object.entries(S.groups)){
+    for(const p of g.parties) memberOfGroup[p] = gid;
+  }
+  const bucket = {};
+  for(const [c,v] of Object.entries(pd)){
+    const gid = memberOfGroup[c];
+    if(gid){
+      const key = "group:"+gid;
+      if(!bucket[key]) bucket[key] = {id:key, code:gid, pct:0, color:S.groups[gid].color, label:S.groups[gid].name};
+      bucket[key].pct += v.pct;
+    } else {
+      const key = "party:"+c;
+      bucket[key] = {id:key, code:c, pct:v.pct, color:colorOf(c), label:c};
+    }
+  }
+  return Object.values(bucket);
+}
+
+function winnerEntity(entities){
+  if(!entities || !entities.length) return null;
+  const sorted = [...entities].sort((a,b)=>b.pct-a.pct);
+  const w = sorted[0], r = sorted[1];
+  const margin = w.pct - (r?.pct || 0);
+  return {...w, margin, runnerUp: r};
+}
+
+// Margin tier → lightness multiplier. 5 tiers all within winner's hue:
+// darkest (decisive) to lightest (very close).
+function marginTier(margin){
+  if(margin < 2.5) return 4;     // en açık
+  if(margin < 7.5) return 3;
+  if(margin < 15)  return 2;
+  if(margin < 25)  return 1;
+  return 0;                       // koyu (base)
+}
+// Mix hex color with white by amount t ∈ [0,1]
+function lighten(hex, t){
+  const n = parseInt(hex.replace("#",""), 16);
+  const r = (n>>16)&255, g = (n>>8)&255, b = n&255;
+  const mix = (c)=> Math.round(c + (255-c)*t);
+  return `rgb(${mix(r)},${mix(g)},${mix(b)})`;
+}
+const TIER_T = [0, 0.25, 0.45, 0.65, 0.82];   // darkest → lightest
+
+function archiveFill(name){
+  const mode = document.getElementById("a-mode").value;
+  const useMargin = document.getElementById("a-margin").checked;
+  const pd = S.current.provinces[name];
+  const ents = entityShares(pd, mode);
+  const w = winnerEntity(ents);
+  if(!w) return "#e5e7eb";
+  if(!useMargin) return w.color;
+  return lighten(w.color, TIER_T[marginTier(w.margin)]);
+}
+
+function drawArchive(){
+  const meta = S.elections.find(e=>e.id===S.current.id);
+  const mode = document.getElementById("a-mode").value;
+  const useMargin = document.getElementById("a-margin").checked;
+  document.getElementById("a-meta").textContent = `${TYPE_LABEL[meta.type]||meta.type} · ${meta.date}`;
+  document.getElementById("a-h2").textContent = mode==="party"
+    ? (useMargin ? "Kazanan parti + marj" : "Kazanan parti (il bazında)")
+    : (useMargin ? "Kazanan grup + marj" : "Kazanan grup (il bazında)");
+  drawMap("#a-map","a-tt", archiveFill,
+    name=>{ S.sel.archive=name;
+      d3.select("#a-map").selectAll("path.province").classed("sel",d=>d.properties.name===name);
+      drawArchiveProv(name);
+    },
+    (ev,f,ttId)=>{
+      const pd=S.current.provinces[f.properties.name]; const tt=document.getElementById(ttId);
+      const ents = entityShares(pd, mode);
+      if(!ents){ tt.innerHTML=`<div class="tprov">${f.properties.name}</div><div class="trow">Veri yok</div>`;}
+      else { const rows=[...ents].sort((a,b)=>b.pct-a.pct).slice(0,4);
+        const w = winnerEntity(ents);
+        const marginTxt = w ? `<div class="trow" style="border-top:1px solid var(--rule);padding-top:4px;margin-top:4px"><b>Marj</b><span>${w.margin.toFixed(1)} pp</span></div>` : "";
+        tt.innerHTML=`<div class="tprov">${f.properties.name}</div>`+rows.map(r=>
+          `<div class="trow"><span><span class="chip" style="background:${r.color}"></span>${r.label}</span><span>%${r.pct.toFixed(1)}</span></div>`).join("") + marginTxt; }
+      moveTooltip(ev,ttId,"#view-archive .mapwrap");
+    });
+  drawArchiveLegend(useMargin);
+  drawArchiveTotals(); drawArchiveProv(S.sel.archive);
+}
+
+function drawArchiveLegend(useMargin){
+  const leg = document.getElementById("a-legend");
+  if(!useMargin){ leg.innerHTML=""; return; }
+  const tiers = [
+    {lbl:"25+ pp",   t:TIER_T[0]},
+    {lbl:"15–25",    t:TIER_T[1]},
+    {lbl:"7.5–15",   t:TIER_T[2]},
+    {lbl:"2.5–7.5",  t:TIER_T[3]},
+    {lbl:"<2.5",     t:TIER_T[4]},
+  ];
+  const base = "#4b5563";
+  leg.innerHTML = tiers.map(x=>
+    `<span><span class="sw" style="background:${lighten(base, x.t)}"></span>${x.lbl}</span>`
+  ).join("");
+}
+
+function drawArchiveTotals(){
+  const totals={}; let total=0; let miss=false;
+  for(const pd of Object.values(S.current.provinces)) for(const[c,v] of Object.entries(pd)){
+    if(v.votes==null){ miss=true; continue; } totals[c]=(totals[c]||0)+v.votes; total+=v.votes; }
+  const rows=Object.entries(totals).map(([c,v])=>({code:c,votes:v,pct:100*v/total}))
+    .sort((a,b)=>b.votes-a.votes).slice(0,8);
+  document.getElementById("a-natmeta").textContent = miss?`Toplam oy: ${fmt(total)} (kısmi)`:`Toplam oy: ${fmt(total)}`;
+  const mx=rows[0]?.pct||1;
+  document.getElementById("a-totals").innerHTML = rows.map(r=>`
+    <div class="totrow"><span class="chip" style="background:${colorOf(r.code)}"></span>
+      <div><div class="label">${r.code} <span style="color:var(--muted);font-weight:500">${nameOf(r.code)}</span></div>
+        <div class="bar"><div class="fill" style="width:${(100*r.pct/mx).toFixed(1)}%;background:${colorOf(r.code)}"></div></div></div>
+      <div class="pct">%${r.pct.toFixed(1)}</div></div>`).join("");
+}
+function drawArchiveProv(name){
+  const body=document.getElementById("a-provbody");
+  if(!name){ body.innerHTML='<div class="hint">Haritadan bir il seçin.</div>'; return; }
+  const pd=S.current.provinces[name];
+  if(!pd){ body.innerHTML=`<h3>${name}</h3><div class="hint">Bu seçim için veri yok.</div>`; return; }
+  const rows=Object.entries(pd).sort((a,b)=>b[1].pct-a[1].pct);
+  body.innerHTML=`<h3>${name}</h3><div class="hint">${S.current.label}</div>
+    <div class="partylist">${rows.map(([c,v])=>`<div class="partyrow">
+      <span class="chip" style="background:${colorOf(c)}"></span>
+      <span class="pn">${c} <span style="color:var(--muted);font-weight:500">${nameOf(c)}</span></span>
+      <span class="pp">%${v.pct.toFixed(1)}</span>
+      <span class="pv">${fmt(v.votes)}</span></div>`).join("")}</div>`;
+}
+
+// ---- SWING (dual target) ----
+function buildSwing(){
+  fillElectionSelect(document.getElementById("s-from"));
+  fillElectionSelect(document.getElementById("s-to"));
+  fillTargetSelect(document.getElementById("s-tgtA"), "party:CHP");
+  fillTargetSelect(document.getElementById("s-tgtB"), "party:CHP");
+  const genels = S.elections.filter(e=>e.type==="genel");
+  if(genels.length>=2){
+    document.getElementById("s-to").value = genels[genels.length-1].id;
+    document.getElementById("s-from").value = genels[genels.length-2].id;
+  }
+  ["s-from","s-to","s-tgtA","s-tgtB"].forEach(id=>{
+    document.getElementById(id).onchange = ()=>drawSwing();
+  });
+}
+async function drawSwing(){
+  const from = document.getElementById("s-from").value;
+  const to   = document.getElementById("s-to").value;
+  const tA   = document.getElementById("s-tgtA").value;
+  const tB   = document.getElementById("s-tgtB").value;
+  const [A,B] = await Promise.all([loadElection(from), loadElection(to)]);
+  S.current = B;
+  // per-province delta = shareOf(B, tB) - shareOf(A, tA)
+  const deltas = {};
+  for(const name of S.geo.features.map(f=>f.properties.name)){
+    const a = shareOf(A.provinces[name], tA);
+    const b = shareOf(B.provinces[name], tB);
+    deltas[name] = (a!=null && b!=null) ? (b-a) : null;
+  }
+  const absMax = Math.max(1, ...Object.values(deltas).filter(v=>v!=null).map(v=>Math.abs(v)));
+  const scale = d3.scaleDiverging(d3.interpolateRdBu).domain([absMax,0,-absMax]);
+  drawMap("#s-map","s-tt",
+    name => deltas[name]==null ? "#e5e7eb" : scale(deltas[name]),
+    name=>{ S.sel.swing=name;
+      d3.select("#s-map").selectAll("path.province").classed("sel",d=>d.properties.name===name);
+      drawSwingProv(name,A,B,tA,tB); },
+    (ev,f,ttId)=>{ const n=f.properties.name;
+      const a=shareOf(A.provinces[n],tA); const b=shareOf(B.provinces[n],tB); const d=deltas[n];
+      document.getElementById(ttId).innerHTML=`<div class="tprov">${n}</div>
+        <div class="trow"><span>Baz: ${targetLabel(tA).split(" — ")[0]}</span><span>${a!=null?"%"+a.toFixed(1):"—"}</span></div>
+        <div class="trow"><span>Hedef: ${targetLabel(tB).split(" — ")[0]}</span><span>${b!=null?"%"+b.toFixed(1):"—"}</span></div>
+        <div class="trow" style="border-top:1px solid var(--rule);padding-top:4px;margin-top:4px"><b>Δ</b><span>${d!=null?(d>=0?"+":"")+d.toFixed(1)+" pp":"—"}</span></div>`;
+      moveTooltip(ev,ttId,"#view-swing .mapwrap"); });
+  document.getElementById("s-legend").innerHTML =
+    `<span><span class="sw" style="background:${scale(-absMax)}"></span>${(-absMax).toFixed(1)}</span>`+
+    `<span><span class="sw" style="background:${scale(0)}"></span>0</span>`+
+    `<span><span class="sw" style="background:${scale(absMax)}"></span>+${absMax.toFixed(1)}</span>`+
+    `<span style="color:var(--faint)">yüzde puan · ${targetLabel(tA)} → ${targetLabel(tB)}</span>`;
+  const rows = Object.entries(deltas).filter(([,d])=>d!=null).map(([n,d])=>({name:n,delta:d})).sort((a,b)=>b.delta-a.delta);
+  const mean = d3.mean(rows,d=>d.delta)||0;
+  document.getElementById("s-summary").innerHTML = `ortalama Δ: ${mean>=0?"+":""}${mean.toFixed(1)} pp · ${rows.length} il`;
+  const tops=[...rows.slice(0,5), ...rows.slice(-5).reverse()];
+  document.getElementById("s-top").innerHTML = tops.map(r=>`
+    <div class="totrow"><span class="chip" style="background:${scale(r.delta)}"></span>
+      <div class="label">${r.name}</div>
+      <div class="pct">${r.delta>=0?"+":""}${r.delta.toFixed(1)}</div></div>`).join("");
+  drawSwingProv(S.sel.swing,A,B,tA,tB);
+}
+function drawSwingProv(name,A,B,tA,tB){
+  const body=document.getElementById("s-provbody");
+  if(!name){ body.innerHTML='<div class="hint">Haritadan bir il seçin.</div>'; return; }
+  const a=shareOf(A.provinces[name],tA); const b=shareOf(B.provinces[name],tB);
+  body.innerHTML=`<h3>${name}</h3>
+    <div class="hint">${A.label} → ${B.label}</div>
+    <div class="partylist">
+      <div class="partyrow"><span></span><span class="pn">${targetLabel(tA)}</span>
+        <span class="pp">${a!=null?"%"+a.toFixed(1):"—"}</span><span></span></div>
+      <div class="partyrow"><span></span><span class="pn">${targetLabel(tB)}</span>
+        <span class="pp">${b!=null?"%"+b.toFixed(1):"—"}</span><span></span></div>
+      <div class="partyrow"><span></span><span class="pn">Δ</span>
+        <span class="pp">${(a!=null&&b!=null)?((b-a)>=0?"+":"")+(b-a).toFixed(1)+" pp":"—"}</span><span></span></div>
+    </div>`;
+}
+
+// ---- TREND ----
+function buildTrend(){
+  fillTargetSelect(document.getElementById("t-target"), "group:sag");
+  const esel = document.getElementById("t-election");
+  const list = S.elections.filter(e=>["genel","milletvekili"].includes(e.type))
+    .sort((a,b)=>d3.descending(a.date,b.date));
+  esel.innerHTML = list.map(e=>`<option value="${e.id}">${e.label}</option>`).join("");
+  ["t-target","t-election"].forEach(id=> document.getElementById(id).onchange = ()=>drawTrend());
+}
+async function drawTrend(){
+  const target = document.getElementById("t-target").value;
+  const eid = document.getElementById("t-election").value;
+  const parliamentary = S.elections.filter(e=>["genel","milletvekili"].includes(e.type))
+    .sort((a,b)=>d3.ascending(a.date,b.date));
+  await Promise.all(parliamentary.map(e=>loadElection(e.id)));
+  const data = S.resultsCache[eid];
+  const nat = nationalShare(data, target);
+  const vals = {};
+  for(const [name,pd] of Object.entries(data.provinces)){
+    const p = shareOf(pd, target);
+    vals[name] = (p!=null && nat>0) ? (p/nat)*50 : null;
+  }
+  const devs = Object.values(vals).filter(v=>v!=null).map(v=>Math.abs(v-50));
+  const maxDev = Math.max(1, ...devs);
+  const col = targetColor(target);
+  const scaleHi = d3.scaleLinear().domain([50, 50+maxDev]).range(["#ffffff", col]).clamp(true);
+  const scaleLo = d3.scaleLinear().domain([50-maxDev, 50]).range(["#6b7280", "#ffffff"]).clamp(true);
+  const scale = v => v>=50 ? scaleHi(v) : scaleLo(v);
+  drawMap("#t-map","t-tt",
+    name => vals[name]==null ? "#e5e7eb" : scale(vals[name]),
+    name=>{ S.sel.trend=name;
+      d3.select("#t-map").selectAll("path.province").classed("sel",d=>d.properties.name===name);
+      drawTrendProv(name, target, parliamentary); },
+    (ev,f,ttId)=>{ const n=f.properties.name;
+      const p=shareOf(data.provinces[n],target); const v=vals[n];
+      document.getElementById(ttId).innerHTML=`<div class="tprov">${n}</div>
+        <div class="trow"><span>İl oyu</span><span>${p!=null?"%"+p.toFixed(1):"—"}</span></div>
+        <div class="trow"><span>Ülke oyu</span><span>%${nat.toFixed(1)}</span></div>
+        <div class="trow" style="border-top:1px solid var(--rule);padding-top:4px;margin-top:4px"><b>Endeks</b><span>${v!=null?v.toFixed(1):"—"}</span></div>`;
+      moveTooltip(ev,ttId,"#view-trend .mapwrap"); });
+  document.getElementById("t-legend").innerHTML =
+    `<span><span class="sw" style="background:${scale(50-maxDev)}"></span>${(50-maxDev).toFixed(0)}</span>`+
+    `<span><span class="sw" style="background:${scale(50)}"></span>50</span>`+
+    `<span><span class="sw" style="background:${scale(50+maxDev)}"></span>${(50+maxDev).toFixed(0)}</span>`+
+    `<span style="color:var(--faint)">${targetLabel(target)}</span>`;
+  const natl = parliamentary.map(e=>({date:new Date(e.date), pct:nationalShare(S.resultsCache[e.id],target), label:e.label, id:e.id}))
+    .filter(d=>d.pct>0);
+  drawTrendChart(natl, eid);
+  drawTrendProv(S.sel.trend, target, parliamentary);
+}
+function drawTrendChart(series, eid){
+  const svg=d3.select("#t-chart"); svg.selectAll("*").remove();
+  const w=svg.node().clientWidth||600, h=160, m={l:32,r:10,t:14,b:22};
+  const x=d3.scaleTime().domain(d3.extent(series,d=>d.date)).range([m.l,w-m.r]);
+  const y=d3.scaleLinear().domain([0,d3.max(series,d=>d.pct)*1.2||60]).range([h-m.b,m.t]);
+  svg.attr("viewBox",`0 0 ${w} ${h}`);
+  svg.append("g").attr("transform",`translate(0,${h-m.b})`).call(d3.axisBottom(x).ticks(6).tickSizeOuter(0))
+    .selectAll("text").style("font-family","Inter").style("font-size","10px");
+  svg.append("g").attr("transform",`translate(${m.l},0)`).call(d3.axisLeft(y).ticks(4).tickFormat(v=>"%"+v))
+    .selectAll("text").style("font-family","Inter").style("font-size","10px");
+  svg.append("path").datum(series).attr("fill","none").attr("stroke","#111827").attr("stroke-width",1.5)
+    .attr("d",d3.line().x(d=>x(d.date)).y(d=>y(d.pct)));
+  svg.selectAll("circle").data(series).join("circle").attr("cx",d=>x(d.date)).attr("cy",d=>y(d.pct))
+    .attr("r",d=>d.id===eid?5:3).attr("fill",d=>d.id===eid?"#dc2626":"#111827").attr("stroke","#111827");
+}
+function drawTrendProv(name, target, parliamentary){
+  const body=document.getElementById("t-provbody");
+  const spark=d3.select("#t-spark"); spark.selectAll("*").remove();
+  if(!name){ body.innerHTML='<div class="hint">Haritadan bir il seçin.</div>'; return; }
+  const series=parliamentary.map(e=>{
+    const d=S.resultsCache[e.id]; const p=shareOf(d.provinces[name],target); const n=nationalShare(d,target);
+    return {date:new Date(e.date), val:(p!=null&&n>0)?(p/n)*50:null, label:e.label};
+  }).filter(d=>d.val!=null);
+  body.innerHTML=`<h3>${name}</h3><div class="hint">${targetLabel(target)} · endeks</div>`;
+  if(!series.length){ body.innerHTML+='<div class="hint">Veri yok.</div>'; return; }
+  const w=spark.node().clientWidth||300, h=110, m={l:32,r:6,t:10,b:18};
+  const x=d3.scaleTime().domain(d3.extent(series,d=>d.date)).range([m.l,w-m.r]);
+  const yMax=Math.max(100, d3.max(series,d=>d.val)*1.05);
+  const y=d3.scaleLinear().domain([0,yMax]).range([h-m.b,m.t]);
+  spark.attr("viewBox",`0 0 ${w} ${h}`);
+  spark.append("line").attr("x1",m.l).attr("x2",w-m.r).attr("y1",y(50)).attr("y2",y(50))
+    .attr("stroke","#9ca3af").attr("stroke-dasharray","2,3");
+  spark.append("g").attr("transform",`translate(0,${h-m.b})`).call(d3.axisBottom(x).ticks(5).tickSizeOuter(0))
+    .selectAll("text").style("font-family","Inter").style("font-size","9px");
+  spark.append("g").attr("transform",`translate(${m.l},0)`).call(d3.axisLeft(y).ticks(3))
+    .selectAll("text").style("font-family","Inter").style("font-size","9px");
+  spark.append("path").datum(series).attr("fill","none").attr("stroke","#111827").attr("stroke-width",1.2)
+    .attr("d",d3.line().x(d=>x(d.date)).y(d=>y(d.val)));
+  spark.selectAll("circle").data(series).join("circle").attr("cx",d=>x(d.date)).attr("cy",d=>y(d.val))
+    .attr("r",2.5).attr("fill","#111827");
+}
+
+// ---- TREND CHANGE ----
+function buildTrendChange(){
+  fillElectionSelect(document.getElementById("tc-from"));
+  fillElectionSelect(document.getElementById("tc-to"));
+  fillTargetSelect(document.getElementById("tc-tgtA"), "group:sag");
+  fillTargetSelect(document.getElementById("tc-tgtB"), "group:sag");
+  const genels = S.elections.filter(e=>e.type==="genel");
+  if(genels.length>=2){
+    document.getElementById("tc-to").value = genels[genels.length-1].id;
+    document.getElementById("tc-from").value = genels[genels.length-2].id;
+  }
+  ["tc-from","tc-to","tc-tgtA","tc-tgtB"].forEach(id=>{
+    document.getElementById(id).onchange = ()=>drawTrendChange();
+  });
+}
+async function drawTrendChange(){
+  const from = document.getElementById("tc-from").value;
+  const to   = document.getElementById("tc-to").value;
+  const tA   = document.getElementById("tc-tgtA").value;
+  const tB   = document.getElementById("tc-tgtB").value;
+  const [A,B] = await Promise.all([loadElection(from), loadElection(to)]);
+  const natA = nationalShare(A, tA), natB = nationalShare(B, tB);
+  const deltas = {};
+  for(const name of S.geo.features.map(f=>f.properties.name)){
+    const pA = shareOf(A.provinces[name], tA); const pB = shareOf(B.provinces[name], tB);
+    const iA = (pA!=null&&natA>0)? (pA/natA)*50 : null;
+    const iB = (pB!=null&&natB>0)? (pB/natB)*50 : null;
+    deltas[name] = (iA!=null && iB!=null) ? (iB-iA) : null;
+  }
+  const absMax = Math.max(1, ...Object.values(deltas).filter(v=>v!=null).map(v=>Math.abs(v)));
+  const scale = d3.scaleDiverging(d3.interpolateRdBu).domain([absMax,0,-absMax]);
+  drawMap("#tc-map","tc-tt",
+    name => deltas[name]==null ? "#e5e7eb" : scale(deltas[name]),
+    name => { S.sel.trendchange=name;
+      d3.select("#tc-map").selectAll("path.province").classed("sel",d=>d.properties.name===name);
+      drawTrendChangeProv(name,A,B,tA,tB,natA,natB);
+    },
+    (ev,f,ttId)=>{ const n=f.properties.name;
+      const pA = shareOf(A.provinces[n],tA); const pB = shareOf(B.provinces[n],tB);
+      const iA = (pA!=null&&natA>0)?(pA/natA)*50:null;
+      const iB = (pB!=null&&natB>0)?(pB/natB)*50:null;
+      const d = deltas[n];
+      document.getElementById(ttId).innerHTML=`<div class="tprov">${n}</div>
+        <div class="trow"><span>Baz endeks</span><span>${iA!=null?iA.toFixed(1):"—"}</span></div>
+        <div class="trow"><span>Hedef endeks</span><span>${iB!=null?iB.toFixed(1):"—"}</span></div>
+        <div class="trow" style="border-top:1px solid var(--rule);padding-top:4px;margin-top:4px"><b>Δ</b><span>${d!=null?(d>=0?"+":"")+d.toFixed(1):"—"}</span></div>`;
+      moveTooltip(ev,ttId,"#view-trendchange .mapwrap"); });
+  document.getElementById("tc-legend").innerHTML =
+    `<span><span class="sw" style="background:${scale(-absMax)}"></span>${(-absMax).toFixed(1)}</span>`+
+    `<span><span class="sw" style="background:${scale(0)}"></span>0</span>`+
+    `<span><span class="sw" style="background:${scale(absMax)}"></span>+${absMax.toFixed(1)}</span>`+
+    `<span style="color:var(--faint)">endeks değişimi · ${targetLabel(tA)} → ${targetLabel(tB)}</span>`;
+  const rows = Object.entries(deltas).filter(([,d])=>d!=null).map(([n,d])=>({name:n,delta:d})).sort((a,b)=>b.delta-a.delta);
+  const mean = d3.mean(rows,d=>d.delta)||0;
+  document.getElementById("tc-summary").innerHTML = `ortalama Δ endeks: ${mean>=0?"+":""}${mean.toFixed(1)} · ${rows.length} il`;
+  const tops=[...rows.slice(0,5), ...rows.slice(-5).reverse()];
+  document.getElementById("tc-top").innerHTML = tops.map(r=>`
+    <div class="totrow"><span class="chip" style="background:${scale(r.delta)}"></span>
+      <div class="label">${r.name}</div>
+      <div class="pct">${r.delta>=0?"+":""}${r.delta.toFixed(1)}</div></div>`).join("");
+  drawTrendChangeProv(S.sel.trendchange,A,B,tA,tB,natA,natB);
+}
+function drawTrendChangeProv(name,A,B,tA,tB,natA,natB){
+  const body=document.getElementById("tc-provbody");
+  if(!name){ body.innerHTML='<div class="hint">Haritadan bir il seçin.</div>'; return; }
+  const pA=shareOf(A.provinces[name],tA); const pB=shareOf(B.provinces[name],tB);
+  const iA=(pA!=null&&natA>0)?(pA/natA)*50:null; const iB=(pB!=null&&natB>0)?(pB/natB)*50:null;
+  body.innerHTML=`<h3>${name}</h3><div class="hint">${A.label} → ${B.label}</div>
+    <div class="partylist">
+      <div class="partyrow"><span></span><span class="pn">${targetLabel(tA)} (il)</span>
+        <span class="pp">${pA!=null?"%"+pA.toFixed(1):"—"}</span><span class="pv">endeks ${iA!=null?iA.toFixed(1):"—"}</span></div>
+      <div class="partyrow"><span></span><span class="pn">${targetLabel(tB)} (il)</span>
+        <span class="pp">${pB!=null?"%"+pB.toFixed(1):"—"}</span><span class="pv">endeks ${iB!=null?iB.toFixed(1):"—"}</span></div>
+      <div class="partyrow"><span></span><span class="pn">Δ endeks</span>
+        <span class="pp">${(iA!=null&&iB!=null)?((iB-iA)>=0?"+":"")+(iB-iA).toFixed(1):"—"}</span><span></span></div>
+    </div>`;
+}
+
+// ---- GROUP MANAGER ----
+function openGroups(){ renderGroupList(); renderColorList(); document.getElementById("gmodal").classList.add("open"); }
+function showGTab(t){
+  const groups = t==="groups";
+  document.getElementById("tab-groups").className = groups?"primary":"";
+  document.getElementById("tab-colors").className = groups?"":"primary";
+  document.getElementById("tab-groups").style.cssText = groups
+    ? "padding:6px 12px;font-weight:800;cursor:pointer;border:1px solid var(--ink);box-shadow:2px 2px 0 0 var(--ink);background:var(--ink);color:#fff"
+    : "padding:6px 12px;cursor:pointer;border:1px solid var(--ink);background:#fff;box-shadow:2px 2px 0 0 var(--ink)";
+  document.getElementById("tab-colors").style.cssText = !groups
+    ? "padding:6px 12px;font-weight:800;cursor:pointer;border:1px solid var(--ink);box-shadow:2px 2px 0 0 var(--ink);background:var(--ink);color:#fff"
+    : "padding:6px 12px;cursor:pointer;border:1px solid var(--ink);background:#fff;box-shadow:2px 2px 0 0 var(--ink)";
+  document.getElementById("tab-groups-body").style.display = groups?"":"none";
+  document.getElementById("tab-colors-body").style.display = groups?"none":"";
+}
+function renderColorList(){
+  const parties = Object.keys(S.partyMeta).sort();
+  document.getElementById("pclist").innerHTML = parties.map(p=>`
+    <label style="display:flex;align-items:center;gap:6px;font-size:12px;font-weight:700;padding:4px;border:1px solid var(--rule)">
+      <input type="color" value="${colorOf(p)}" onchange="setPartyColor('${p}', this.value)" style="width:30px;height:24px;padding:0;border:1px solid var(--ink);cursor:pointer">
+      <span>${p}</span>
+      <span style="color:var(--muted);font-weight:500;font-size:10px">${nameOf(p)}</span>
+    </label>`).join("");
+}
+function setPartyColor(code, color){
+  S.partyColors[code] = color; savePartyColors();
+}
+function resetPartyColors(){
+  if(!confirm("Tüm parti renklerini varsayılana döndürmek istiyor musun?")) return;
+  S.partyColors = {}; savePartyColors(); renderColorList();
+}
+function closeGroups(){ document.getElementById("gmodal").classList.remove("open"); document.getElementById("geditor").innerHTML=""; refreshAllTargetSelects(); redrawCurrentView(); }
+function renderGroupList(){
+  const list = document.getElementById("glist");
+  list.innerHTML = Object.entries(S.groups).map(([gid,g])=>`
+    <div class="grow">
+      <div class="gname"><span class="chip" style="background:${g.color}"></span>${g.name}</div>
+      <div class="gmembers">${g.parties.map(p=>`<span style="display:inline-block;padding:1px 6px;margin:1px;background:#f3f4f6;border:1px solid var(--rule)">${p}</span>`).join(" ")}</div>
+      <div class="gact"><button onclick="editGroup('${gid}')">Düzenle</button><button onclick="deleteGroup('${gid}')">Sil</button></div>
+    </div>`).join("");
+}
+function newGroup(){ editGroup(null); }
+function editGroup(gid){
+  const g = gid ? S.groups[gid] : {name:"", color:"#4f46e5", parties:[]};
+  const editor = document.getElementById("geditor");
+  const allParties = Object.keys(S.partyMeta).sort();
+  editor.innerHTML = `<div class="ged">
+    <div class="r">
+      <label>İsim</label><input type="text" id="ged-name" value="${g.name}">
+      <label>Renk</label><input type="color" id="ged-color" value="${g.color}">
+    </div>
+    <div class="r"><label>Partiler</label></div>
+    <div class="partygrid" id="ged-parties">
+      ${allParties.map(p=>`<label><input type="checkbox" value="${p}" ${g.parties.includes(p)?"checked":""}> <span class="chip" style="background:${colorOf(p)}"></span>${p}</label>`).join("")}
+    </div>
+    <div class="r" style="margin-top:10px">
+      <button class="primary" style="padding:6px 14px;font-weight:800;cursor:pointer;border:1px solid var(--ink);box-shadow:2px 2px 0 0 var(--ink)" onclick="saveGroup('${gid||""}')">Kaydet</button>
+      <button style="padding:6px 14px;cursor:pointer;border:1px solid var(--ink);background:#fff;box-shadow:2px 2px 0 0 var(--ink)" onclick="document.getElementById('geditor').innerHTML=''">İptal</button>
+    </div>
+  </div>`;
+}
+function saveGroup(gid){
+  const name = document.getElementById("ged-name").value.trim();
+  if(!name){ alert("İsim boş olamaz"); return; }
+  const color = document.getElementById("ged-color").value;
+  const parties = [...document.querySelectorAll("#ged-parties input:checked")].map(x=>x.value);
+  if(!gid) gid = "g_" + Date.now();
+  S.groups[gid] = {name, color, parties};
+  saveGroups(); renderGroupList();
+  document.getElementById("geditor").innerHTML = "";
+}
+function deleteGroup(gid){
+  if(!confirm(`"${S.groups[gid].name}" grubunu silmek istediğinden emin misin?`)) return;
+  delete S.groups[gid]; saveGroups(); renderGroupList();
+}
+function refreshAllTargetSelects(){
+  const pairs = [["s-tgtA","s-tgtA"],["s-tgtB","s-tgtB"],["t-target","t-target"],["tc-tgtA","tc-tgtA"],["tc-tgtB","tc-tgtB"]];
+  for(const [id] of pairs){
+    const sel = document.getElementById(id); const prev = sel.value;
+    fillTargetSelect(sel, prev);
+    // if prev was a deleted group, default back to a party
+    if(sel.value !== prev){ sel.value = "party:CHP"; }
+  }
+}
+function redrawCurrentView(){
+  if(S.view==="swing") drawSwing();
+  else if(S.view==="trend") drawTrend();
+  else if(S.view==="trendchange") drawTrendChange();
+}
+
+load();
+</script>
+</body>
+</html>
