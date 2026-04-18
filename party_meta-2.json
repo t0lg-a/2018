@@ -1,0 +1,322 @@
+{
+  "DP": {
+    "name": "Demokrat Parti",
+    "family": "center-right",
+    "color": "#d68a3e"
+  },
+  "AP": {
+    "name": "Adalet Partisi",
+    "family": "center-right",
+    "color": "#c46b1f"
+  },
+  "DYP": {
+    "name": "Doğru Yol Partisi",
+    "family": "center-right",
+    "color": "#9b4d0a"
+  },
+  "ANAP": {
+    "name": "Anavatan Partisi",
+    "family": "center-right",
+    "color": "#f2a73b"
+  },
+  "AKP": {
+    "name": "Adalet ve Kalkınma Partisi",
+    "family": "center-right",
+    "color": "#e6890f"
+  },
+  "CHP": {
+    "name": "Cumhuriyet Halk Partisi",
+    "family": "center-left",
+    "color": "#d02129"
+  },
+  "SHP": {
+    "name": "Sosyaldemokrat Halkçı P.",
+    "family": "center-left",
+    "color": "#b44a4f"
+  },
+  "DSP": {
+    "name": "Demokratik Sol Parti",
+    "family": "center-left",
+    "color": "#b8232b"
+  },
+  "HP": {
+    "name": "Halkçı Parti",
+    "family": "center-left",
+    "color": "#a23438"
+  },
+  "SODEP": {
+    "name": "Sosyal Demokrasi P.",
+    "family": "center-left",
+    "color": "#bd2e34"
+  },
+  "CGP": {
+    "name": "Cumhuriyetçi Güven P.",
+    "family": "center-left",
+    "color": "#a8343a"
+  },
+  "CMP": {
+    "name": "Cumhuriyetçi Millet P.",
+    "family": "center-left",
+    "color": "#8a4a4e"
+  },
+  "CKMP": {
+    "name": "Cumh. Köylü Millet P.",
+    "family": "nationalist",
+    "color": "#8b5a2b"
+  },
+  "MHP": {
+    "name": "Milliyetçi Hareket P.",
+    "family": "nationalist",
+    "color": "#b8442e"
+  },
+  "MCP": {
+    "name": "Milliyetçi Çalışma P.",
+    "family": "nationalist",
+    "color": "#a03f2a"
+  },
+  "BBP": {
+    "name": "Büyük Birlik Partisi",
+    "family": "nationalist",
+    "color": "#702d20"
+  },
+  "IP": {
+    "name": "İYİ Parti",
+    "family": "nationalist",
+    "color": "#3b82bf"
+  },
+  "MNP": {
+    "name": "Milli Nizam Partisi",
+    "family": "islamist",
+    "color": "#1f6b3a"
+  },
+  "MSP": {
+    "name": "Milli Selamet Partisi",
+    "family": "islamist",
+    "color": "#2a7f44"
+  },
+  "RP": {
+    "name": "Refah Partisi",
+    "family": "islamist",
+    "color": "#2f8a48"
+  },
+  "FP": {
+    "name": "Fazilet Partisi",
+    "family": "islamist",
+    "color": "#347a46"
+  },
+  "SP": {
+    "name": "Saadet Partisi",
+    "family": "islamist",
+    "color": "#2b6b3e"
+  },
+  "HEP": {
+    "name": "Halkın Emek P.",
+    "family": "kurdish",
+    "color": "#6a2a7a"
+  },
+  "DEP": {
+    "name": "Demokrasi Partisi",
+    "family": "kurdish",
+    "color": "#6e2c7e"
+  },
+  "HADEP": {
+    "name": "Halkın Demokrasi P.",
+    "family": "kurdish",
+    "color": "#732f83"
+  },
+  "DEHAP": {
+    "name": "Demokratik Halk P.",
+    "family": "kurdish",
+    "color": "#783388"
+  },
+  "DTP": {
+    "name": "Demokratik Toplum P.",
+    "family": "kurdish",
+    "color": "#7d378d"
+  },
+  "BDP": {
+    "name": "Barış ve Demokrasi P.",
+    "family": "kurdish",
+    "color": "#823b92"
+  },
+  "HDP": {
+    "name": "Halkların Demokratik P.",
+    "family": "kurdish",
+    "color": "#8e44ad"
+  },
+  "HDK": {
+    "name": "Halkların Dem. Kongresi",
+    "family": "kurdish",
+    "color": "#8440a5"
+  },
+  "DBP": {
+    "name": "Demokratik Bölgeler P.",
+    "family": "kurdish",
+    "color": "#79378e"
+  },
+  "DEM": {
+    "name": "DEM Parti",
+    "family": "kurdish",
+    "color": "#8e44ad"
+  },
+  "TIP": {
+    "name": "Türkiye İşçi Partisi",
+    "family": "socialist",
+    "color": "#b91c4c"
+  },
+  "TBP": {
+    "name": "Türkiye Birlik Partisi",
+    "family": "socialist",
+    "color": "#a31a46"
+  },
+  "TKP": {
+    "name": "Türkiye Komünist P.",
+    "family": "socialist",
+    "color": "#8c1638"
+  },
+  "ODP": {
+    "name": "Özgürlük ve Dayanışma P.",
+    "family": "socialist",
+    "color": "#a01a42"
+  },
+  "EMEP": {
+    "name": "Emek Partisi",
+    "family": "socialist",
+    "color": "#8b1838"
+  },
+  "YTP": {
+    "name": "Yeni Türkiye Partisi",
+    "family": "other-right",
+    "color": "#6a7a8a"
+  },
+  "GP": {
+    "name": "Genç Parti",
+    "family": "other-right",
+    "color": "#7a8594"
+  },
+  "LDP": {
+    "name": "Liberal Demokrat P.",
+    "family": "other-right",
+    "color": "#8090a0"
+  },
+  "DEVA": {
+    "name": "Demokrasi ve Atılım P.",
+    "family": "other-right",
+    "color": "#5c7a9a"
+  },
+  "GELECEK": {
+    "name": "Gelecek Partisi",
+    "family": "other-right",
+    "color": "#6380a0"
+  },
+  "MEMLEKET": {
+    "name": "Memleket Partisi",
+    "family": "center-left",
+    "color": "#c04050"
+  },
+  "MP": {
+    "name": "Millet Partisi",
+    "family": "other-right",
+    "color": "#9c8a5c"
+  },
+  "MDP": {
+    "name": "Milliyetçi Demokrasi P.",
+    "family": "other-right",
+    "color": "#8a7a50"
+  },
+  "DTP83": {
+    "name": "Doğru Tutum P. (1983)",
+    "family": "other-right",
+    "color": "#787058"
+  },
+  "BGS": {
+    "name": "Bağımsız",
+    "family": "independent",
+    "color": "#888888"
+  },
+  "OTHER": {
+    "name": "Diğer",
+    "family": "other",
+    "color": "#aaaaaa"
+  },
+  "EVET": {
+    "name": "Evet",
+    "family": "referendum-yes",
+    "color": "#4a7c4e"
+  },
+  "HAYIR": {
+    "name": "Hayır",
+    "family": "referendum-no",
+    "color": "#b03a3a"
+  },
+  "YRP": {
+    "name": "Yeniden Refah Partisi",
+    "family": "islamist",
+    "color": "#2a7f44"
+  },
+  "ZP": {
+    "name": "Zafer Partisi",
+    "family": "nationalist",
+    "color": "#6a2d1a"
+  },
+  "HUDAPAR": {
+    "name": "HÜDA PAR",
+    "family": "islamist",
+    "color": "#1f5e3a"
+  },
+  "BTP": {
+    "name": "Bağımsız Türkiye Partisi",
+    "family": "other-right",
+    "color": "#a88a3a"
+  },
+  "SOL": {
+    "name": "Sol Parti",
+    "family": "socialist",
+    "color": "#8a1a42"
+  },
+  "VATAN": {
+    "name": "Vatan Partisi",
+    "family": "socialist",
+    "color": "#7a2030"
+  },
+  "TKH": {
+    "name": "Türkiye Komünist Hareketi",
+    "family": "socialist",
+    "color": "#6e1632"
+  },
+  "MILLIYOL": {
+    "name": "Milli Yol Partisi",
+    "family": "nationalist",
+    "color": "#8c5a30"
+  },
+  "HAKPAR": {
+    "name": "Hak ve Özgürlükler Partisi",
+    "family": "kurdish",
+    "color": "#7a3593"
+  },
+  "ABP": {
+    "name": "Anadolu Birliği Partisi",
+    "family": "other",
+    "color": "#8a8a8a"
+  },
+  "OCAK": {
+    "name": "Ocak Partisi",
+    "family": "other",
+    "color": "#8a8a8a"
+  },
+  "ABPARTI": {
+    "name": "Adalet Birlik Partisi",
+    "family": "other",
+    "color": "#8a8a8a"
+  },
+  "HKP": {
+    "name": "Halkın Kurtuluş Partisi",
+    "family": "socialist",
+    "color": "#6e1632"
+  },
+  "ADP": {
+    "name": "Aydınlık Demokrasi Partisi",
+    "family": "other",
+    "color": "#8a8a8a"
+  }
+}
