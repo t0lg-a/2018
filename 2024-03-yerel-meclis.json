@@ -1,0 +1,7088 @@
+{
+  "id": "2024-03-yerel-meclis",
+  "label": "31 Mart 2024 Yerel Meclis Seçimi (İGM / BŞ İlçe BM)",
+  "provinces": {
+    "Adana": {
+      "CHP": {
+        "votes": 478561,
+        "pct": 41.29
+      },
+      "AKP": {
+        "votes": 230106,
+        "pct": 19.85
+      },
+      "MHP": {
+        "votes": 150121,
+        "pct": 12.95
+      },
+      "IYI": {
+        "votes": 78752,
+        "pct": 6.79
+      },
+      "DEM": {
+        "votes": 76858,
+        "pct": 6.63
+      },
+      "YRP": {
+        "votes": 37035,
+        "pct": 3.19
+      },
+      "ZAFER": {
+        "votes": 26368,
+        "pct": 2.27
+      },
+      "BBP": {
+        "votes": 23823,
+        "pct": 2.06
+      },
+      "SP": {
+        "votes": 10553,
+        "pct": 0.91
+      },
+      "HUDAPAR": {
+        "votes": 9895,
+        "pct": 0.85
+      },
+      "DEVA": {
+        "votes": 5804,
+        "pct": 0.5
+      },
+      "TIP": {
+        "votes": 4682,
+        "pct": 0.4
+      },
+      "BTP": {
+        "votes": 4191,
+        "pct": 0.36
+      },
+      "MEMLEKET": {
+        "votes": 2196,
+        "pct": 0.19
+      },
+      "TKP": {
+        "votes": 2184,
+        "pct": 0.19
+      },
+      "EMEP": {
+        "votes": 2147,
+        "pct": 0.19
+      },
+      "DP": {
+        "votes": 1990,
+        "pct": 0.17
+      },
+      "DSP": {
+        "votes": 1811,
+        "pct": 0.16
+      },
+      "BAGIMSIZ": {
+        "votes": 4905,
+        "pct": 0.42
+      },
+      "SOL": {
+        "votes": 1545,
+        "pct": 0.13
+      },
+      "VATAN": {
+        "votes": 1489,
+        "pct": 0.13
+      },
+      "ANAP": {
+        "votes": 1337,
+        "pct": 0.12
+      },
+      "GELECEK": {
+        "votes": 1242,
+        "pct": 0.11
+      },
+      "TKH": {
+        "votes": 668,
+        "pct": 0.06
+      },
+      "OCAK": {
+        "votes": 613,
+        "pct": 0.05
+      },
+      "ABPARTI": {
+        "votes": 263,
+        "pct": 0.02
+      },
+      "MILLIYOL": {
+        "votes": 21,
+        "pct": 0.0
+      }
+    },
+    "Adıyaman": {
+      "AKP": {
+        "votes": 103371,
+        "pct": 35.01
+      },
+      "CHP": {
+        "votes": 77362,
+        "pct": 26.2
+      },
+      "YRP": {
+        "votes": 38946,
+        "pct": 13.19
+      },
+      "DEM": {
+        "votes": 17618,
+        "pct": 5.97
+      },
+      "MHP": {
+        "votes": 14474,
+        "pct": 4.9
+      },
+      "HUDAPAR": {
+        "votes": 13290,
+        "pct": 4.5
+      },
+      "SP": {
+        "votes": 11814,
+        "pct": 4.0
+      },
+      "IYI": {
+        "votes": 4465,
+        "pct": 1.51
+      },
+      "BBP": {
+        "votes": 4314,
+        "pct": 1.46
+      },
+      "DEVA": {
+        "votes": 3019,
+        "pct": 1.02
+      },
+      "GELECEK": {
+        "votes": 1315,
+        "pct": 0.45
+      },
+      "BTP": {
+        "votes": 1102,
+        "pct": 0.37
+      },
+      "TIP": {
+        "votes": 900,
+        "pct": 0.3
+      },
+      "MILLET": {
+        "votes": 870,
+        "pct": 0.29
+      },
+      "SOL": {
+        "votes": 483,
+        "pct": 0.16
+      },
+      "MEMLEKET": {
+        "votes": 440,
+        "pct": 0.15
+      },
+      "ZAFER": {
+        "votes": 410,
+        "pct": 0.14
+      },
+      "VATAN": {
+        "votes": 390,
+        "pct": 0.13
+      },
+      "TKP": {
+        "votes": 277,
+        "pct": 0.09
+      },
+      "ABPARTI": {
+        "votes": 196,
+        "pct": 0.07
+      },
+      "BAGIMSIZ": {
+        "votes": 206,
+        "pct": 0.07
+      }
+    },
+    "Afyonkarahisar": {
+      "AKP": {
+        "votes": 154124,
+        "pct": 34.99
+      },
+      "CHP": {
+        "votes": 111273,
+        "pct": 25.26
+      },
+      "MHP": {
+        "votes": 97936,
+        "pct": 22.23
+      },
+      "IYI": {
+        "votes": 29554,
+        "pct": 6.71
+      },
+      "YRP": {
+        "votes": 23404,
+        "pct": 5.31
+      },
+      "DP": {
+        "votes": 4852,
+        "pct": 1.1
+      },
+      "BBP": {
+        "votes": 4804,
+        "pct": 1.09
+      },
+      "ZAFER": {
+        "votes": 4706,
+        "pct": 1.07
+      },
+      "SP": {
+        "votes": 4236,
+        "pct": 0.96
+      },
+      "MILLET": {
+        "votes": 1417,
+        "pct": 0.32
+      },
+      "BTP": {
+        "votes": 1095,
+        "pct": 0.25
+      },
+      "TIP": {
+        "votes": 876,
+        "pct": 0.2
+      },
+      "DEVA": {
+        "votes": 468,
+        "pct": 0.11
+      },
+      "DEM": {
+        "votes": 455,
+        "pct": 0.1
+      },
+      "HUDAPAR": {
+        "votes": 394,
+        "pct": 0.09
+      },
+      "VATAN": {
+        "votes": 344,
+        "pct": 0.08
+      },
+      "SOL": {
+        "votes": 332,
+        "pct": 0.08
+      },
+      "BAGIMSIZ": {
+        "votes": 166,
+        "pct": 0.04
+      },
+      "MEMLEKET": {
+        "votes": 44,
+        "pct": 0.01
+      }
+    },
+    "Ağrı": {
+      "DEM": {
+        "votes": 92095,
+        "pct": 46.19
+      },
+      "AKP": {
+        "votes": 52325,
+        "pct": 26.25
+      },
+      "YRP": {
+        "votes": 16885,
+        "pct": 8.47
+      },
+      "CHP": {
+        "votes": 12161,
+        "pct": 6.1
+      },
+      "MHP": {
+        "votes": 4602,
+        "pct": 2.31
+      },
+      "HUDAPAR": {
+        "votes": 3875,
+        "pct": 1.94
+      },
+      "IYI": {
+        "votes": 3777,
+        "pct": 1.89
+      },
+      "DEVA": {
+        "votes": 3755,
+        "pct": 1.88
+      },
+      "SP": {
+        "votes": 2765,
+        "pct": 1.39
+      },
+      "BTP": {
+        "votes": 1474,
+        "pct": 0.74
+      },
+      "DP": {
+        "votes": 1468,
+        "pct": 0.74
+      },
+      "BBP": {
+        "votes": 1373,
+        "pct": 0.69
+      },
+      "ZAFER": {
+        "votes": 1041,
+        "pct": 0.52
+      },
+      "GELECEK": {
+        "votes": 834,
+        "pct": 0.42
+      },
+      "SOL": {
+        "votes": 292,
+        "pct": 0.15
+      },
+      "TKH": {
+        "votes": 270,
+        "pct": 0.14
+      },
+      "BAGIMSIZ": {
+        "votes": 262,
+        "pct": 0.13
+      },
+      "MILLET": {
+        "votes": 114,
+        "pct": 0.06
+      }
+    },
+    "Aksaray": {
+      "AKP": {
+        "votes": 80936,
+        "pct": 36.65
+      },
+      "MHP": {
+        "votes": 63070,
+        "pct": 28.56
+      },
+      "IYI": {
+        "votes": 30727,
+        "pct": 13.92
+      },
+      "CHP": {
+        "votes": 19901,
+        "pct": 9.01
+      },
+      "YRP": {
+        "votes": 8091,
+        "pct": 3.66
+      },
+      "BBP": {
+        "votes": 4438,
+        "pct": 2.01
+      },
+      "BAGIMSIZ": {
+        "votes": 4107,
+        "pct": 1.86
+      },
+      "ZAFER": {
+        "votes": 2094,
+        "pct": 0.95
+      },
+      "SP": {
+        "votes": 1675,
+        "pct": 0.76
+      },
+      "BTP": {
+        "votes": 1060,
+        "pct": 0.48
+      },
+      "DEVA": {
+        "votes": 1038,
+        "pct": 0.47
+      },
+      "SOL": {
+        "votes": 978,
+        "pct": 0.44
+      },
+      "HUDAPAR": {
+        "votes": 807,
+        "pct": 0.37
+      },
+      "DEM": {
+        "votes": 554,
+        "pct": 0.25
+      },
+      "TIP": {
+        "votes": 443,
+        "pct": 0.2
+      },
+      "MILLET": {
+        "votes": 277,
+        "pct": 0.13
+      },
+      "MILLIYOL": {
+        "votes": 266,
+        "pct": 0.12
+      },
+      "DSP": {
+        "votes": 181,
+        "pct": 0.08
+      },
+      "VATAN": {
+        "votes": 161,
+        "pct": 0.07
+      },
+      "DP": {
+        "votes": 15,
+        "pct": 0.01
+      }
+    },
+    "Amasya": {
+      "CHP": {
+        "votes": 74588,
+        "pct": 35.13
+      },
+      "AKP": {
+        "votes": 73211,
+        "pct": 34.48
+      },
+      "MHP": {
+        "votes": 42365,
+        "pct": 19.95
+      },
+      "YRP": {
+        "votes": 7578,
+        "pct": 3.57
+      },
+      "IYI": {
+        "votes": 6993,
+        "pct": 3.29
+      },
+      "SP": {
+        "votes": 1508,
+        "pct": 0.71
+      },
+      "ZAFER": {
+        "votes": 1243,
+        "pct": 0.59
+      },
+      "BBP": {
+        "votes": 833,
+        "pct": 0.39
+      },
+      "BTP": {
+        "votes": 749,
+        "pct": 0.35
+      },
+      "EMEP": {
+        "votes": 526,
+        "pct": 0.25
+      },
+      "SOL": {
+        "votes": 501,
+        "pct": 0.24
+      },
+      "TIP": {
+        "votes": 431,
+        "pct": 0.2
+      },
+      "MILLIYOL": {
+        "votes": 343,
+        "pct": 0.16
+      },
+      "GELECEK": {
+        "votes": 320,
+        "pct": 0.15
+      },
+      "MILLET": {
+        "votes": 272,
+        "pct": 0.13
+      },
+      "DEVA": {
+        "votes": 211,
+        "pct": 0.1
+      },
+      "DP": {
+        "votes": 192,
+        "pct": 0.09
+      },
+      "VATAN": {
+        "votes": 158,
+        "pct": 0.07
+      },
+      "HUDAPAR": {
+        "votes": 143,
+        "pct": 0.07
+      },
+      "DEM": {
+        "votes": 98,
+        "pct": 0.05
+      },
+      "DSP": {
+        "votes": 83,
+        "pct": 0.04
+      }
+    },
+    "Ankara": {
+      "CHP": {
+        "votes": 1620164,
+        "pct": 49.37
+      },
+      "AKP": {
+        "votes": 922554,
+        "pct": 28.11
+      },
+      "YRP": {
+        "votes": 157687,
+        "pct": 4.81
+      },
+      "MHP": {
+        "votes": 155213,
+        "pct": 4.73
+      },
+      "ZAFER": {
+        "votes": 124158,
+        "pct": 3.78
+      },
+      "IYI": {
+        "votes": 94964,
+        "pct": 2.89
+      },
+      "BBP": {
+        "votes": 43278,
+        "pct": 1.32
+      },
+      "DEM": {
+        "votes": 32089,
+        "pct": 0.98
+      },
+      "TIP": {
+        "votes": 26167,
+        "pct": 0.8
+      },
+      "SP": {
+        "votes": 24971,
+        "pct": 0.76
+      },
+      "DEVA": {
+        "votes": 13246,
+        "pct": 0.4
+      },
+      "BTP": {
+        "votes": 10410,
+        "pct": 0.32
+      },
+      "MEMLEKET": {
+        "votes": 8659,
+        "pct": 0.26
+      },
+      "TKP": {
+        "votes": 7150,
+        "pct": 0.22
+      },
+      "EMEP": {
+        "votes": 3972,
+        "pct": 0.12
+      },
+      "ANAP": {
+        "votes": 3895,
+        "pct": 0.12
+      },
+      "HUDAPAR": {
+        "votes": 3817,
+        "pct": 0.12
+      },
+      "YTP": {
+        "votes": 3483,
+        "pct": 0.11
+      },
+      "SOL": {
+        "votes": 3405,
+        "pct": 0.1
+      },
+      "VATAN": {
+        "votes": 3390,
+        "pct": 0.1
+      },
+      "MILLET": {
+        "votes": 3282,
+        "pct": 0.1
+      },
+      "BAGIMSIZ": {
+        "votes": 5549,
+        "pct": 0.17
+      },
+      "DP": {
+        "votes": 2675,
+        "pct": 0.08
+      },
+      "DSP": {
+        "votes": 2300,
+        "pct": 0.07
+      },
+      "TKH": {
+        "votes": 1899,
+        "pct": 0.06
+      },
+      "HKP": {
+        "votes": 1043,
+        "pct": 0.03
+      },
+      "MILLIYOL": {
+        "votes": 960,
+        "pct": 0.03
+      },
+      "GELECEK": {
+        "votes": 490,
+        "pct": 0.01
+      },
+      "AP": {
+        "votes": 346,
+        "pct": 0.01
+      },
+      "ABP": {
+        "votes": 197,
+        "pct": 0.01
+      },
+      "ADP": {
+        "votes": 42,
+        "pct": 0.0
+      },
+      "OCAK": {
+        "votes": 30,
+        "pct": 0.0
+      }
+    },
+    "Antalya": {
+      "CHP": {
+        "votes": 667460,
+        "pct": 46.38
+      },
+      "AKP": {
+        "votes": 394071,
+        "pct": 27.39
+      },
+      "IYI": {
+        "votes": 89105,
+        "pct": 6.19
+      },
+      "MHP": {
+        "votes": 85688,
+        "pct": 5.95
+      },
+      "DEM": {
+        "votes": 41388,
+        "pct": 2.88
+      },
+      "ZAFER": {
+        "votes": 35587,
+        "pct": 2.47
+      },
+      "YRP": {
+        "votes": 23922,
+        "pct": 1.66
+      },
+      "DP": {
+        "votes": 21788,
+        "pct": 1.51
+      },
+      "BBP": {
+        "votes": 12588,
+        "pct": 0.87
+      },
+      "TIP": {
+        "votes": 10131,
+        "pct": 0.7
+      },
+      "SP": {
+        "votes": 9562,
+        "pct": 0.66
+      },
+      "BTP": {
+        "votes": 6311,
+        "pct": 0.44
+      },
+      "DEVA": {
+        "votes": 4185,
+        "pct": 0.29
+      },
+      "BAGIMSIZ": {
+        "votes": 15305,
+        "pct": 1.06
+      },
+      "MEMLEKET": {
+        "votes": 3496,
+        "pct": 0.24
+      },
+      "HUDAPAR": {
+        "votes": 3060,
+        "pct": 0.21
+      },
+      "TKP": {
+        "votes": 2975,
+        "pct": 0.21
+      },
+      "DSP": {
+        "votes": 2290,
+        "pct": 0.16
+      },
+      "VATAN": {
+        "votes": 1668,
+        "pct": 0.12
+      },
+      "SOL": {
+        "votes": 1508,
+        "pct": 0.1
+      },
+      "ANAP": {
+        "votes": 1391,
+        "pct": 0.1
+      },
+      "AP": {
+        "votes": 1021,
+        "pct": 0.07
+      },
+      "GELECEK": {
+        "votes": 867,
+        "pct": 0.06
+      },
+      "EMEP": {
+        "votes": 764,
+        "pct": 0.05
+      },
+      "MILLIYOL": {
+        "votes": 724,
+        "pct": 0.05
+      },
+      "MILLET": {
+        "votes": 708,
+        "pct": 0.05
+      },
+      "TKH": {
+        "votes": 707,
+        "pct": 0.05
+      },
+      "YTP": {
+        "votes": 434,
+        "pct": 0.03
+      },
+      "ABPARTI": {
+        "votes": 186,
+        "pct": 0.01
+      },
+      "OCAK": {
+        "votes": 72,
+        "pct": 0.01
+      }
+    },
+    "Ardahan": {
+      "AKP": {
+        "votes": 13863,
+        "pct": 28.27
+      },
+      "CHP": {
+        "votes": 13748,
+        "pct": 28.04
+      },
+      "MHP": {
+        "votes": 6059,
+        "pct": 12.36
+      },
+      "DEM": {
+        "votes": 5831,
+        "pct": 11.89
+      },
+      "YRP": {
+        "votes": 2726,
+        "pct": 5.56
+      },
+      "DEVA": {
+        "votes": 1421,
+        "pct": 2.9
+      },
+      "IYI": {
+        "votes": 1327,
+        "pct": 2.71
+      },
+      "BAGIMSIZ": {
+        "votes": 2018,
+        "pct": 4.12
+      },
+      "SOL": {
+        "votes": 498,
+        "pct": 1.02
+      },
+      "TIP": {
+        "votes": 352,
+        "pct": 0.72
+      },
+      "SP": {
+        "votes": 320,
+        "pct": 0.65
+      },
+      "BTP": {
+        "votes": 268,
+        "pct": 0.55
+      },
+      "HUDAPAR": {
+        "votes": 176,
+        "pct": 0.36
+      },
+      "VATAN": {
+        "votes": 172,
+        "pct": 0.35
+      },
+      "BBP": {
+        "votes": 125,
+        "pct": 0.25
+      },
+      "DSP": {
+        "votes": 73,
+        "pct": 0.15
+      },
+      "MILLET": {
+        "votes": 56,
+        "pct": 0.11
+      }
+    },
+    "Artvin": {
+      "CHP": {
+        "votes": 40093,
+        "pct": 37.72
+      },
+      "AKP": {
+        "votes": 38704,
+        "pct": 36.41
+      },
+      "MHP": {
+        "votes": 12546,
+        "pct": 11.8
+      },
+      "IYI": {
+        "votes": 4557,
+        "pct": 4.29
+      },
+      "YRP": {
+        "votes": 4317,
+        "pct": 4.06
+      },
+      "SOL": {
+        "votes": 1807,
+        "pct": 1.7
+      },
+      "TIP": {
+        "votes": 960,
+        "pct": 0.9
+      },
+      "SP": {
+        "votes": 938,
+        "pct": 0.88
+      },
+      "BBP": {
+        "votes": 790,
+        "pct": 0.74
+      },
+      "BTP": {
+        "votes": 505,
+        "pct": 0.48
+      },
+      "DP": {
+        "votes": 466,
+        "pct": 0.44
+      },
+      "HUDAPAR": {
+        "votes": 151,
+        "pct": 0.14
+      },
+      "ZAFER": {
+        "votes": 104,
+        "pct": 0.1
+      },
+      "DEM": {
+        "votes": 101,
+        "pct": 0.1
+      },
+      "VATAN": {
+        "votes": 81,
+        "pct": 0.08
+      },
+      "MILLET": {
+        "votes": 64,
+        "pct": 0.06
+      },
+      "MEMLEKET": {
+        "votes": 63,
+        "pct": 0.06
+      },
+      "DEVA": {
+        "votes": 51,
+        "pct": 0.05
+      }
+    },
+    "Aydın": {
+      "CHP": {
+        "votes": 313392,
+        "pct": 46.7
+      },
+      "AKP": {
+        "votes": 130424,
+        "pct": 19.44
+      },
+      "MHP": {
+        "votes": 94919,
+        "pct": 14.15
+      },
+      "IYI": {
+        "votes": 57142,
+        "pct": 8.52
+      },
+      "DEM": {
+        "votes": 22954,
+        "pct": 3.42
+      },
+      "ZAFER": {
+        "votes": 12133,
+        "pct": 1.81
+      },
+      "YRP": {
+        "votes": 7409,
+        "pct": 1.1
+      },
+      "DP": {
+        "votes": 5543,
+        "pct": 0.83
+      },
+      "MEMLEKET": {
+        "votes": 5357,
+        "pct": 0.8
+      },
+      "TIP": {
+        "votes": 4526,
+        "pct": 0.67
+      },
+      "SP": {
+        "votes": 3091,
+        "pct": 0.46
+      },
+      "BTP": {
+        "votes": 2440,
+        "pct": 0.36
+      },
+      "TKP": {
+        "votes": 1908,
+        "pct": 0.28
+      },
+      "HUDAPAR": {
+        "votes": 1639,
+        "pct": 0.24
+      },
+      "DEVA": {
+        "votes": 1549,
+        "pct": 0.23
+      },
+      "SOL": {
+        "votes": 1462,
+        "pct": 0.22
+      },
+      "BBP": {
+        "votes": 1183,
+        "pct": 0.18
+      },
+      "VATAN": {
+        "votes": 1101,
+        "pct": 0.16
+      },
+      "DSP": {
+        "votes": 958,
+        "pct": 0.14
+      },
+      "EMEP": {
+        "votes": 672,
+        "pct": 0.1
+      },
+      "BAGIMSIZ": {
+        "votes": 761,
+        "pct": 0.11
+      },
+      "TKH": {
+        "votes": 232,
+        "pct": 0.03
+      },
+      "OCAK": {
+        "votes": 194,
+        "pct": 0.03
+      },
+      "MILLIYOL": {
+        "votes": 22,
+        "pct": 0.0
+      }
+    },
+    "Balıkesir": {
+      "CHP": {
+        "votes": 358800,
+        "pct": 45.37
+      },
+      "AKP": {
+        "votes": 297869,
+        "pct": 37.66
+      },
+      "IYI": {
+        "votes": 43151,
+        "pct": 5.46
+      },
+      "YRP": {
+        "votes": 27110,
+        "pct": 3.43
+      },
+      "ZAFER": {
+        "votes": 12178,
+        "pct": 1.54
+      },
+      "MHP": {
+        "votes": 11440,
+        "pct": 1.45
+      },
+      "SP": {
+        "votes": 7501,
+        "pct": 0.95
+      },
+      "DEM": {
+        "votes": 6336,
+        "pct": 0.8
+      },
+      "TIP": {
+        "votes": 4659,
+        "pct": 0.59
+      },
+      "BBP": {
+        "votes": 4175,
+        "pct": 0.53
+      },
+      "BTP": {
+        "votes": 2882,
+        "pct": 0.36
+      },
+      "MEMLEKET": {
+        "votes": 2545,
+        "pct": 0.32
+      },
+      "DEVA": {
+        "votes": 2051,
+        "pct": 0.26
+      },
+      "DP": {
+        "votes": 1271,
+        "pct": 0.16
+      },
+      "TKP": {
+        "votes": 1246,
+        "pct": 0.16
+      },
+      "SOL": {
+        "votes": 1186,
+        "pct": 0.15
+      },
+      "EMEP": {
+        "votes": 1154,
+        "pct": 0.15
+      },
+      "HUDAPAR": {
+        "votes": 926,
+        "pct": 0.12
+      },
+      "BAGIMSIZ": {
+        "votes": 2901,
+        "pct": 0.37
+      },
+      "VATAN": {
+        "votes": 684,
+        "pct": 0.09
+      },
+      "GELECEK": {
+        "votes": 311,
+        "pct": 0.04
+      },
+      "TKH": {
+        "votes": 216,
+        "pct": 0.03
+      },
+      "ABP": {
+        "votes": 105,
+        "pct": 0.01
+      },
+      "YTP": {
+        "votes": 76,
+        "pct": 0.01
+      },
+      "DSP": {
+        "votes": 74,
+        "pct": 0.01
+      },
+      "AP": {
+        "votes": 29,
+        "pct": 0.0
+      },
+      "MILLIYOL": {
+        "votes": 15,
+        "pct": 0.0
+      }
+    },
+    "Bartın": {
+      "CHP": {
+        "votes": 40735,
+        "pct": 33.25
+      },
+      "AKP": {
+        "votes": 37958,
+        "pct": 30.99
+      },
+      "MHP": {
+        "votes": 20318,
+        "pct": 16.59
+      },
+      "YRP": {
+        "votes": 11441,
+        "pct": 9.34
+      },
+      "SP": {
+        "votes": 2818,
+        "pct": 2.3
+      },
+      "ZAFER": {
+        "votes": 2444,
+        "pct": 2.0
+      },
+      "IYI": {
+        "votes": 2207,
+        "pct": 1.8
+      },
+      "DEVA": {
+        "votes": 944,
+        "pct": 0.77
+      },
+      "GELECEK": {
+        "votes": 524,
+        "pct": 0.43
+      },
+      "BTP": {
+        "votes": 515,
+        "pct": 0.42
+      },
+      "MILLET": {
+        "votes": 479,
+        "pct": 0.39
+      },
+      "BBP": {
+        "votes": 404,
+        "pct": 0.33
+      },
+      "TIP": {
+        "votes": 402,
+        "pct": 0.33
+      },
+      "SOL": {
+        "votes": 351,
+        "pct": 0.29
+      },
+      "VATAN": {
+        "votes": 295,
+        "pct": 0.24
+      },
+      "HUDAPAR": {
+        "votes": 238,
+        "pct": 0.19
+      },
+      "DEM": {
+        "votes": 227,
+        "pct": 0.19
+      },
+      "EMEP": {
+        "votes": 176,
+        "pct": 0.14
+      },
+      "BAGIMSIZ": {
+        "votes": 24,
+        "pct": 0.02
+      }
+    },
+    "Batman": {
+      "DEM": {
+        "votes": 154003,
+        "pct": 55.97
+      },
+      "AKP": {
+        "votes": 47754,
+        "pct": 17.36
+      },
+      "HUDAPAR": {
+        "votes": 35306,
+        "pct": 12.83
+      },
+      "CHP": {
+        "votes": 10992,
+        "pct": 4.0
+      },
+      "YRP": {
+        "votes": 10884,
+        "pct": 3.96
+      },
+      "MHP": {
+        "votes": 4021,
+        "pct": 1.46
+      },
+      "SP": {
+        "votes": 3958,
+        "pct": 1.44
+      },
+      "DEVA": {
+        "votes": 1974,
+        "pct": 0.72
+      },
+      "IYI": {
+        "votes": 1451,
+        "pct": 0.53
+      },
+      "ZAFER": {
+        "votes": 1157,
+        "pct": 0.42
+      },
+      "DP": {
+        "votes": 911,
+        "pct": 0.33
+      },
+      "BTP": {
+        "votes": 904,
+        "pct": 0.33
+      },
+      "BBP": {
+        "votes": 781,
+        "pct": 0.28
+      },
+      "SOL": {
+        "votes": 561,
+        "pct": 0.2
+      },
+      "VATAN": {
+        "votes": 232,
+        "pct": 0.08
+      },
+      "MILLET": {
+        "votes": 138,
+        "pct": 0.05
+      },
+      "MILLIYOL": {
+        "votes": 113,
+        "pct": 0.04
+      }
+    },
+    "Bayburt": {
+      "AKP": {
+        "votes": 18137,
+        "pct": 43.84
+      },
+      "MHP": {
+        "votes": 11835,
+        "pct": 28.61
+      },
+      "YRP": {
+        "votes": 3615,
+        "pct": 8.74
+      },
+      "CHP": {
+        "votes": 2537,
+        "pct": 6.13
+      },
+      "IYI": {
+        "votes": 1765,
+        "pct": 4.27
+      },
+      "SP": {
+        "votes": 1476,
+        "pct": 3.57
+      },
+      "DEVA": {
+        "votes": 576,
+        "pct": 1.39
+      },
+      "BBP": {
+        "votes": 415,
+        "pct": 1.0
+      },
+      "DP": {
+        "votes": 254,
+        "pct": 0.61
+      },
+      "MILLET": {
+        "votes": 203,
+        "pct": 0.49
+      },
+      "HUDAPAR": {
+        "votes": 152,
+        "pct": 0.37
+      },
+      "BTP": {
+        "votes": 90,
+        "pct": 0.22
+      },
+      "GELECEK": {
+        "votes": 89,
+        "pct": 0.22
+      },
+      "TIP": {
+        "votes": 78,
+        "pct": 0.19
+      },
+      "DEM": {
+        "votes": 72,
+        "pct": 0.17
+      },
+      "SOL": {
+        "votes": 41,
+        "pct": 0.1
+      },
+      "VATAN": {
+        "votes": 37,
+        "pct": 0.09
+      }
+    },
+    "Bilecik": {
+      "CHP": {
+        "votes": 45624,
+        "pct": 33.5
+      },
+      "AKP": {
+        "votes": 37228,
+        "pct": 27.34
+      },
+      "IYI": {
+        "votes": 18167,
+        "pct": 13.34
+      },
+      "MHP": {
+        "votes": 14962,
+        "pct": 10.99
+      },
+      "YRP": {
+        "votes": 10053,
+        "pct": 7.38
+      },
+      "BBP": {
+        "votes": 1729,
+        "pct": 1.27
+      },
+      "SP": {
+        "votes": 1416,
+        "pct": 1.04
+      },
+      "ZAFER": {
+        "votes": 1139,
+        "pct": 0.84
+      },
+      "BAGIMSIZ": {
+        "votes": 2172,
+        "pct": 1.6
+      },
+      "MEMLEKET": {
+        "votes": 825,
+        "pct": 0.61
+      },
+      "BTP": {
+        "votes": 578,
+        "pct": 0.42
+      },
+      "TIP": {
+        "votes": 483,
+        "pct": 0.35
+      },
+      "DEVA": {
+        "votes": 481,
+        "pct": 0.35
+      },
+      "HUDAPAR": {
+        "votes": 435,
+        "pct": 0.32
+      },
+      "VATAN": {
+        "votes": 274,
+        "pct": 0.2
+      },
+      "DP": {
+        "votes": 221,
+        "pct": 0.16
+      },
+      "MILLET": {
+        "votes": 198,
+        "pct": 0.15
+      },
+      "SOL": {
+        "votes": 188,
+        "pct": 0.14
+      }
+    },
+    "Bingöl": {
+      "AKP": {
+        "votes": 40221,
+        "pct": 33.11
+      },
+      "DEM": {
+        "votes": 24086,
+        "pct": 19.83
+      },
+      "YRP": {
+        "votes": 20880,
+        "pct": 17.19
+      },
+      "HUDAPAR": {
+        "votes": 14970,
+        "pct": 12.32
+      },
+      "DEVA": {
+        "votes": 5960,
+        "pct": 4.91
+      },
+      "CHP": {
+        "votes": 5332,
+        "pct": 4.39
+      },
+      "MHP": {
+        "votes": 4226,
+        "pct": 3.48
+      },
+      "SP": {
+        "votes": 1469,
+        "pct": 1.21
+      },
+      "IYI": {
+        "votes": 1317,
+        "pct": 1.08
+      },
+      "BBP": {
+        "votes": 940,
+        "pct": 0.77
+      },
+      "ZAFER": {
+        "votes": 523,
+        "pct": 0.43
+      },
+      "BTP": {
+        "votes": 407,
+        "pct": 0.34
+      },
+      "GELECEK": {
+        "votes": 227,
+        "pct": 0.19
+      },
+      "BAGIMSIZ": {
+        "votes": 229,
+        "pct": 0.19
+      },
+      "SOL": {
+        "votes": 164,
+        "pct": 0.13
+      },
+      "DP": {
+        "votes": 125,
+        "pct": 0.1
+      },
+      "DSP": {
+        "votes": 117,
+        "pct": 0.1
+      },
+      "VATAN": {
+        "votes": 107,
+        "pct": 0.09
+      },
+      "MILLET": {
+        "votes": 98,
+        "pct": 0.08
+      },
+      "MILLIYOL": {
+        "votes": 88,
+        "pct": 0.07
+      }
+    },
+    "Bitlis": {
+      "DEM": {
+        "votes": 55743,
+        "pct": 35.34
+      },
+      "AKP": {
+        "votes": 50624,
+        "pct": 32.09
+      },
+      "YRP": {
+        "votes": 20602,
+        "pct": 13.06
+      },
+      "MHP": {
+        "votes": 6554,
+        "pct": 4.15
+      },
+      "SP": {
+        "votes": 4468,
+        "pct": 2.83
+      },
+      "IYI": {
+        "votes": 4133,
+        "pct": 2.62
+      },
+      "CHP": {
+        "votes": 4096,
+        "pct": 2.6
+      },
+      "HUDAPAR": {
+        "votes": 3821,
+        "pct": 2.42
+      },
+      "BBP": {
+        "votes": 3142,
+        "pct": 1.99
+      },
+      "GELECEK": {
+        "votes": 1857,
+        "pct": 1.18
+      },
+      "DEVA": {
+        "votes": 952,
+        "pct": 0.6
+      },
+      "BTP": {
+        "votes": 849,
+        "pct": 0.54
+      },
+      "ZAFER": {
+        "votes": 324,
+        "pct": 0.21
+      },
+      "DP": {
+        "votes": 209,
+        "pct": 0.13
+      },
+      "VATAN": {
+        "votes": 190,
+        "pct": 0.12
+      },
+      "DSP": {
+        "votes": 128,
+        "pct": 0.08
+      },
+      "MILLET": {
+        "votes": 46,
+        "pct": 0.03
+      }
+    },
+    "Bolu": {
+      "CHP": {
+        "votes": 64644,
+        "pct": 33.25
+      },
+      "AKP": {
+        "votes": 62377,
+        "pct": 32.09
+      },
+      "MHP": {
+        "votes": 37069,
+        "pct": 19.07
+      },
+      "YRP": {
+        "votes": 9168,
+        "pct": 4.72
+      },
+      "BBP": {
+        "votes": 6086,
+        "pct": 3.13
+      },
+      "IYI": {
+        "votes": 3912,
+        "pct": 2.01
+      },
+      "SP": {
+        "votes": 3065,
+        "pct": 1.58
+      },
+      "ZAFER": {
+        "votes": 2804,
+        "pct": 1.44
+      },
+      "BAGIMSIZ": {
+        "votes": 873,
+        "pct": 0.45
+      },
+      "TIP": {
+        "votes": 766,
+        "pct": 0.39
+      },
+      "BTP": {
+        "votes": 739,
+        "pct": 0.38
+      },
+      "DEM": {
+        "votes": 712,
+        "pct": 0.37
+      },
+      "DEVA": {
+        "votes": 525,
+        "pct": 0.27
+      },
+      "HUDAPAR": {
+        "votes": 396,
+        "pct": 0.2
+      },
+      "DP": {
+        "votes": 326,
+        "pct": 0.17
+      },
+      "MILLET": {
+        "votes": 250,
+        "pct": 0.13
+      },
+      "SOL": {
+        "votes": 240,
+        "pct": 0.12
+      },
+      "VATAN": {
+        "votes": 185,
+        "pct": 0.1
+      },
+      "MILLIYOL": {
+        "votes": 136,
+        "pct": 0.07
+      },
+      "DSP": {
+        "votes": 121,
+        "pct": 0.06
+      }
+    },
+    "Burdur": {
+      "AKP": {
+        "votes": 59646,
+        "pct": 35.61
+      },
+      "CHP": {
+        "votes": 57849,
+        "pct": 34.54
+      },
+      "MHP": {
+        "votes": 30591,
+        "pct": 18.26
+      },
+      "IYI": {
+        "votes": 7922,
+        "pct": 4.73
+      },
+      "YRP": {
+        "votes": 3408,
+        "pct": 2.03
+      },
+      "SP": {
+        "votes": 2124,
+        "pct": 1.27
+      },
+      "ZAFER": {
+        "votes": 1749,
+        "pct": 1.04
+      },
+      "BBP": {
+        "votes": 908,
+        "pct": 0.54
+      },
+      "BTP": {
+        "votes": 567,
+        "pct": 0.34
+      },
+      "TIP": {
+        "votes": 552,
+        "pct": 0.33
+      },
+      "DEVA": {
+        "votes": 419,
+        "pct": 0.25
+      },
+      "DP": {
+        "votes": 314,
+        "pct": 0.19
+      },
+      "DSP": {
+        "votes": 310,
+        "pct": 0.19
+      },
+      "HUDAPAR": {
+        "votes": 280,
+        "pct": 0.17
+      },
+      "VATAN": {
+        "votes": 236,
+        "pct": 0.14
+      },
+      "DEM": {
+        "votes": 223,
+        "pct": 0.13
+      },
+      "MILLIYOL": {
+        "votes": 176,
+        "pct": 0.11
+      },
+      "MILLET": {
+        "votes": 123,
+        "pct": 0.07
+      },
+      "SOL": {
+        "votes": 108,
+        "pct": 0.06
+      }
+    },
+    "Bursa": {
+      "CHP": {
+        "votes": 697730,
+        "pct": 39.04
+      },
+      "AKP": {
+        "votes": 631876,
+        "pct": 35.35
+      },
+      "YRP": {
+        "votes": 123344,
+        "pct": 6.9
+      },
+      "IYI": {
+        "votes": 85853,
+        "pct": 4.8
+      },
+      "ZAFER": {
+        "votes": 73172,
+        "pct": 4.09
+      },
+      "SP": {
+        "votes": 42967,
+        "pct": 2.4
+      },
+      "DEM": {
+        "votes": 38954,
+        "pct": 2.18
+      },
+      "MHP": {
+        "votes": 31031,
+        "pct": 1.74
+      },
+      "DP": {
+        "votes": 9295,
+        "pct": 0.52
+      },
+      "MEMLEKET": {
+        "votes": 7150,
+        "pct": 0.4
+      },
+      "BTP": {
+        "votes": 6859,
+        "pct": 0.38
+      },
+      "DEVA": {
+        "votes": 6592,
+        "pct": 0.37
+      },
+      "HUDAPAR": {
+        "votes": 6136,
+        "pct": 0.34
+      },
+      "BBP": {
+        "votes": 4764,
+        "pct": 0.27
+      },
+      "DSP": {
+        "votes": 3455,
+        "pct": 0.19
+      },
+      "TIP": {
+        "votes": 2855,
+        "pct": 0.16
+      },
+      "GELECEK": {
+        "votes": 2572,
+        "pct": 0.14
+      },
+      "TKP": {
+        "votes": 2089,
+        "pct": 0.12
+      },
+      "VATAN": {
+        "votes": 1949,
+        "pct": 0.11
+      },
+      "MILLET": {
+        "votes": 1934,
+        "pct": 0.11
+      },
+      "SOL": {
+        "votes": 1798,
+        "pct": 0.1
+      },
+      "TKH": {
+        "votes": 689,
+        "pct": 0.04
+      },
+      "BAGIMSIZ": {
+        "votes": 2689,
+        "pct": 0.15
+      },
+      "ABP": {
+        "votes": 345,
+        "pct": 0.02
+      },
+      "MILLIYOL": {
+        "votes": 297,
+        "pct": 0.02
+      },
+      "EMEP": {
+        "votes": 282,
+        "pct": 0.02
+      },
+      "OCAK": {
+        "votes": 197,
+        "pct": 0.01
+      },
+      "AP": {
+        "votes": 154,
+        "pct": 0.01
+      },
+      "HKP": {
+        "votes": 125,
+        "pct": 0.01
+      },
+      "ADP": {
+        "votes": 91,
+        "pct": 0.01
+      }
+    },
+    "Çanakkale": {
+      "CHP": {
+        "votes": 139936,
+        "pct": 39.7
+      },
+      "AKP": {
+        "votes": 107666,
+        "pct": 30.54
+      },
+      "IYI": {
+        "votes": 46684,
+        "pct": 13.24
+      },
+      "MHP": {
+        "votes": 33074,
+        "pct": 9.38
+      },
+      "ZAFER": {
+        "votes": 6043,
+        "pct": 1.71
+      },
+      "DEM": {
+        "votes": 4028,
+        "pct": 1.14
+      },
+      "YRP": {
+        "votes": 3828,
+        "pct": 1.09
+      },
+      "TIP": {
+        "votes": 2273,
+        "pct": 0.64
+      },
+      "BBP": {
+        "votes": 1907,
+        "pct": 0.54
+      },
+      "SP": {
+        "votes": 1494,
+        "pct": 0.42
+      },
+      "BTP": {
+        "votes": 1011,
+        "pct": 0.29
+      },
+      "DP": {
+        "votes": 800,
+        "pct": 0.23
+      },
+      "DEVA": {
+        "votes": 675,
+        "pct": 0.19
+      },
+      "HUDAPAR": {
+        "votes": 612,
+        "pct": 0.17
+      },
+      "MEMLEKET": {
+        "votes": 564,
+        "pct": 0.16
+      },
+      "SOL": {
+        "votes": 435,
+        "pct": 0.12
+      },
+      "DSP": {
+        "votes": 417,
+        "pct": 0.12
+      },
+      "MILLET": {
+        "votes": 396,
+        "pct": 0.11
+      },
+      "VATAN": {
+        "votes": 323,
+        "pct": 0.09
+      },
+      "GELECEK": {
+        "votes": 210,
+        "pct": 0.06
+      },
+      "BAGIMSIZ": {
+        "votes": 141,
+        "pct": 0.04
+      }
+    },
+    "Çankırı": {
+      "MHP": {
+        "votes": 50932,
+        "pct": 42.2
+      },
+      "AKP": {
+        "votes": 46430,
+        "pct": 38.47
+      },
+      "CHP": {
+        "votes": 8532,
+        "pct": 7.07
+      },
+      "YRP": {
+        "votes": 5123,
+        "pct": 4.24
+      },
+      "IYI": {
+        "votes": 4334,
+        "pct": 3.59
+      },
+      "SP": {
+        "votes": 1209,
+        "pct": 1.0
+      },
+      "DEVA": {
+        "votes": 684,
+        "pct": 0.57
+      },
+      "BAGIMSIZ": {
+        "votes": 1479,
+        "pct": 1.23
+      },
+      "BBP": {
+        "votes": 372,
+        "pct": 0.31
+      },
+      "BTP": {
+        "votes": 358,
+        "pct": 0.3
+      },
+      "TIP": {
+        "votes": 252,
+        "pct": 0.21
+      },
+      "MILLET": {
+        "votes": 192,
+        "pct": 0.16
+      },
+      "SOL": {
+        "votes": 146,
+        "pct": 0.12
+      },
+      "VATAN": {
+        "votes": 138,
+        "pct": 0.11
+      },
+      "DP": {
+        "votes": 134,
+        "pct": 0.11
+      },
+      "MILLIYOL": {
+        "votes": 129,
+        "pct": 0.11
+      },
+      "HUDAPAR": {
+        "votes": 120,
+        "pct": 0.1
+      },
+      "ZAFER": {
+        "votes": 66,
+        "pct": 0.05
+      },
+      "DEM": {
+        "votes": 41,
+        "pct": 0.03
+      },
+      "DSP": {
+        "votes": 31,
+        "pct": 0.03
+      }
+    },
+    "Çorum": {
+      "AKP": {
+        "votes": 106954,
+        "pct": 34.06
+      },
+      "CHP": {
+        "votes": 82246,
+        "pct": 26.19
+      },
+      "MHP": {
+        "votes": 63129,
+        "pct": 20.1
+      },
+      "YRP": {
+        "votes": 28413,
+        "pct": 9.05
+      },
+      "IYI": {
+        "votes": 11689,
+        "pct": 3.72
+      },
+      "ZAFER": {
+        "votes": 5276,
+        "pct": 1.68
+      },
+      "SP": {
+        "votes": 3963,
+        "pct": 1.26
+      },
+      "BBP": {
+        "votes": 3843,
+        "pct": 1.22
+      },
+      "BTP": {
+        "votes": 1247,
+        "pct": 0.4
+      },
+      "DEVA": {
+        "votes": 1119,
+        "pct": 0.36
+      },
+      "DP": {
+        "votes": 781,
+        "pct": 0.25
+      },
+      "EMEP": {
+        "votes": 762,
+        "pct": 0.24
+      },
+      "TIP": {
+        "votes": 728,
+        "pct": 0.23
+      },
+      "BAGIMSIZ": {
+        "votes": 1759,
+        "pct": 0.56
+      },
+      "GELECEK": {
+        "votes": 465,
+        "pct": 0.15
+      },
+      "MILLET": {
+        "votes": 453,
+        "pct": 0.14
+      },
+      "VATAN": {
+        "votes": 428,
+        "pct": 0.14
+      },
+      "DSP": {
+        "votes": 305,
+        "pct": 0.1
+      },
+      "HUDAPAR": {
+        "votes": 261,
+        "pct": 0.08
+      },
+      "MILLIYOL": {
+        "votes": 220,
+        "pct": 0.07
+      }
+    },
+    "Denizli": {
+      "CHP": {
+        "votes": 299914,
+        "pct": 47.69
+      },
+      "AKP": {
+        "votes": 191810,
+        "pct": 30.5
+      },
+      "IYI": {
+        "votes": 43950,
+        "pct": 6.99
+      },
+      "YRP": {
+        "votes": 23245,
+        "pct": 3.7
+      },
+      "MHP": {
+        "votes": 16069,
+        "pct": 2.56
+      },
+      "ZAFER": {
+        "votes": 13738,
+        "pct": 2.18
+      },
+      "BBP": {
+        "votes": 13119,
+        "pct": 2.09
+      },
+      "DEM": {
+        "votes": 7252,
+        "pct": 1.15
+      },
+      "DEVA": {
+        "votes": 2581,
+        "pct": 0.41
+      },
+      "MEMLEKET": {
+        "votes": 2328,
+        "pct": 0.37
+      },
+      "DP": {
+        "votes": 2324,
+        "pct": 0.37
+      },
+      "BTP": {
+        "votes": 2161,
+        "pct": 0.34
+      },
+      "SP": {
+        "votes": 2082,
+        "pct": 0.33
+      },
+      "TIP": {
+        "votes": 1386,
+        "pct": 0.22
+      },
+      "BAGIMSIZ": {
+        "votes": 2137,
+        "pct": 0.34
+      },
+      "HUDAPAR": {
+        "votes": 924,
+        "pct": 0.15
+      },
+      "EMEP": {
+        "votes": 853,
+        "pct": 0.14
+      },
+      "VATAN": {
+        "votes": 849,
+        "pct": 0.14
+      },
+      "TKP": {
+        "votes": 576,
+        "pct": 0.09
+      },
+      "SOL": {
+        "votes": 506,
+        "pct": 0.08
+      },
+      "MILLET": {
+        "votes": 340,
+        "pct": 0.05
+      },
+      "DSP": {
+        "votes": 316,
+        "pct": 0.05
+      },
+      "ABP": {
+        "votes": 168,
+        "pct": 0.03
+      },
+      "TKH": {
+        "votes": 147,
+        "pct": 0.02
+      },
+      "GELECEK": {
+        "votes": 112,
+        "pct": 0.02
+      }
+    },
+    "Diyarbakır": {
+      "DEM": {
+        "votes": 445365,
+        "pct": 62.57
+      },
+      "AKP": {
+        "votes": 121449,
+        "pct": 17.06
+      },
+      "HUDAPAR": {
+        "votes": 55283,
+        "pct": 7.77
+      },
+      "YRP": {
+        "votes": 29358,
+        "pct": 4.12
+      },
+      "CHP": {
+        "votes": 27359,
+        "pct": 3.84
+      },
+      "DEVA": {
+        "votes": 9247,
+        "pct": 1.3
+      },
+      "SP": {
+        "votes": 5914,
+        "pct": 0.83
+      },
+      "DSP": {
+        "votes": 2594,
+        "pct": 0.36
+      },
+      "IYI": {
+        "votes": 2396,
+        "pct": 0.34
+      },
+      "TKP": {
+        "votes": 2201,
+        "pct": 0.31
+      },
+      "ZAFER": {
+        "votes": 1854,
+        "pct": 0.26
+      },
+      "BTP": {
+        "votes": 1729,
+        "pct": 0.24
+      },
+      "BBP": {
+        "votes": 1334,
+        "pct": 0.19
+      },
+      "SOL": {
+        "votes": 1089,
+        "pct": 0.15
+      },
+      "BAGIMSIZ": {
+        "votes": 1745,
+        "pct": 0.25
+      },
+      "EMEP": {
+        "votes": 656,
+        "pct": 0.09
+      },
+      "VATAN": {
+        "votes": 606,
+        "pct": 0.09
+      },
+      "DP": {
+        "votes": 500,
+        "pct": 0.07
+      },
+      "MILLIYOL": {
+        "votes": 372,
+        "pct": 0.05
+      },
+      "TKH": {
+        "votes": 321,
+        "pct": 0.05
+      },
+      "HAKPAR": {
+        "votes": 300,
+        "pct": 0.04
+      },
+      "MHP": {
+        "votes": 101,
+        "pct": 0.01
+      }
+    },
+    "Düzce": {
+      "AKP": {
+        "votes": 94208,
+        "pct": 39.37
+      },
+      "YRP": {
+        "votes": 48828,
+        "pct": 20.41
+      },
+      "MHP": {
+        "votes": 33678,
+        "pct": 14.08
+      },
+      "CHP": {
+        "votes": 32600,
+        "pct": 13.63
+      },
+      "IYI": {
+        "votes": 13180,
+        "pct": 5.51
+      },
+      "ZAFER": {
+        "votes": 4099,
+        "pct": 1.71
+      },
+      "SP": {
+        "votes": 3714,
+        "pct": 1.55
+      },
+      "BBP": {
+        "votes": 2203,
+        "pct": 0.92
+      },
+      "DEVA": {
+        "votes": 1788,
+        "pct": 0.75
+      },
+      "BTP": {
+        "votes": 831,
+        "pct": 0.35
+      },
+      "MILLET": {
+        "votes": 667,
+        "pct": 0.28
+      },
+      "DSP": {
+        "votes": 629,
+        "pct": 0.26
+      },
+      "DEM": {
+        "votes": 619,
+        "pct": 0.26
+      },
+      "SOL": {
+        "votes": 587,
+        "pct": 0.25
+      },
+      "DP": {
+        "votes": 531,
+        "pct": 0.22
+      },
+      "TIP": {
+        "votes": 411,
+        "pct": 0.17
+      },
+      "HUDAPAR": {
+        "votes": 355,
+        "pct": 0.15
+      },
+      "VATAN": {
+        "votes": 335,
+        "pct": 0.14
+      }
+    },
+    "Edirne": {
+      "CHP": {
+        "votes": 124735,
+        "pct": 48.16
+      },
+      "AKP": {
+        "votes": 84179,
+        "pct": 32.5
+      },
+      "IYI": {
+        "votes": 21872,
+        "pct": 8.44
+      },
+      "MHP": {
+        "votes": 11427,
+        "pct": 4.41
+      },
+      "ZAFER": {
+        "votes": 5030,
+        "pct": 1.94
+      },
+      "TIP": {
+        "votes": 3005,
+        "pct": 1.16
+      },
+      "SP": {
+        "votes": 1660,
+        "pct": 0.64
+      },
+      "YRP": {
+        "votes": 1432,
+        "pct": 0.55
+      },
+      "SOL": {
+        "votes": 961,
+        "pct": 0.37
+      },
+      "BTP": {
+        "votes": 666,
+        "pct": 0.26
+      },
+      "MEMLEKET": {
+        "votes": 630,
+        "pct": 0.24
+      },
+      "DP": {
+        "votes": 629,
+        "pct": 0.24
+      },
+      "DEM": {
+        "votes": 608,
+        "pct": 0.23
+      },
+      "HUDAPAR": {
+        "votes": 461,
+        "pct": 0.18
+      },
+      "GELECEK": {
+        "votes": 419,
+        "pct": 0.16
+      },
+      "BBP": {
+        "votes": 329,
+        "pct": 0.13
+      },
+      "DSP": {
+        "votes": 294,
+        "pct": 0.11
+      },
+      "MILLIYOL": {
+        "votes": 268,
+        "pct": 0.1
+      },
+      "VATAN": {
+        "votes": 248,
+        "pct": 0.1
+      },
+      "MILLET": {
+        "votes": 155,
+        "pct": 0.06
+      }
+    },
+    "Elazığ": {
+      "AKP": {
+        "votes": 102177,
+        "pct": 33.75
+      },
+      "YRP": {
+        "votes": 56720,
+        "pct": 18.74
+      },
+      "MHP": {
+        "votes": 42539,
+        "pct": 14.05
+      },
+      "CHP": {
+        "votes": 40777,
+        "pct": 13.47
+      },
+      "SP": {
+        "votes": 14691,
+        "pct": 4.85
+      },
+      "DEM": {
+        "votes": 13871,
+        "pct": 4.58
+      },
+      "HUDAPAR": {
+        "votes": 9670,
+        "pct": 3.19
+      },
+      "BBP": {
+        "votes": 6371,
+        "pct": 2.1
+      },
+      "IYI": {
+        "votes": 3582,
+        "pct": 1.18
+      },
+      "ZAFER": {
+        "votes": 3099,
+        "pct": 1.02
+      },
+      "DEVA": {
+        "votes": 2797,
+        "pct": 0.92
+      },
+      "BTP": {
+        "votes": 1002,
+        "pct": 0.33
+      },
+      "BAGIMSIZ": {
+        "votes": 2172,
+        "pct": 0.72
+      },
+      "MILLET": {
+        "votes": 641,
+        "pct": 0.21
+      },
+      "EMEP": {
+        "votes": 624,
+        "pct": 0.21
+      },
+      "TIP": {
+        "votes": 523,
+        "pct": 0.17
+      },
+      "VATAN": {
+        "votes": 434,
+        "pct": 0.14
+      },
+      "HAKPAR": {
+        "votes": 367,
+        "pct": 0.12
+      },
+      "SOL": {
+        "votes": 336,
+        "pct": 0.11
+      },
+      "ANAP": {
+        "votes": 317,
+        "pct": 0.1
+      }
+    },
+    "Erzincan": {
+      "MHP": {
+        "votes": 37597,
+        "pct": 28.75
+      },
+      "AKP": {
+        "votes": 37428,
+        "pct": 28.62
+      },
+      "CHP": {
+        "votes": 36358,
+        "pct": 27.8
+      },
+      "YRP": {
+        "votes": 5508,
+        "pct": 4.21
+      },
+      "IYI": {
+        "votes": 2320,
+        "pct": 1.77
+      },
+      "TIP": {
+        "votes": 1901,
+        "pct": 1.45
+      },
+      "SP": {
+        "votes": 1855,
+        "pct": 1.42
+      },
+      "BBP": {
+        "votes": 1467,
+        "pct": 1.12
+      },
+      "DP": {
+        "votes": 1177,
+        "pct": 0.9
+      },
+      "BTP": {
+        "votes": 1159,
+        "pct": 0.89
+      },
+      "BAGIMSIZ": {
+        "votes": 1725,
+        "pct": 1.32
+      },
+      "DSP": {
+        "votes": 643,
+        "pct": 0.49
+      },
+      "DEVA": {
+        "votes": 555,
+        "pct": 0.42
+      },
+      "HUDAPAR": {
+        "votes": 394,
+        "pct": 0.3
+      },
+      "VATAN": {
+        "votes": 240,
+        "pct": 0.18
+      },
+      "MILLET": {
+        "votes": 205,
+        "pct": 0.16
+      },
+      "SOL": {
+        "votes": 146,
+        "pct": 0.11
+      },
+      "ZAFER": {
+        "votes": 83,
+        "pct": 0.06
+      }
+    },
+    "Erzurum": {
+      "AKP": {
+        "votes": 139775,
+        "pct": 40.01
+      },
+      "YRP": {
+        "votes": 60821,
+        "pct": 17.41
+      },
+      "IYI": {
+        "votes": 42438,
+        "pct": 12.15
+      },
+      "DEM": {
+        "votes": 23942,
+        "pct": 6.85
+      },
+      "CHP": {
+        "votes": 21814,
+        "pct": 6.24
+      },
+      "BBP": {
+        "votes": 17656,
+        "pct": 5.05
+      },
+      "ZAFER": {
+        "votes": 12771,
+        "pct": 3.66
+      },
+      "MHP": {
+        "votes": 7501,
+        "pct": 2.15
+      },
+      "SP": {
+        "votes": 7291,
+        "pct": 2.09
+      },
+      "DEVA": {
+        "votes": 3592,
+        "pct": 1.03
+      },
+      "DP": {
+        "votes": 3188,
+        "pct": 0.91
+      },
+      "TKP": {
+        "votes": 1181,
+        "pct": 0.34
+      },
+      "HUDAPAR": {
+        "votes": 1168,
+        "pct": 0.33
+      },
+      "BTP": {
+        "votes": 1117,
+        "pct": 0.32
+      },
+      "MILLIYOL": {
+        "votes": 987,
+        "pct": 0.28
+      },
+      "BAGIMSIZ": {
+        "votes": 2781,
+        "pct": 0.8
+      },
+      "ANAP": {
+        "votes": 377,
+        "pct": 0.11
+      },
+      "SOL": {
+        "votes": 376,
+        "pct": 0.11
+      },
+      "TIP": {
+        "votes": 302,
+        "pct": 0.09
+      },
+      "VATAN": {
+        "votes": 128,
+        "pct": 0.04
+      },
+      "TKH": {
+        "votes": 112,
+        "pct": 0.03
+      }
+    },
+    "Eskişehir": {
+      "CHP": {
+        "votes": 258033,
+        "pct": 48.02
+      },
+      "AKP": {
+        "votes": 184206,
+        "pct": 34.28
+      },
+      "IYI": {
+        "votes": 19245,
+        "pct": 3.58
+      },
+      "ZAFER": {
+        "votes": 18981,
+        "pct": 3.53
+      },
+      "YRP": {
+        "votes": 12169,
+        "pct": 2.26
+      },
+      "MHP": {
+        "votes": 11850,
+        "pct": 2.21
+      },
+      "DSP": {
+        "votes": 6787,
+        "pct": 1.26
+      },
+      "BBP": {
+        "votes": 6643,
+        "pct": 1.24
+      },
+      "SP": {
+        "votes": 3184,
+        "pct": 0.59
+      },
+      "BAGIMSIZ": {
+        "votes": 2807,
+        "pct": 0.52
+      },
+      "DEM": {
+        "votes": 2084,
+        "pct": 0.39
+      },
+      "BTP": {
+        "votes": 2023,
+        "pct": 0.38
+      },
+      "MEMLEKET": {
+        "votes": 1530,
+        "pct": 0.28
+      },
+      "DEVA": {
+        "votes": 1322,
+        "pct": 0.25
+      },
+      "TIP": {
+        "votes": 1210,
+        "pct": 0.23
+      },
+      "DP": {
+        "votes": 983,
+        "pct": 0.18
+      },
+      "TKP": {
+        "votes": 889,
+        "pct": 0.17
+      },
+      "EMEP": {
+        "votes": 737,
+        "pct": 0.14
+      },
+      "SOL": {
+        "votes": 572,
+        "pct": 0.11
+      },
+      "HUDAPAR": {
+        "votes": 504,
+        "pct": 0.09
+      },
+      "VATAN": {
+        "votes": 467,
+        "pct": 0.09
+      },
+      "MILLET": {
+        "votes": 431,
+        "pct": 0.08
+      },
+      "TKH": {
+        "votes": 252,
+        "pct": 0.05
+      },
+      "HKP": {
+        "votes": 215,
+        "pct": 0.04
+      },
+      "ANAP": {
+        "votes": 132,
+        "pct": 0.02
+      },
+      "GELECEK": {
+        "votes": 45,
+        "pct": 0.01
+      }
+    },
+    "Gaziantep": {
+      "AKP": {
+        "votes": 323749,
+        "pct": 35.46
+      },
+      "CHP": {
+        "votes": 259195,
+        "pct": 28.39
+      },
+      "YRP": {
+        "votes": 151752,
+        "pct": 16.62
+      },
+      "DEM": {
+        "votes": 50590,
+        "pct": 5.54
+      },
+      "ZAFER": {
+        "votes": 23424,
+        "pct": 2.57
+      },
+      "IYI": {
+        "votes": 20535,
+        "pct": 2.25
+      },
+      "HUDAPAR": {
+        "votes": 16480,
+        "pct": 1.81
+      },
+      "MHP": {
+        "votes": 14750,
+        "pct": 1.62
+      },
+      "BBP": {
+        "votes": 11495,
+        "pct": 1.26
+      },
+      "SP": {
+        "votes": 11257,
+        "pct": 1.23
+      },
+      "DEVA": {
+        "votes": 5951,
+        "pct": 0.65
+      },
+      "BTP": {
+        "votes": 4221,
+        "pct": 0.46
+      },
+      "MEMLEKET": {
+        "votes": 2512,
+        "pct": 0.28
+      },
+      "DSP": {
+        "votes": 2226,
+        "pct": 0.24
+      },
+      "TIP": {
+        "votes": 1959,
+        "pct": 0.21
+      },
+      "DP": {
+        "votes": 1944,
+        "pct": 0.21
+      },
+      "TKP": {
+        "votes": 1412,
+        "pct": 0.15
+      },
+      "GELECEK": {
+        "votes": 1412,
+        "pct": 0.15
+      },
+      "ANAP": {
+        "votes": 1289,
+        "pct": 0.14
+      },
+      "MILLET": {
+        "votes": 1211,
+        "pct": 0.13
+      },
+      "SOL": {
+        "votes": 985,
+        "pct": 0.11
+      },
+      "VATAN": {
+        "votes": 976,
+        "pct": 0.11
+      },
+      "TKH": {
+        "votes": 600,
+        "pct": 0.07
+      },
+      "MILLIYOL": {
+        "votes": 578,
+        "pct": 0.06
+      },
+      "ABP": {
+        "votes": 554,
+        "pct": 0.06
+      },
+      "BAGIMSIZ": {
+        "votes": 1764,
+        "pct": 0.19
+      },
+      "AP": {
+        "votes": 70,
+        "pct": 0.01
+      }
+    },
+    "Giresun": {
+      "AKP": {
+        "votes": 104008,
+        "pct": 36.85
+      },
+      "CHP": {
+        "votes": 84334,
+        "pct": 29.88
+      },
+      "MHP": {
+        "votes": 46964,
+        "pct": 16.64
+      },
+      "YRP": {
+        "votes": 15991,
+        "pct": 5.66
+      },
+      "IYI": {
+        "votes": 15203,
+        "pct": 5.39
+      },
+      "SP": {
+        "votes": 4507,
+        "pct": 1.6
+      },
+      "BBP": {
+        "votes": 2714,
+        "pct": 0.96
+      },
+      "ZAFER": {
+        "votes": 1637,
+        "pct": 0.58
+      },
+      "BTP": {
+        "votes": 1230,
+        "pct": 0.44
+      },
+      "BAGIMSIZ": {
+        "votes": 1390,
+        "pct": 0.49
+      },
+      "DP": {
+        "votes": 756,
+        "pct": 0.27
+      },
+      "HUDAPAR": {
+        "votes": 613,
+        "pct": 0.22
+      },
+      "SOL": {
+        "votes": 511,
+        "pct": 0.18
+      },
+      "TIP": {
+        "votes": 500,
+        "pct": 0.18
+      },
+      "DEVA": {
+        "votes": 485,
+        "pct": 0.17
+      },
+      "MEMLEKET": {
+        "votes": 425,
+        "pct": 0.15
+      },
+      "MILLET": {
+        "votes": 246,
+        "pct": 0.09
+      },
+      "ANAP": {
+        "votes": 234,
+        "pct": 0.08
+      },
+      "GELECEK": {
+        "votes": 206,
+        "pct": 0.07
+      },
+      "VATAN": {
+        "votes": 179,
+        "pct": 0.06
+      },
+      "DEM": {
+        "votes": 86,
+        "pct": 0.03
+      },
+      "DSP": {
+        "votes": 61,
+        "pct": 0.02
+      }
+    },
+    "Gümüşhane": {
+      "AKP": {
+        "votes": 28562,
+        "pct": 36.58
+      },
+      "MHP": {
+        "votes": 27352,
+        "pct": 35.03
+      },
+      "YRP": {
+        "votes": 6909,
+        "pct": 8.85
+      },
+      "CHP": {
+        "votes": 5823,
+        "pct": 7.46
+      },
+      "IYI": {
+        "votes": 2761,
+        "pct": 3.54
+      },
+      "DP": {
+        "votes": 1774,
+        "pct": 2.27
+      },
+      "BBP": {
+        "votes": 1285,
+        "pct": 1.65
+      },
+      "SP": {
+        "votes": 1220,
+        "pct": 1.56
+      },
+      "ZAFER": {
+        "votes": 741,
+        "pct": 0.95
+      },
+      "HUDAPAR": {
+        "votes": 577,
+        "pct": 0.74
+      },
+      "MILLIYOL": {
+        "votes": 241,
+        "pct": 0.31
+      },
+      "DEVA": {
+        "votes": 228,
+        "pct": 0.29
+      },
+      "BTP": {
+        "votes": 165,
+        "pct": 0.21
+      },
+      "TIP": {
+        "votes": 142,
+        "pct": 0.18
+      },
+      "SOL": {
+        "votes": 110,
+        "pct": 0.14
+      },
+      "MILLET": {
+        "votes": 54,
+        "pct": 0.07
+      },
+      "VATAN": {
+        "votes": 50,
+        "pct": 0.06
+      },
+      "DEM": {
+        "votes": 34,
+        "pct": 0.04
+      },
+      "ABP": {
+        "votes": 27,
+        "pct": 0.03
+      },
+      "DSP": {
+        "votes": 17,
+        "pct": 0.02
+      }
+    },
+    "Hakkari": {
+      "DEM": {
+        "votes": 72423,
+        "pct": 54.11
+      },
+      "AKP": {
+        "votes": 37904,
+        "pct": 28.32
+      },
+      "YRP": {
+        "votes": 10822,
+        "pct": 8.09
+      },
+      "CHP": {
+        "votes": 3605,
+        "pct": 2.69
+      },
+      "MHP": {
+        "votes": 1992,
+        "pct": 1.49
+      },
+      "HUDAPAR": {
+        "votes": 1566,
+        "pct": 1.17
+      },
+      "ZAFER": {
+        "votes": 1171,
+        "pct": 0.87
+      },
+      "GELECEK": {
+        "votes": 911,
+        "pct": 0.68
+      },
+      "BBP": {
+        "votes": 817,
+        "pct": 0.61
+      },
+      "BTP": {
+        "votes": 655,
+        "pct": 0.49
+      },
+      "SP": {
+        "votes": 599,
+        "pct": 0.45
+      },
+      "DSP": {
+        "votes": 584,
+        "pct": 0.44
+      },
+      "SOL": {
+        "votes": 273,
+        "pct": 0.2
+      },
+      "IYI": {
+        "votes": 254,
+        "pct": 0.19
+      },
+      "DEVA": {
+        "votes": 235,
+        "pct": 0.18
+      },
+      "MILLET": {
+        "votes": 25,
+        "pct": 0.02
+      }
+    },
+    "Hatay": {
+      "CHP": {
+        "votes": 280376,
+        "pct": 36.22
+      },
+      "AKP": {
+        "votes": 256375,
+        "pct": 33.12
+      },
+      "MHP": {
+        "votes": 43110,
+        "pct": 5.57
+      },
+      "YRP": {
+        "votes": 41683,
+        "pct": 5.38
+      },
+      "TIP": {
+        "votes": 36669,
+        "pct": 4.74
+      },
+      "IYI": {
+        "votes": 27384,
+        "pct": 3.54
+      },
+      "TKP": {
+        "votes": 23150,
+        "pct": 2.99
+      },
+      "BBP": {
+        "votes": 11788,
+        "pct": 1.52
+      },
+      "ZAFER": {
+        "votes": 11727,
+        "pct": 1.51
+      },
+      "SP": {
+        "votes": 11565,
+        "pct": 1.49
+      },
+      "DEM": {
+        "votes": 7816,
+        "pct": 1.01
+      },
+      "DP": {
+        "votes": 5709,
+        "pct": 0.74
+      },
+      "DEVA": {
+        "votes": 3806,
+        "pct": 0.49
+      },
+      "BTP": {
+        "votes": 2742,
+        "pct": 0.35
+      },
+      "TKH": {
+        "votes": 2037,
+        "pct": 0.26
+      },
+      "HUDAPAR": {
+        "votes": 2007,
+        "pct": 0.26
+      },
+      "SOL": {
+        "votes": 1635,
+        "pct": 0.21
+      },
+      "AP": {
+        "votes": 870,
+        "pct": 0.11
+      },
+      "EMEP": {
+        "votes": 668,
+        "pct": 0.09
+      },
+      "VATAN": {
+        "votes": 566,
+        "pct": 0.07
+      },
+      "BAGIMSIZ": {
+        "votes": 1210,
+        "pct": 0.16
+      },
+      "MEMLEKET": {
+        "votes": 445,
+        "pct": 0.06
+      },
+      "GELECEK": {
+        "votes": 416,
+        "pct": 0.05
+      },
+      "MILLIYOL": {
+        "votes": 247,
+        "pct": 0.03
+      },
+      "DSP": {
+        "votes": 58,
+        "pct": 0.01
+      },
+      "MILLET": {
+        "votes": 31,
+        "pct": 0.0
+      }
+    },
+    "Iğdır": {
+      "DEM": {
+        "votes": 45857,
+        "pct": 45.03
+      },
+      "AKP": {
+        "votes": 25182,
+        "pct": 24.73
+      },
+      "MHP": {
+        "votes": 12054,
+        "pct": 11.84
+      },
+      "CHP": {
+        "votes": 5552,
+        "pct": 5.45
+      },
+      "YRP": {
+        "votes": 3845,
+        "pct": 3.78
+      },
+      "IYI": {
+        "votes": 2996,
+        "pct": 2.94
+      },
+      "BBP": {
+        "votes": 1534,
+        "pct": 1.51
+      },
+      "DEVA": {
+        "votes": 1279,
+        "pct": 1.26
+      },
+      "BAGIMSIZ": {
+        "votes": 991,
+        "pct": 0.97
+      },
+      "ZAFER": {
+        "votes": 755,
+        "pct": 0.74
+      },
+      "BTP": {
+        "votes": 525,
+        "pct": 0.52
+      },
+      "HUDAPAR": {
+        "votes": 502,
+        "pct": 0.49
+      },
+      "GELECEK": {
+        "votes": 262,
+        "pct": 0.26
+      },
+      "SOL": {
+        "votes": 246,
+        "pct": 0.24
+      },
+      "VATAN": {
+        "votes": 169,
+        "pct": 0.17
+      },
+      "SP": {
+        "votes": 79,
+        "pct": 0.08
+      }
+    },
+    "Isparta": {
+      "AKP": {
+        "votes": 91786,
+        "pct": 35.88
+      },
+      "CHP": {
+        "votes": 55581,
+        "pct": 21.73
+      },
+      "MHP": {
+        "votes": 46520,
+        "pct": 18.18
+      },
+      "IYI": {
+        "votes": 33445,
+        "pct": 13.07
+      },
+      "YRP": {
+        "votes": 8709,
+        "pct": 3.4
+      },
+      "ZAFER": {
+        "votes": 7936,
+        "pct": 3.1
+      },
+      "DP": {
+        "votes": 3078,
+        "pct": 1.2
+      },
+      "SP": {
+        "votes": 2917,
+        "pct": 1.14
+      },
+      "BTP": {
+        "votes": 1029,
+        "pct": 0.4
+      },
+      "BBP": {
+        "votes": 853,
+        "pct": 0.33
+      },
+      "DEVA": {
+        "votes": 820,
+        "pct": 0.32
+      },
+      "DEM": {
+        "votes": 713,
+        "pct": 0.28
+      },
+      "MILLIYOL": {
+        "votes": 487,
+        "pct": 0.19
+      },
+      "TIP": {
+        "votes": 445,
+        "pct": 0.17
+      },
+      "VATAN": {
+        "votes": 425,
+        "pct": 0.17
+      },
+      "HUDAPAR": {
+        "votes": 423,
+        "pct": 0.17
+      },
+      "MILLET": {
+        "votes": 354,
+        "pct": 0.14
+      },
+      "BAGIMSIZ": {
+        "votes": 151,
+        "pct": 0.06
+      },
+      "SOL": {
+        "votes": 139,
+        "pct": 0.05
+      },
+      "TKH": {
+        "votes": 16,
+        "pct": 0.01
+      }
+    },
+    "İstanbul": {
+      "CHP": {
+        "votes": 3970679,
+        "pct": 45.69
+      },
+      "AKP": {
+        "votes": 3323133,
+        "pct": 38.24
+      },
+      "YRP": {
+        "votes": 326432,
+        "pct": 3.76
+      },
+      "ZAFER": {
+        "votes": 313889,
+        "pct": 3.61
+      },
+      "DEM": {
+        "votes": 151246,
+        "pct": 1.74
+      },
+      "IYI": {
+        "votes": 129564,
+        "pct": 1.49
+      },
+      "SP": {
+        "votes": 84668,
+        "pct": 0.97
+      },
+      "TIP": {
+        "votes": 65145,
+        "pct": 0.75
+      },
+      "MHP": {
+        "votes": 51441,
+        "pct": 0.59
+      },
+      "BBP": {
+        "votes": 38037,
+        "pct": 0.44
+      },
+      "TKP": {
+        "votes": 30081,
+        "pct": 0.35
+      },
+      "DEVA": {
+        "votes": 28971,
+        "pct": 0.33
+      },
+      "MEMLEKET": {
+        "votes": 28407,
+        "pct": 0.33
+      },
+      "BTP": {
+        "votes": 28079,
+        "pct": 0.32
+      },
+      "HUDAPAR": {
+        "votes": 24831,
+        "pct": 0.29
+      },
+      "SOL": {
+        "votes": 16188,
+        "pct": 0.19
+      },
+      "EMEP": {
+        "votes": 13729,
+        "pct": 0.16
+      },
+      "GELECEK": {
+        "votes": 10524,
+        "pct": 0.12
+      },
+      "DSP": {
+        "votes": 10178,
+        "pct": 0.12
+      },
+      "VATAN": {
+        "votes": 8277,
+        "pct": 0.1
+      },
+      "DP": {
+        "votes": 6989,
+        "pct": 0.08
+      },
+      "TKH": {
+        "votes": 6581,
+        "pct": 0.08
+      },
+      "MILLET": {
+        "votes": 4689,
+        "pct": 0.05
+      },
+      "ANAP": {
+        "votes": 2948,
+        "pct": 0.03
+      },
+      "HKP": {
+        "votes": 1871,
+        "pct": 0.02
+      },
+      "BAGIMSIZ": {
+        "votes": 9481,
+        "pct": 0.11
+      },
+      "ABPARTI": {
+        "votes": 1496,
+        "pct": 0.02
+      },
+      "MILLIYOL": {
+        "votes": 970,
+        "pct": 0.01
+      },
+      "ABP": {
+        "votes": 966,
+        "pct": 0.01
+      },
+      "ADP": {
+        "votes": 659,
+        "pct": 0.01
+      },
+      "AP": {
+        "votes": 269,
+        "pct": 0.0
+      },
+      "OCAK": {
+        "votes": 123,
+        "pct": 0.0
+      }
+    },
+    "İzmir": {
+      "CHP": {
+        "votes": 1258986,
+        "pct": 48.21
+      },
+      "AKP": {
+        "votes": 809582,
+        "pct": 31.0
+      },
+      "DEM": {
+        "votes": 117783,
+        "pct": 4.51
+      },
+      "IYI": {
+        "votes": 105635,
+        "pct": 4.04
+      },
+      "ZAFER": {
+        "votes": 86218,
+        "pct": 3.3
+      },
+      "MHP": {
+        "votes": 59975,
+        "pct": 2.3
+      },
+      "TIP": {
+        "votes": 35843,
+        "pct": 1.37
+      },
+      "YRP": {
+        "votes": 31453,
+        "pct": 1.2
+      },
+      "DP": {
+        "votes": 15923,
+        "pct": 0.61
+      },
+      "MEMLEKET": {
+        "votes": 15846,
+        "pct": 0.61
+      },
+      "TKP": {
+        "votes": 12841,
+        "pct": 0.49
+      },
+      "SP": {
+        "votes": 11716,
+        "pct": 0.45
+      },
+      "BTP": {
+        "votes": 10045,
+        "pct": 0.38
+      },
+      "DEVA": {
+        "votes": 8638,
+        "pct": 0.33
+      },
+      "DSP": {
+        "votes": 4294,
+        "pct": 0.16
+      },
+      "EMEP": {
+        "votes": 4257,
+        "pct": 0.16
+      },
+      "HUDAPAR": {
+        "votes": 4231,
+        "pct": 0.16
+      },
+      "VATAN": {
+        "votes": 3474,
+        "pct": 0.13
+      },
+      "SOL": {
+        "votes": 3349,
+        "pct": 0.13
+      },
+      "TKH": {
+        "votes": 3094,
+        "pct": 0.12
+      },
+      "BAGIMSIZ": {
+        "votes": 5887,
+        "pct": 0.23
+      },
+      "GELECEK": {
+        "votes": 981,
+        "pct": 0.04
+      },
+      "ANAP": {
+        "votes": 569,
+        "pct": 0.02
+      },
+      "OCAK": {
+        "votes": 336,
+        "pct": 0.01
+      },
+      "ABP": {
+        "votes": 328,
+        "pct": 0.01
+      },
+      "AP": {
+        "votes": 157,
+        "pct": 0.01
+      },
+      "ADP": {
+        "votes": 69,
+        "pct": 0.0
+      },
+      "MILLET": {
+        "votes": 32,
+        "pct": 0.0
+      },
+      "MILLIYOL": {
+        "votes": 25,
+        "pct": 0.0
+      }
+    },
+    "Kahramanmaraş": {
+      "AKP": {
+        "votes": 219429,
+        "pct": 38.1
+      },
+      "YRP": {
+        "votes": 193868,
+        "pct": 33.66
+      },
+      "CHP": {
+        "votes": 73419,
+        "pct": 12.75
+      },
+      "IYI": {
+        "votes": 27693,
+        "pct": 4.81
+      },
+      "BBP": {
+        "votes": 12403,
+        "pct": 2.15
+      },
+      "ZAFER": {
+        "votes": 9268,
+        "pct": 1.61
+      },
+      "MHP": {
+        "votes": 8597,
+        "pct": 1.49
+      },
+      "SP": {
+        "votes": 5826,
+        "pct": 1.01
+      },
+      "DEVA": {
+        "votes": 3841,
+        "pct": 0.67
+      },
+      "BTP": {
+        "votes": 3295,
+        "pct": 0.57
+      },
+      "MEMLEKET": {
+        "votes": 3246,
+        "pct": 0.56
+      },
+      "DEM": {
+        "votes": 2718,
+        "pct": 0.47
+      },
+      "BAGIMSIZ": {
+        "votes": 4829,
+        "pct": 0.84
+      },
+      "MILLIYOL": {
+        "votes": 1777,
+        "pct": 0.31
+      },
+      "HUDAPAR": {
+        "votes": 1435,
+        "pct": 0.25
+      },
+      "DSP": {
+        "votes": 933,
+        "pct": 0.16
+      },
+      "TKP": {
+        "votes": 870,
+        "pct": 0.15
+      },
+      "TIP": {
+        "votes": 751,
+        "pct": 0.13
+      },
+      "SOL": {
+        "votes": 658,
+        "pct": 0.11
+      },
+      "GELECEK": {
+        "votes": 575,
+        "pct": 0.1
+      },
+      "MILLET": {
+        "votes": 408,
+        "pct": 0.07
+      },
+      "TKH": {
+        "votes": 100,
+        "pct": 0.02
+      },
+      "VATAN": {
+        "votes": 62,
+        "pct": 0.01
+      }
+    },
+    "Karabük": {
+      "AKP": {
+        "votes": 51956,
+        "pct": 36.63
+      },
+      "MHP": {
+        "votes": 30142,
+        "pct": 21.25
+      },
+      "CHP": {
+        "votes": 27523,
+        "pct": 19.41
+      },
+      "YRP": {
+        "votes": 19362,
+        "pct": 13.65
+      },
+      "IYI": {
+        "votes": 3620,
+        "pct": 2.55
+      },
+      "ZAFER": {
+        "votes": 3002,
+        "pct": 2.12
+      },
+      "SP": {
+        "votes": 2543,
+        "pct": 1.79
+      },
+      "BTP": {
+        "votes": 971,
+        "pct": 0.68
+      },
+      "BBP": {
+        "votes": 481,
+        "pct": 0.34
+      },
+      "SOL": {
+        "votes": 350,
+        "pct": 0.25
+      },
+      "HUDAPAR": {
+        "votes": 312,
+        "pct": 0.22
+      },
+      "DEVA": {
+        "votes": 272,
+        "pct": 0.19
+      },
+      "DP": {
+        "votes": 257,
+        "pct": 0.18
+      },
+      "TIP": {
+        "votes": 246,
+        "pct": 0.17
+      },
+      "MILLET": {
+        "votes": 216,
+        "pct": 0.15
+      },
+      "VATAN": {
+        "votes": 156,
+        "pct": 0.11
+      },
+      "DSP": {
+        "votes": 119,
+        "pct": 0.08
+      },
+      "DEM": {
+        "votes": 118,
+        "pct": 0.08
+      },
+      "GELECEK": {
+        "votes": 100,
+        "pct": 0.07
+      },
+      "BAGIMSIZ": {
+        "votes": 83,
+        "pct": 0.06
+      }
+    },
+    "Karaman": {
+      "MHP": {
+        "votes": 53077,
+        "pct": 35.71
+      },
+      "AKP": {
+        "votes": 42721,
+        "pct": 28.75
+      },
+      "CHP": {
+        "votes": 30847,
+        "pct": 20.76
+      },
+      "YRP": {
+        "votes": 7637,
+        "pct": 5.14
+      },
+      "IYI": {
+        "votes": 3252,
+        "pct": 2.19
+      },
+      "ZAFER": {
+        "votes": 2299,
+        "pct": 1.55
+      },
+      "BAGIMSIZ": {
+        "votes": 4047,
+        "pct": 2.72
+      },
+      "SP": {
+        "votes": 2057,
+        "pct": 1.38
+      },
+      "BTP": {
+        "votes": 747,
+        "pct": 0.5
+      },
+      "SOL": {
+        "votes": 319,
+        "pct": 0.21
+      },
+      "TIP": {
+        "votes": 297,
+        "pct": 0.2
+      },
+      "MILLET": {
+        "votes": 294,
+        "pct": 0.2
+      },
+      "VATAN": {
+        "votes": 281,
+        "pct": 0.19
+      },
+      "DEVA": {
+        "votes": 224,
+        "pct": 0.15
+      },
+      "DEM": {
+        "votes": 216,
+        "pct": 0.15
+      },
+      "HUDAPAR": {
+        "votes": 213,
+        "pct": 0.14
+      },
+      "BBP": {
+        "votes": 91,
+        "pct": 0.06
+      }
+    },
+    "Kars": {
+      "DEM": {
+        "votes": 32782,
+        "pct": 24.58
+      },
+      "AKP": {
+        "votes": 29233,
+        "pct": 21.92
+      },
+      "CHP": {
+        "votes": 24559,
+        "pct": 18.42
+      },
+      "MHP": {
+        "votes": 24333,
+        "pct": 18.25
+      },
+      "IYI": {
+        "votes": 9712,
+        "pct": 7.28
+      },
+      "YRP": {
+        "votes": 5807,
+        "pct": 4.35
+      },
+      "DEVA": {
+        "votes": 2116,
+        "pct": 1.59
+      },
+      "GELECEK": {
+        "votes": 1036,
+        "pct": 0.78
+      },
+      "BTP": {
+        "votes": 935,
+        "pct": 0.7
+      },
+      "SOL": {
+        "votes": 629,
+        "pct": 0.47
+      },
+      "BAGIMSIZ": {
+        "votes": 695,
+        "pct": 0.52
+      },
+      "HUDAPAR": {
+        "votes": 442,
+        "pct": 0.33
+      },
+      "SP": {
+        "votes": 266,
+        "pct": 0.2
+      },
+      "DSP": {
+        "votes": 251,
+        "pct": 0.19
+      },
+      "BBP": {
+        "votes": 249,
+        "pct": 0.19
+      },
+      "VATAN": {
+        "votes": 228,
+        "pct": 0.17
+      },
+      "MILLET": {
+        "votes": 84,
+        "pct": 0.06
+      }
+    },
+    "Kastamonu": {
+      "AKP": {
+        "votes": 90487,
+        "pct": 37.38
+      },
+      "CHP": {
+        "votes": 59890,
+        "pct": 24.74
+      },
+      "MHP": {
+        "votes": 59760,
+        "pct": 24.69
+      },
+      "YRP": {
+        "votes": 13407,
+        "pct": 5.54
+      },
+      "IYI": {
+        "votes": 5921,
+        "pct": 2.45
+      },
+      "SP": {
+        "votes": 2785,
+        "pct": 1.15
+      },
+      "ZAFER": {
+        "votes": 1969,
+        "pct": 0.81
+      },
+      "BBP": {
+        "votes": 1428,
+        "pct": 0.59
+      },
+      "BTP": {
+        "votes": 1418,
+        "pct": 0.59
+      },
+      "BAGIMSIZ": {
+        "votes": 2042,
+        "pct": 0.84
+      },
+      "VATAN": {
+        "votes": 562,
+        "pct": 0.23
+      },
+      "HUDAPAR": {
+        "votes": 510,
+        "pct": 0.21
+      },
+      "DSP": {
+        "votes": 333,
+        "pct": 0.14
+      },
+      "DEVA": {
+        "votes": 328,
+        "pct": 0.14
+      },
+      "MEMLEKET": {
+        "votes": 282,
+        "pct": 0.12
+      },
+      "MILLET": {
+        "votes": 269,
+        "pct": 0.11
+      },
+      "DP": {
+        "votes": 204,
+        "pct": 0.08
+      },
+      "SOL": {
+        "votes": 153,
+        "pct": 0.06
+      },
+      "TIP": {
+        "votes": 132,
+        "pct": 0.05
+      },
+      "DEM": {
+        "votes": 104,
+        "pct": 0.04
+      },
+      "EMEP": {
+        "votes": 84,
+        "pct": 0.03
+      }
+    },
+    "Kayseri": {
+      "AKP": {
+        "votes": 259955,
+        "pct": 34.05
+      },
+      "YRP": {
+        "votes": 146461,
+        "pct": 19.18
+      },
+      "CHP": {
+        "votes": 118074,
+        "pct": 15.47
+      },
+      "IYI": {
+        "votes": 106958,
+        "pct": 14.01
+      },
+      "ZAFER": {
+        "votes": 31554,
+        "pct": 4.13
+      },
+      "BBP": {
+        "votes": 31335,
+        "pct": 4.1
+      },
+      "SP": {
+        "votes": 29171,
+        "pct": 3.82
+      },
+      "MHP": {
+        "votes": 19926,
+        "pct": 2.61
+      },
+      "DEVA": {
+        "votes": 4891,
+        "pct": 0.64
+      },
+      "BTP": {
+        "votes": 2926,
+        "pct": 0.38
+      },
+      "HUDAPAR": {
+        "votes": 1991,
+        "pct": 0.26
+      },
+      "DEM": {
+        "votes": 1886,
+        "pct": 0.25
+      },
+      "TIP": {
+        "votes": 1462,
+        "pct": 0.19
+      },
+      "TKP": {
+        "votes": 1393,
+        "pct": 0.18
+      },
+      "MILLIYOL": {
+        "votes": 1251,
+        "pct": 0.16
+      },
+      "EMEP": {
+        "votes": 892,
+        "pct": 0.12
+      },
+      "MILLET": {
+        "votes": 798,
+        "pct": 0.1
+      },
+      "VATAN": {
+        "votes": 766,
+        "pct": 0.1
+      },
+      "GELECEK": {
+        "votes": 763,
+        "pct": 0.1
+      },
+      "SOL": {
+        "votes": 707,
+        "pct": 0.09
+      },
+      "TKH": {
+        "votes": 323,
+        "pct": 0.04
+      }
+    },
+    "Kilis": {
+      "CHP": {
+        "votes": 25450,
+        "pct": 33.22
+      },
+      "AKP": {
+        "votes": 23240,
+        "pct": 30.34
+      },
+      "MHP": {
+        "votes": 17228,
+        "pct": 22.49
+      },
+      "IYI": {
+        "votes": 3100,
+        "pct": 4.05
+      },
+      "YRP": {
+        "votes": 2805,
+        "pct": 3.66
+      },
+      "BTP": {
+        "votes": 1048,
+        "pct": 1.37
+      },
+      "ZAFER": {
+        "votes": 1014,
+        "pct": 1.32
+      },
+      "HUDAPAR": {
+        "votes": 588,
+        "pct": 0.77
+      },
+      "SP": {
+        "votes": 537,
+        "pct": 0.7
+      },
+      "DEVA": {
+        "votes": 494,
+        "pct": 0.64
+      },
+      "BBP": {
+        "votes": 363,
+        "pct": 0.47
+      },
+      "DEM": {
+        "votes": 255,
+        "pct": 0.33
+      },
+      "MILLET": {
+        "votes": 248,
+        "pct": 0.32
+      },
+      "TIP": {
+        "votes": 116,
+        "pct": 0.15
+      },
+      "VATAN": {
+        "votes": 66,
+        "pct": 0.09
+      },
+      "SOL": {
+        "votes": 42,
+        "pct": 0.05
+      },
+      "MILLIYOL": {
+        "votes": 8,
+        "pct": 0.01
+      }
+    },
+    "Kırıkkale": {
+      "CHP": {
+        "votes": 57060,
+        "pct": 35.83
+      },
+      "AKP": {
+        "votes": 45463,
+        "pct": 28.55
+      },
+      "MHP": {
+        "votes": 33873,
+        "pct": 21.27
+      },
+      "YRP": {
+        "votes": 10554,
+        "pct": 6.63
+      },
+      "IYI": {
+        "votes": 4282,
+        "pct": 2.69
+      },
+      "BBP": {
+        "votes": 2165,
+        "pct": 1.36
+      },
+      "SP": {
+        "votes": 1538,
+        "pct": 0.97
+      },
+      "ZAFER": {
+        "votes": 1517,
+        "pct": 0.95
+      },
+      "DEVA": {
+        "votes": 592,
+        "pct": 0.37
+      },
+      "MILLET": {
+        "votes": 486,
+        "pct": 0.31
+      },
+      "DP": {
+        "votes": 449,
+        "pct": 0.28
+      },
+      "BTP": {
+        "votes": 403,
+        "pct": 0.25
+      },
+      "HUDAPAR": {
+        "votes": 211,
+        "pct": 0.13
+      },
+      "DEM": {
+        "votes": 180,
+        "pct": 0.11
+      },
+      "TIP": {
+        "votes": 163,
+        "pct": 0.1
+      },
+      "ANAP": {
+        "votes": 136,
+        "pct": 0.09
+      },
+      "SOL": {
+        "votes": 93,
+        "pct": 0.06
+      },
+      "VATAN": {
+        "votes": 88,
+        "pct": 0.06
+      }
+    },
+    "Kırklareli": {
+      "CHP": {
+        "votes": 119632,
+        "pct": 50.48
+      },
+      "AKP": {
+        "votes": 55064,
+        "pct": 23.24
+      },
+      "MHP": {
+        "votes": 25731,
+        "pct": 10.86
+      },
+      "IYI": {
+        "votes": 13370,
+        "pct": 5.64
+      },
+      "ZAFER": {
+        "votes": 4285,
+        "pct": 1.81
+      },
+      "BAGIMSIZ": {
+        "votes": 3331,
+        "pct": 1.41
+      },
+      "DP": {
+        "votes": 2690,
+        "pct": 1.14
+      },
+      "BTP": {
+        "votes": 2015,
+        "pct": 0.85
+      },
+      "TIP": {
+        "votes": 1674,
+        "pct": 0.71
+      },
+      "DSP": {
+        "votes": 1632,
+        "pct": 0.69
+      },
+      "DEM": {
+        "votes": 1417,
+        "pct": 0.6
+      },
+      "YRP": {
+        "votes": 1394,
+        "pct": 0.59
+      },
+      "BBP": {
+        "votes": 1186,
+        "pct": 0.5
+      },
+      "SP": {
+        "votes": 853,
+        "pct": 0.36
+      },
+      "SOL": {
+        "votes": 618,
+        "pct": 0.26
+      },
+      "MEMLEKET": {
+        "votes": 557,
+        "pct": 0.24
+      },
+      "DEVA": {
+        "votes": 465,
+        "pct": 0.2
+      },
+      "MILLET": {
+        "votes": 331,
+        "pct": 0.14
+      },
+      "HUDAPAR": {
+        "votes": 317,
+        "pct": 0.13
+      },
+      "VATAN": {
+        "votes": 261,
+        "pct": 0.11
+      },
+      "EMEP": {
+        "votes": 156,
+        "pct": 0.07
+      }
+    },
+    "Kırşehir": {
+      "CHP": {
+        "votes": 50303,
+        "pct": 37.53
+      },
+      "AKP": {
+        "votes": 41947,
+        "pct": 31.29
+      },
+      "MHP": {
+        "votes": 19702,
+        "pct": 14.7
+      },
+      "IYI": {
+        "votes": 6613,
+        "pct": 4.93
+      },
+      "YRP": {
+        "votes": 3869,
+        "pct": 2.89
+      },
+      "BBP": {
+        "votes": 3390,
+        "pct": 2.53
+      },
+      "ZAFER": {
+        "votes": 2417,
+        "pct": 1.8
+      },
+      "DEM": {
+        "votes": 1984,
+        "pct": 1.48
+      },
+      "SP": {
+        "votes": 1385,
+        "pct": 1.03
+      },
+      "DP": {
+        "votes": 579,
+        "pct": 0.43
+      },
+      "BTP": {
+        "votes": 555,
+        "pct": 0.41
+      },
+      "DEVA": {
+        "votes": 240,
+        "pct": 0.18
+      },
+      "MILLET": {
+        "votes": 216,
+        "pct": 0.16
+      },
+      "TIP": {
+        "votes": 206,
+        "pct": 0.15
+      },
+      "SOL": {
+        "votes": 196,
+        "pct": 0.15
+      },
+      "HUDAPAR": {
+        "votes": 140,
+        "pct": 0.1
+      },
+      "EMEP": {
+        "votes": 119,
+        "pct": 0.09
+      },
+      "VATAN": {
+        "votes": 113,
+        "pct": 0.08
+      },
+      "MILLIYOL": {
+        "votes": 71,
+        "pct": 0.05
+      }
+    },
+    "Kocaeli": {
+      "AKP": {
+        "votes": 435670,
+        "pct": 39.29
+      },
+      "CHP": {
+        "votes": 333068,
+        "pct": 30.04
+      },
+      "YRP": {
+        "votes": 100340,
+        "pct": 9.05
+      },
+      "IYI": {
+        "votes": 74440,
+        "pct": 6.71
+      },
+      "ZAFER": {
+        "votes": 42684,
+        "pct": 3.85
+      },
+      "SP": {
+        "votes": 31923,
+        "pct": 2.88
+      },
+      "DEM": {
+        "votes": 30205,
+        "pct": 2.72
+      },
+      "TIP": {
+        "votes": 20984,
+        "pct": 1.89
+      },
+      "ANAP": {
+        "votes": 6405,
+        "pct": 0.58
+      },
+      "DEVA": {
+        "votes": 5755,
+        "pct": 0.52
+      },
+      "BTP": {
+        "votes": 5195,
+        "pct": 0.47
+      },
+      "HUDAPAR": {
+        "votes": 3207,
+        "pct": 0.29
+      },
+      "TKP": {
+        "votes": 2832,
+        "pct": 0.26
+      },
+      "MEMLEKET": {
+        "votes": 2803,
+        "pct": 0.25
+      },
+      "BAGIMSIZ": {
+        "votes": 5181,
+        "pct": 0.47
+      },
+      "DP": {
+        "votes": 2000,
+        "pct": 0.18
+      },
+      "SOL": {
+        "votes": 1813,
+        "pct": 0.16
+      },
+      "VATAN": {
+        "votes": 1750,
+        "pct": 0.16
+      },
+      "EMEP": {
+        "votes": 1060,
+        "pct": 0.1
+      },
+      "TKH": {
+        "votes": 573,
+        "pct": 0.05
+      },
+      "DSP": {
+        "votes": 538,
+        "pct": 0.05
+      },
+      "MILLET": {
+        "votes": 131,
+        "pct": 0.01
+      },
+      "GELECEK": {
+        "votes": 117,
+        "pct": 0.01
+      },
+      "HKP": {
+        "votes": 61,
+        "pct": 0.01
+      }
+    },
+    "Konya": {
+      "AKP": {
+        "votes": 465948,
+        "pct": 39.6
+      },
+      "YRP": {
+        "votes": 269379,
+        "pct": 22.89
+      },
+      "CHP": {
+        "votes": 171459,
+        "pct": 14.57
+      },
+      "MHP": {
+        "votes": 52717,
+        "pct": 4.48
+      },
+      "IYI": {
+        "votes": 45161,
+        "pct": 3.84
+      },
+      "ZAFER": {
+        "votes": 40096,
+        "pct": 3.41
+      },
+      "BBP": {
+        "votes": 38104,
+        "pct": 3.24
+      },
+      "SP": {
+        "votes": 36057,
+        "pct": 3.06
+      },
+      "DEM": {
+        "votes": 20143,
+        "pct": 1.71
+      },
+      "DP": {
+        "votes": 8869,
+        "pct": 0.75
+      },
+      "DEVA": {
+        "votes": 6067,
+        "pct": 0.52
+      },
+      "HUDAPAR": {
+        "votes": 3883,
+        "pct": 0.33
+      },
+      "BTP": {
+        "votes": 3391,
+        "pct": 0.29
+      },
+      "MEMLEKET": {
+        "votes": 3331,
+        "pct": 0.28
+      },
+      "GELECEK": {
+        "votes": 2528,
+        "pct": 0.21
+      },
+      "TKP": {
+        "votes": 1676,
+        "pct": 0.14
+      },
+      "TIP": {
+        "votes": 1407,
+        "pct": 0.12
+      },
+      "MILLIYOL": {
+        "votes": 1302,
+        "pct": 0.11
+      },
+      "VATAN": {
+        "votes": 1194,
+        "pct": 0.1
+      },
+      "BAGIMSIZ": {
+        "votes": 1799,
+        "pct": 0.15
+      },
+      "SOL": {
+        "votes": 902,
+        "pct": 0.08
+      },
+      "ANAP": {
+        "votes": 648,
+        "pct": 0.06
+      },
+      "TKH": {
+        "votes": 402,
+        "pct": 0.03
+      },
+      "MILLET": {
+        "votes": 143,
+        "pct": 0.01
+      },
+      "AP": {
+        "votes": 130,
+        "pct": 0.01
+      }
+    },
+    "Kütahya": {
+      "AKP": {
+        "votes": 117501,
+        "pct": 33.68
+      },
+      "MHP": {
+        "votes": 89412,
+        "pct": 25.63
+      },
+      "CHP": {
+        "votes": 64563,
+        "pct": 18.51
+      },
+      "YRP": {
+        "votes": 42819,
+        "pct": 12.27
+      },
+      "IYI": {
+        "votes": 13682,
+        "pct": 3.92
+      },
+      "SP": {
+        "votes": 6616,
+        "pct": 1.9
+      },
+      "BBP": {
+        "votes": 4842,
+        "pct": 1.39
+      },
+      "ZAFER": {
+        "votes": 2842,
+        "pct": 0.81
+      },
+      "DP": {
+        "votes": 1302,
+        "pct": 0.37
+      },
+      "MILLET": {
+        "votes": 1195,
+        "pct": 0.34
+      },
+      "BTP": {
+        "votes": 946,
+        "pct": 0.27
+      },
+      "DEVA": {
+        "votes": 885,
+        "pct": 0.25
+      },
+      "TIP": {
+        "votes": 715,
+        "pct": 0.2
+      },
+      "VATAN": {
+        "votes": 388,
+        "pct": 0.11
+      },
+      "HUDAPAR": {
+        "votes": 371,
+        "pct": 0.11
+      },
+      "SOL": {
+        "votes": 274,
+        "pct": 0.08
+      },
+      "MEMLEKET": {
+        "votes": 260,
+        "pct": 0.07
+      },
+      "DEM": {
+        "votes": 224,
+        "pct": 0.06
+      }
+    },
+    "Malatya": {
+      "AKP": {
+        "votes": 180359,
+        "pct": 47.17
+      },
+      "CHP": {
+        "votes": 106489,
+        "pct": 27.85
+      },
+      "YRP": {
+        "votes": 57230,
+        "pct": 14.97
+      },
+      "BBP": {
+        "votes": 6229,
+        "pct": 1.63
+      },
+      "MHP": {
+        "votes": 6211,
+        "pct": 1.62
+      },
+      "SP": {
+        "votes": 5311,
+        "pct": 1.39
+      },
+      "IYI": {
+        "votes": 5197,
+        "pct": 1.36
+      },
+      "DEM": {
+        "votes": 3355,
+        "pct": 0.88
+      },
+      "ZAFER": {
+        "votes": 2984,
+        "pct": 0.78
+      },
+      "HUDAPAR": {
+        "votes": 2039,
+        "pct": 0.53
+      },
+      "BTP": {
+        "votes": 1828,
+        "pct": 0.48
+      },
+      "TIP": {
+        "votes": 1738,
+        "pct": 0.45
+      },
+      "DEVA": {
+        "votes": 800,
+        "pct": 0.21
+      },
+      "TKP": {
+        "votes": 470,
+        "pct": 0.12
+      },
+      "EMEP": {
+        "votes": 324,
+        "pct": 0.08
+      },
+      "SOL": {
+        "votes": 321,
+        "pct": 0.08
+      },
+      "BAGIMSIZ": {
+        "votes": 524,
+        "pct": 0.14
+      },
+      "VATAN": {
+        "votes": 224,
+        "pct": 0.06
+      },
+      "MEMLEKET": {
+        "votes": 215,
+        "pct": 0.06
+      },
+      "TKH": {
+        "votes": 176,
+        "pct": 0.05
+      },
+      "MILLIYOL": {
+        "votes": 128,
+        "pct": 0.03
+      },
+      "DP": {
+        "votes": 95,
+        "pct": 0.02
+      },
+      "OCAK": {
+        "votes": 72,
+        "pct": 0.02
+      },
+      "ABP": {
+        "votes": 30,
+        "pct": 0.01
+      }
+    },
+    "Manisa": {
+      "CHP": {
+        "votes": 408364,
+        "pct": 45.84
+      },
+      "AKP": {
+        "votes": 182637,
+        "pct": 20.5
+      },
+      "MHP": {
+        "votes": 119572,
+        "pct": 13.42
+      },
+      "IYI": {
+        "votes": 54917,
+        "pct": 6.16
+      },
+      "YRP": {
+        "votes": 41197,
+        "pct": 4.62
+      },
+      "SP": {
+        "votes": 18886,
+        "pct": 2.12
+      },
+      "ZAFER": {
+        "votes": 15392,
+        "pct": 1.73
+      },
+      "DEM": {
+        "votes": 14982,
+        "pct": 1.68
+      },
+      "BBP": {
+        "votes": 7926,
+        "pct": 0.89
+      },
+      "DP": {
+        "votes": 6314,
+        "pct": 0.71
+      },
+      "BTP": {
+        "votes": 2660,
+        "pct": 0.3
+      },
+      "BAGIMSIZ": {
+        "votes": 3545,
+        "pct": 0.4
+      },
+      "TIP": {
+        "votes": 2197,
+        "pct": 0.25
+      },
+      "DEVA": {
+        "votes": 2180,
+        "pct": 0.24
+      },
+      "HUDAPAR": {
+        "votes": 1873,
+        "pct": 0.21
+      },
+      "MILLET": {
+        "votes": 1747,
+        "pct": 0.2
+      },
+      "TKP": {
+        "votes": 1415,
+        "pct": 0.16
+      },
+      "GELECEK": {
+        "votes": 1122,
+        "pct": 0.13
+      },
+      "SOL": {
+        "votes": 1014,
+        "pct": 0.11
+      },
+      "EMEP": {
+        "votes": 696,
+        "pct": 0.08
+      },
+      "ANAP": {
+        "votes": 626,
+        "pct": 0.07
+      },
+      "VATAN": {
+        "votes": 505,
+        "pct": 0.06
+      },
+      "DSP": {
+        "votes": 485,
+        "pct": 0.05
+      },
+      "MEMLEKET": {
+        "votes": 252,
+        "pct": 0.03
+      },
+      "YTP": {
+        "votes": 161,
+        "pct": 0.02
+      },
+      "TKH": {
+        "votes": 89,
+        "pct": 0.01
+      },
+      "MILLIYOL": {
+        "votes": 43,
+        "pct": 0.0
+      }
+    },
+    "Mardin": {
+      "DEM": {
+        "votes": 202154,
+        "pct": 53.77
+      },
+      "AKP": {
+        "votes": 93655,
+        "pct": 24.91
+      },
+      "YRP": {
+        "votes": 23882,
+        "pct": 6.35
+      },
+      "HUDAPAR": {
+        "votes": 14312,
+        "pct": 3.81
+      },
+      "DP": {
+        "votes": 10799,
+        "pct": 2.87
+      },
+      "CHP": {
+        "votes": 10685,
+        "pct": 2.84
+      },
+      "DEVA": {
+        "votes": 4508,
+        "pct": 1.2
+      },
+      "BAGIMSIZ": {
+        "votes": 4702,
+        "pct": 1.25
+      },
+      "IYI": {
+        "votes": 2834,
+        "pct": 0.75
+      },
+      "SP": {
+        "votes": 2665,
+        "pct": 0.71
+      },
+      "TKP": {
+        "votes": 1241,
+        "pct": 0.33
+      },
+      "BTP": {
+        "votes": 1089,
+        "pct": 0.29
+      },
+      "SOL": {
+        "votes": 1036,
+        "pct": 0.28
+      },
+      "BBP": {
+        "votes": 933,
+        "pct": 0.25
+      },
+      "ZAFER": {
+        "votes": 861,
+        "pct": 0.23
+      },
+      "GELECEK": {
+        "votes": 444,
+        "pct": 0.12
+      },
+      "VATAN": {
+        "votes": 77,
+        "pct": 0.02
+      },
+      "TKH": {
+        "votes": 64,
+        "pct": 0.02
+      },
+      "MHP": {
+        "votes": 49,
+        "pct": 0.01
+      }
+    },
+    "Mersin": {
+      "CHP": {
+        "votes": 494303,
+        "pct": 47.4
+      },
+      "MHP": {
+        "votes": 242912,
+        "pct": 23.29
+      },
+      "AKP": {
+        "votes": 94772,
+        "pct": 9.09
+      },
+      "IYI": {
+        "votes": 72082,
+        "pct": 6.91
+      },
+      "DEM": {
+        "votes": 43598,
+        "pct": 4.18
+      },
+      "ZAFER": {
+        "votes": 19079,
+        "pct": 1.83
+      },
+      "YRP": {
+        "votes": 15581,
+        "pct": 1.49
+      },
+      "MEMLEKET": {
+        "votes": 11381,
+        "pct": 1.09
+      },
+      "HUDAPAR": {
+        "votes": 6848,
+        "pct": 0.66
+      },
+      "TIP": {
+        "votes": 5794,
+        "pct": 0.56
+      },
+      "SP": {
+        "votes": 5719,
+        "pct": 0.55
+      },
+      "DEVA": {
+        "votes": 5220,
+        "pct": 0.5
+      },
+      "BBP": {
+        "votes": 4940,
+        "pct": 0.47
+      },
+      "BTP": {
+        "votes": 4425,
+        "pct": 0.42
+      },
+      "DP": {
+        "votes": 2907,
+        "pct": 0.28
+      },
+      "SOL": {
+        "votes": 2753,
+        "pct": 0.26
+      },
+      "TKP": {
+        "votes": 2374,
+        "pct": 0.23
+      },
+      "EMEP": {
+        "votes": 1953,
+        "pct": 0.19
+      },
+      "GELECEK": {
+        "votes": 1804,
+        "pct": 0.17
+      },
+      "VATAN": {
+        "votes": 1300,
+        "pct": 0.12
+      },
+      "BAGIMSIZ": {
+        "votes": 1837,
+        "pct": 0.18
+      },
+      "TKH": {
+        "votes": 525,
+        "pct": 0.05
+      },
+      "DSP": {
+        "votes": 483,
+        "pct": 0.05
+      },
+      "MILLET": {
+        "votes": 186,
+        "pct": 0.02
+      }
+    },
+    "Muğla": {
+      "CHP": {
+        "votes": 313270,
+        "pct": 49.68
+      },
+      "AKP": {
+        "votes": 162952,
+        "pct": 25.84
+      },
+      "IYI": {
+        "votes": 53438,
+        "pct": 8.47
+      },
+      "MHP": {
+        "votes": 42585,
+        "pct": 6.75
+      },
+      "DEM": {
+        "votes": 13176,
+        "pct": 2.09
+      },
+      "ZAFER": {
+        "votes": 12670,
+        "pct": 2.01
+      },
+      "TIP": {
+        "votes": 10494,
+        "pct": 1.66
+      },
+      "YRP": {
+        "votes": 6543,
+        "pct": 1.04
+      },
+      "DEVA": {
+        "votes": 2776,
+        "pct": 0.44
+      },
+      "SP": {
+        "votes": 2469,
+        "pct": 0.39
+      },
+      "TKP": {
+        "votes": 2156,
+        "pct": 0.34
+      },
+      "BTP": {
+        "votes": 2117,
+        "pct": 0.34
+      },
+      "SOL": {
+        "votes": 2023,
+        "pct": 0.32
+      },
+      "EMEP": {
+        "votes": 1064,
+        "pct": 0.17
+      },
+      "HUDAPAR": {
+        "votes": 751,
+        "pct": 0.12
+      },
+      "VATAN": {
+        "votes": 634,
+        "pct": 0.1
+      },
+      "DSP": {
+        "votes": 394,
+        "pct": 0.06
+      },
+      "BAGIMSIZ": {
+        "votes": 490,
+        "pct": 0.08
+      },
+      "DP": {
+        "votes": 153,
+        "pct": 0.02
+      },
+      "AP": {
+        "votes": 138,
+        "pct": 0.02
+      },
+      "YTP": {
+        "votes": 136,
+        "pct": 0.02
+      },
+      "TKH": {
+        "votes": 88,
+        "pct": 0.01
+      },
+      "MILLET": {
+        "votes": 64,
+        "pct": 0.01
+      },
+      "BBP": {
+        "votes": 52,
+        "pct": 0.01
+      }
+    },
+    "Muş": {
+      "DEM": {
+        "votes": 71362,
+        "pct": 43.19
+      },
+      "AKP": {
+        "votes": 41671,
+        "pct": 25.22
+      },
+      "YRP": {
+        "votes": 14936,
+        "pct": 9.04
+      },
+      "MHP": {
+        "votes": 6930,
+        "pct": 4.19
+      },
+      "CHP": {
+        "votes": 6747,
+        "pct": 4.08
+      },
+      "IYI": {
+        "votes": 5968,
+        "pct": 3.61
+      },
+      "HUDAPAR": {
+        "votes": 5305,
+        "pct": 3.21
+      },
+      "DEVA": {
+        "votes": 4369,
+        "pct": 2.64
+      },
+      "BAGIMSIZ": {
+        "votes": 2697,
+        "pct": 1.63
+      },
+      "SP": {
+        "votes": 1713,
+        "pct": 1.04
+      },
+      "BTP": {
+        "votes": 974,
+        "pct": 0.59
+      },
+      "HAKPAR": {
+        "votes": 527,
+        "pct": 0.32
+      },
+      "BBP": {
+        "votes": 496,
+        "pct": 0.3
+      },
+      "SOL": {
+        "votes": 444,
+        "pct": 0.27
+      },
+      "ZAFER": {
+        "votes": 435,
+        "pct": 0.26
+      },
+      "VATAN": {
+        "votes": 309,
+        "pct": 0.19
+      },
+      "DSP": {
+        "votes": 212,
+        "pct": 0.13
+      },
+      "MILLET": {
+        "votes": 129,
+        "pct": 0.08
+      }
+    },
+    "Nevşehir": {
+      "AKP": {
+        "votes": 60729,
+        "pct": 33.46
+      },
+      "MHP": {
+        "votes": 43309,
+        "pct": 23.86
+      },
+      "CHP": {
+        "votes": 30381,
+        "pct": 16.74
+      },
+      "IYI": {
+        "votes": 28888,
+        "pct": 15.92
+      },
+      "YRP": {
+        "votes": 6480,
+        "pct": 3.57
+      },
+      "BBP": {
+        "votes": 3308,
+        "pct": 1.82
+      },
+      "ZAFER": {
+        "votes": 2805,
+        "pct": 1.55
+      },
+      "TIP": {
+        "votes": 1720,
+        "pct": 0.95
+      },
+      "SP": {
+        "votes": 1585,
+        "pct": 0.87
+      },
+      "BTP": {
+        "votes": 600,
+        "pct": 0.33
+      },
+      "HUDAPAR": {
+        "votes": 436,
+        "pct": 0.24
+      },
+      "DEM": {
+        "votes": 331,
+        "pct": 0.18
+      },
+      "BAGIMSIZ": {
+        "votes": 314,
+        "pct": 0.17
+      },
+      "MILLET": {
+        "votes": 230,
+        "pct": 0.13
+      },
+      "DEVA": {
+        "votes": 147,
+        "pct": 0.08
+      },
+      "DP": {
+        "votes": 121,
+        "pct": 0.07
+      },
+      "VATAN": {
+        "votes": 110,
+        "pct": 0.06
+      }
+    },
+    "Niğde": {
+      "AKP": {
+        "votes": 75448,
+        "pct": 36.09
+      },
+      "CHP": {
+        "votes": 50290,
+        "pct": 24.06
+      },
+      "MHP": {
+        "votes": 49151,
+        "pct": 23.51
+      },
+      "IYI": {
+        "votes": 10258,
+        "pct": 4.91
+      },
+      "YRP": {
+        "votes": 9929,
+        "pct": 4.75
+      },
+      "BBP": {
+        "votes": 5562,
+        "pct": 2.66
+      },
+      "SP": {
+        "votes": 2868,
+        "pct": 1.37
+      },
+      "ZAFER": {
+        "votes": 1870,
+        "pct": 0.89
+      },
+      "BTP": {
+        "votes": 723,
+        "pct": 0.35
+      },
+      "BAGIMSIZ": {
+        "votes": 699,
+        "pct": 0.33
+      },
+      "DEVA": {
+        "votes": 420,
+        "pct": 0.2
+      },
+      "MILLET": {
+        "votes": 353,
+        "pct": 0.17
+      },
+      "TIP": {
+        "votes": 295,
+        "pct": 0.14
+      },
+      "VATAN": {
+        "votes": 257,
+        "pct": 0.12
+      },
+      "HUDAPAR": {
+        "votes": 227,
+        "pct": 0.11
+      },
+      "DEM": {
+        "votes": 210,
+        "pct": 0.1
+      },
+      "TKP": {
+        "votes": 192,
+        "pct": 0.09
+      },
+      "SOL": {
+        "votes": 177,
+        "pct": 0.08
+      },
+      "EMEP": {
+        "votes": 127,
+        "pct": 0.06
+      }
+    },
+    "Ordu": {
+      "AKP": {
+        "votes": 183416,
+        "pct": 40.78
+      },
+      "CHP": {
+        "votes": 114976,
+        "pct": 25.57
+      },
+      "IYI": {
+        "votes": 89097,
+        "pct": 19.81
+      },
+      "YRP": {
+        "votes": 29980,
+        "pct": 6.67
+      },
+      "MHP": {
+        "votes": 8277,
+        "pct": 1.84
+      },
+      "ZAFER": {
+        "votes": 4976,
+        "pct": 1.11
+      },
+      "SP": {
+        "votes": 4814,
+        "pct": 1.07
+      },
+      "BBP": {
+        "votes": 4627,
+        "pct": 1.03
+      },
+      "BTP": {
+        "votes": 1658,
+        "pct": 0.37
+      },
+      "SOL": {
+        "votes": 1311,
+        "pct": 0.29
+      },
+      "BAGIMSIZ": {
+        "votes": 2327,
+        "pct": 0.52
+      },
+      "DP": {
+        "votes": 740,
+        "pct": 0.16
+      },
+      "HUDAPAR": {
+        "votes": 640,
+        "pct": 0.14
+      },
+      "TIP": {
+        "votes": 626,
+        "pct": 0.14
+      },
+      "VATAN": {
+        "votes": 512,
+        "pct": 0.11
+      },
+      "TKP": {
+        "votes": 484,
+        "pct": 0.11
+      },
+      "DSP": {
+        "votes": 304,
+        "pct": 0.07
+      },
+      "DEVA": {
+        "votes": 298,
+        "pct": 0.07
+      },
+      "DEM": {
+        "votes": 248,
+        "pct": 0.06
+      },
+      "GELECEK": {
+        "votes": 233,
+        "pct": 0.05
+      },
+      "OCAK": {
+        "votes": 71,
+        "pct": 0.02
+      },
+      "TKH": {
+        "votes": 61,
+        "pct": 0.01
+      },
+      "MEMLEKET": {
+        "votes": 45,
+        "pct": 0.01
+      }
+    },
+    "Osmaniye": {
+      "AKP": {
+        "votes": 79007,
+        "pct": 26.96
+      },
+      "MHP": {
+        "votes": 76818,
+        "pct": 26.21
+      },
+      "CHP": {
+        "votes": 72529,
+        "pct": 24.75
+      },
+      "IYI": {
+        "votes": 33587,
+        "pct": 11.46
+      },
+      "YRP": {
+        "votes": 6064,
+        "pct": 2.07
+      },
+      "ZAFER": {
+        "votes": 5604,
+        "pct": 1.91
+      },
+      "BBP": {
+        "votes": 4772,
+        "pct": 1.63
+      },
+      "DP": {
+        "votes": 3459,
+        "pct": 1.18
+      },
+      "SP": {
+        "votes": 2697,
+        "pct": 0.92
+      },
+      "BTP": {
+        "votes": 1571,
+        "pct": 0.54
+      },
+      "HUDAPAR": {
+        "votes": 1434,
+        "pct": 0.49
+      },
+      "BAGIMSIZ": {
+        "votes": 1267,
+        "pct": 0.43
+      },
+      "TIP": {
+        "votes": 791,
+        "pct": 0.27
+      },
+      "MILLET": {
+        "votes": 747,
+        "pct": 0.25
+      },
+      "SOL": {
+        "votes": 670,
+        "pct": 0.23
+      },
+      "EMEP": {
+        "votes": 530,
+        "pct": 0.18
+      },
+      "MEMLEKET": {
+        "votes": 503,
+        "pct": 0.17
+      },
+      "DEVA": {
+        "votes": 426,
+        "pct": 0.15
+      },
+      "VATAN": {
+        "votes": 396,
+        "pct": 0.14
+      },
+      "GELECEK": {
+        "votes": 218,
+        "pct": 0.07
+      }
+    },
+    "Rize": {
+      "AKP": {
+        "votes": 92222,
+        "pct": 45.63
+      },
+      "CHP": {
+        "votes": 34565,
+        "pct": 17.1
+      },
+      "MHP": {
+        "votes": 28972,
+        "pct": 14.33
+      },
+      "YRP": {
+        "votes": 18811,
+        "pct": 9.31
+      },
+      "IYI": {
+        "votes": 7433,
+        "pct": 3.68
+      },
+      "SP": {
+        "votes": 6491,
+        "pct": 3.21
+      },
+      "BBP": {
+        "votes": 4827,
+        "pct": 2.39
+      },
+      "ZAFER": {
+        "votes": 3129,
+        "pct": 1.55
+      },
+      "DEVA": {
+        "votes": 1279,
+        "pct": 0.63
+      },
+      "BTP": {
+        "votes": 1139,
+        "pct": 0.56
+      },
+      "SOL": {
+        "votes": 883,
+        "pct": 0.44
+      },
+      "MEMLEKET": {
+        "votes": 531,
+        "pct": 0.26
+      },
+      "HUDAPAR": {
+        "votes": 386,
+        "pct": 0.19
+      },
+      "TIP": {
+        "votes": 337,
+        "pct": 0.17
+      },
+      "VATAN": {
+        "votes": 308,
+        "pct": 0.15
+      },
+      "DP": {
+        "votes": 238,
+        "pct": 0.12
+      },
+      "BAGIMSIZ": {
+        "votes": 153,
+        "pct": 0.08
+      },
+      "DEM": {
+        "votes": 146,
+        "pct": 0.07
+      },
+      "MILLET": {
+        "votes": 142,
+        "pct": 0.07
+      },
+      "EMEP": {
+        "votes": 121,
+        "pct": 0.06
+      }
+    },
+    "Sakarya": {
+      "AKP": {
+        "votes": 224969,
+        "pct": 37.52
+      },
+      "CHP": {
+        "votes": 112898,
+        "pct": 18.83
+      },
+      "YRP": {
+        "votes": 91001,
+        "pct": 15.18
+      },
+      "BBP": {
+        "votes": 51193,
+        "pct": 8.54
+      },
+      "SP": {
+        "votes": 31858,
+        "pct": 5.31
+      },
+      "IYI": {
+        "votes": 31194,
+        "pct": 5.2
+      },
+      "ZAFER": {
+        "votes": 17685,
+        "pct": 2.95
+      },
+      "MHP": {
+        "votes": 17668,
+        "pct": 2.95
+      },
+      "DEVA": {
+        "votes": 4123,
+        "pct": 0.69
+      },
+      "BTP": {
+        "votes": 3307,
+        "pct": 0.55
+      },
+      "BAGIMSIZ": {
+        "votes": 2840,
+        "pct": 0.47
+      },
+      "HUDAPAR": {
+        "votes": 1550,
+        "pct": 0.26
+      },
+      "DEM": {
+        "votes": 1456,
+        "pct": 0.24
+      },
+      "TIP": {
+        "votes": 1403,
+        "pct": 0.23
+      },
+      "MILLET": {
+        "votes": 1075,
+        "pct": 0.18
+      },
+      "DP": {
+        "votes": 996,
+        "pct": 0.17
+      },
+      "SOL": {
+        "votes": 995,
+        "pct": 0.17
+      },
+      "TKP": {
+        "votes": 980,
+        "pct": 0.16
+      },
+      "VATAN": {
+        "votes": 746,
+        "pct": 0.12
+      },
+      "DSP": {
+        "votes": 588,
+        "pct": 0.1
+      },
+      "GELECEK": {
+        "votes": 381,
+        "pct": 0.06
+      },
+      "MILLIYOL": {
+        "votes": 337,
+        "pct": 0.06
+      },
+      "TKH": {
+        "votes": 184,
+        "pct": 0.03
+      },
+      "ABP": {
+        "votes": 91,
+        "pct": 0.02
+      }
+    },
+    "Samsun": {
+      "AKP": {
+        "votes": 289917,
+        "pct": 37.43
+      },
+      "CHP": {
+        "votes": 183658,
+        "pct": 23.71
+      },
+      "YRP": {
+        "votes": 124294,
+        "pct": 16.05
+      },
+      "IYI": {
+        "votes": 97343,
+        "pct": 12.57
+      },
+      "ZAFER": {
+        "votes": 15544,
+        "pct": 2.01
+      },
+      "BBP": {
+        "votes": 15480,
+        "pct": 2.0
+      },
+      "MHP": {
+        "votes": 15289,
+        "pct": 1.97
+      },
+      "SP": {
+        "votes": 11347,
+        "pct": 1.46
+      },
+      "BTP": {
+        "votes": 4660,
+        "pct": 0.6
+      },
+      "MEMLEKET": {
+        "votes": 2100,
+        "pct": 0.27
+      },
+      "DEVA": {
+        "votes": 1901,
+        "pct": 0.25
+      },
+      "TIP": {
+        "votes": 1680,
+        "pct": 0.22
+      },
+      "TKP": {
+        "votes": 1537,
+        "pct": 0.2
+      },
+      "GELECEK": {
+        "votes": 1410,
+        "pct": 0.18
+      },
+      "DP": {
+        "votes": 1255,
+        "pct": 0.16
+      },
+      "HUDAPAR": {
+        "votes": 1244,
+        "pct": 0.16
+      },
+      "DSP": {
+        "votes": 1185,
+        "pct": 0.15
+      },
+      "SOL": {
+        "votes": 1139,
+        "pct": 0.15
+      },
+      "VATAN": {
+        "votes": 1109,
+        "pct": 0.14
+      },
+      "BAGIMSIZ": {
+        "votes": 1089,
+        "pct": 0.14
+      },
+      "DEM": {
+        "votes": 458,
+        "pct": 0.06
+      },
+      "MILLIYOL": {
+        "votes": 358,
+        "pct": 0.05
+      },
+      "ANAP": {
+        "votes": 277,
+        "pct": 0.04
+      },
+      "TKH": {
+        "votes": 191,
+        "pct": 0.02
+      },
+      "EMEP": {
+        "votes": 158,
+        "pct": 0.02
+      }
+    },
+    "Şanlıurfa": {
+      "AKP": {
+        "votes": 294651,
+        "pct": 33.47
+      },
+      "YRP": {
+        "votes": 263085,
+        "pct": 29.88
+      },
+      "DEM": {
+        "votes": 211802,
+        "pct": 24.06
+      },
+      "MHP": {
+        "votes": 20951,
+        "pct": 2.38
+      },
+      "CHP": {
+        "votes": 19497,
+        "pct": 2.21
+      },
+      "HUDAPAR": {
+        "votes": 18505,
+        "pct": 2.1
+      },
+      "BBP": {
+        "votes": 10724,
+        "pct": 1.22
+      },
+      "SP": {
+        "votes": 9374,
+        "pct": 1.06
+      },
+      "IYI": {
+        "votes": 6937,
+        "pct": 0.79
+      },
+      "BAGIMSIZ": {
+        "votes": 8926,
+        "pct": 1.01
+      },
+      "DEVA": {
+        "votes": 3731,
+        "pct": 0.42
+      },
+      "GELECEK": {
+        "votes": 2168,
+        "pct": 0.25
+      },
+      "BTP": {
+        "votes": 1594,
+        "pct": 0.18
+      },
+      "TKP": {
+        "votes": 1300,
+        "pct": 0.15
+      },
+      "SOL": {
+        "votes": 1269,
+        "pct": 0.14
+      },
+      "TIP": {
+        "votes": 1172,
+        "pct": 0.13
+      },
+      "ANAP": {
+        "votes": 1091,
+        "pct": 0.12
+      },
+      "DP": {
+        "votes": 945,
+        "pct": 0.11
+      },
+      "EMEP": {
+        "votes": 716,
+        "pct": 0.08
+      },
+      "DSP": {
+        "votes": 695,
+        "pct": 0.08
+      },
+      "VATAN": {
+        "votes": 494,
+        "pct": 0.06
+      },
+      "MILLET": {
+        "votes": 354,
+        "pct": 0.04
+      },
+      "TKH": {
+        "votes": 218,
+        "pct": 0.02
+      },
+      "ABPARTI": {
+        "votes": 156,
+        "pct": 0.02
+      },
+      "MILLIYOL": {
+        "votes": 53,
+        "pct": 0.01
+      }
+    },
+    "Siirt": {
+      "DEM": {
+        "votes": 65977,
+        "pct": 42.76
+      },
+      "AKP": {
+        "votes": 55062,
+        "pct": 35.68
+      },
+      "MHP": {
+        "votes": 12053,
+        "pct": 7.81
+      },
+      "DEVA": {
+        "votes": 4090,
+        "pct": 2.65
+      },
+      "YRP": {
+        "votes": 3862,
+        "pct": 2.5
+      },
+      "CHP": {
+        "votes": 3596,
+        "pct": 2.33
+      },
+      "HUDAPAR": {
+        "votes": 3370,
+        "pct": 2.18
+      },
+      "IYI": {
+        "votes": 1454,
+        "pct": 0.94
+      },
+      "ZAFER": {
+        "votes": 1276,
+        "pct": 0.83
+      },
+      "SP": {
+        "votes": 949,
+        "pct": 0.62
+      },
+      "BBP": {
+        "votes": 795,
+        "pct": 0.52
+      },
+      "BTP": {
+        "votes": 637,
+        "pct": 0.41
+      },
+      "DP": {
+        "votes": 303,
+        "pct": 0.2
+      },
+      "BAGIMSIZ": {
+        "votes": 278,
+        "pct": 0.18
+      },
+      "VATAN": {
+        "votes": 246,
+        "pct": 0.16
+      },
+      "SOL": {
+        "votes": 213,
+        "pct": 0.14
+      },
+      "MILLET": {
+        "votes": 143,
+        "pct": 0.09
+      }
+    },
+    "Sinop": {
+      "AKP": {
+        "votes": 49492,
+        "pct": 35.45
+      },
+      "CHP": {
+        "votes": 39357,
+        "pct": 28.19
+      },
+      "MHP": {
+        "votes": 25476,
+        "pct": 18.25
+      },
+      "YRP": {
+        "votes": 11621,
+        "pct": 8.32
+      },
+      "IYI": {
+        "votes": 5978,
+        "pct": 4.28
+      },
+      "SP": {
+        "votes": 2212,
+        "pct": 1.58
+      },
+      "BBP": {
+        "votes": 1739,
+        "pct": 1.25
+      },
+      "BTP": {
+        "votes": 693,
+        "pct": 0.5
+      },
+      "TIP": {
+        "votes": 542,
+        "pct": 0.39
+      },
+      "DEVA": {
+        "votes": 537,
+        "pct": 0.38
+      },
+      "VATAN": {
+        "votes": 328,
+        "pct": 0.23
+      },
+      "MILLET": {
+        "votes": 303,
+        "pct": 0.22
+      },
+      "HUDAPAR": {
+        "votes": 296,
+        "pct": 0.21
+      },
+      "BAGIMSIZ": {
+        "votes": 471,
+        "pct": 0.34
+      },
+      "EMEP": {
+        "votes": 208,
+        "pct": 0.15
+      },
+      "SOL": {
+        "votes": 117,
+        "pct": 0.08
+      },
+      "DEM": {
+        "votes": 94,
+        "pct": 0.07
+      },
+      "DSP": {
+        "votes": 74,
+        "pct": 0.05
+      },
+      "DP": {
+        "votes": 60,
+        "pct": 0.04
+      },
+      "TKP": {
+        "votes": 30,
+        "pct": 0.02
+      }
+    },
+    "Şırnak": {
+      "DEM": {
+        "votes": 135091,
+        "pct": 55.46
+      },
+      "AKP": {
+        "votes": 59040,
+        "pct": 24.24
+      },
+      "CHP": {
+        "votes": 13973,
+        "pct": 5.74
+      },
+      "GELECEK": {
+        "votes": 9561,
+        "pct": 3.93
+      },
+      "HUDAPAR": {
+        "votes": 8590,
+        "pct": 3.53
+      },
+      "YRP": {
+        "votes": 4631,
+        "pct": 1.9
+      },
+      "ZAFER": {
+        "votes": 4483,
+        "pct": 1.84
+      },
+      "MHP": {
+        "votes": 2260,
+        "pct": 0.93
+      },
+      "BTP": {
+        "votes": 1296,
+        "pct": 0.53
+      },
+      "BAGIMSIZ": {
+        "votes": 1097,
+        "pct": 0.45
+      },
+      "DEVA": {
+        "votes": 993,
+        "pct": 0.41
+      },
+      "BBP": {
+        "votes": 902,
+        "pct": 0.37
+      },
+      "SOL": {
+        "votes": 677,
+        "pct": 0.28
+      },
+      "SP": {
+        "votes": 518,
+        "pct": 0.21
+      },
+      "VATAN": {
+        "votes": 277,
+        "pct": 0.11
+      },
+      "MILLET": {
+        "votes": 194,
+        "pct": 0.08
+      }
+    },
+    "Sivas": {
+      "AKP": {
+        "votes": 99223,
+        "pct": 27.9
+      },
+      "BBP": {
+        "votes": 93216,
+        "pct": 26.21
+      },
+      "MHP": {
+        "votes": 62127,
+        "pct": 17.47
+      },
+      "CHP": {
+        "votes": 55592,
+        "pct": 15.63
+      },
+      "YRP": {
+        "votes": 20269,
+        "pct": 5.7
+      },
+      "IYI": {
+        "votes": 6041,
+        "pct": 1.7
+      },
+      "ZAFER": {
+        "votes": 3757,
+        "pct": 1.06
+      },
+      "SP": {
+        "votes": 3631,
+        "pct": 1.02
+      },
+      "MILLIYOL": {
+        "votes": 1397,
+        "pct": 0.39
+      },
+      "BTP": {
+        "votes": 1395,
+        "pct": 0.39
+      },
+      "SOL": {
+        "votes": 1306,
+        "pct": 0.37
+      },
+      "BAGIMSIZ": {
+        "votes": 2259,
+        "pct": 0.64
+      },
+      "TIP": {
+        "votes": 1282,
+        "pct": 0.36
+      },
+      "DEVA": {
+        "votes": 1152,
+        "pct": 0.32
+      },
+      "MEMLEKET": {
+        "votes": 642,
+        "pct": 0.18
+      },
+      "GELECEK": {
+        "votes": 433,
+        "pct": 0.12
+      },
+      "VATAN": {
+        "votes": 366,
+        "pct": 0.1
+      },
+      "HUDAPAR": {
+        "votes": 347,
+        "pct": 0.1
+      },
+      "DSP": {
+        "votes": 302,
+        "pct": 0.08
+      },
+      "MILLET": {
+        "votes": 298,
+        "pct": 0.08
+      },
+      "DEM": {
+        "votes": 282,
+        "pct": 0.08
+      },
+      "DP": {
+        "votes": 229,
+        "pct": 0.06
+      },
+      "EMEP": {
+        "votes": 75,
+        "pct": 0.02
+      },
+      "TKH": {
+        "votes": 10,
+        "pct": 0.0
+      }
+    },
+    "Tekirdağ": {
+      "CHP": {
+        "votes": 304602,
+        "pct": 47.02
+      },
+      "AKP": {
+        "votes": 201088,
+        "pct": 31.04
+      },
+      "IYI": {
+        "votes": 38116,
+        "pct": 5.88
+      },
+      "YRP": {
+        "votes": 26799,
+        "pct": 4.14
+      },
+      "DEM": {
+        "votes": 24756,
+        "pct": 3.82
+      },
+      "ZAFER": {
+        "votes": 16935,
+        "pct": 2.61
+      },
+      "MHP": {
+        "votes": 10738,
+        "pct": 1.66
+      },
+      "MEMLEKET": {
+        "votes": 3511,
+        "pct": 0.54
+      },
+      "BBP": {
+        "votes": 3499,
+        "pct": 0.54
+      },
+      "DEVA": {
+        "votes": 2803,
+        "pct": 0.43
+      },
+      "TIP": {
+        "votes": 2323,
+        "pct": 0.36
+      },
+      "DSP": {
+        "votes": 2146,
+        "pct": 0.33
+      },
+      "BTP": {
+        "votes": 2040,
+        "pct": 0.31
+      },
+      "SP": {
+        "votes": 1810,
+        "pct": 0.28
+      },
+      "GELECEK": {
+        "votes": 1585,
+        "pct": 0.24
+      },
+      "HUDAPAR": {
+        "votes": 1153,
+        "pct": 0.18
+      },
+      "TKP": {
+        "votes": 1103,
+        "pct": 0.17
+      },
+      "MILLET": {
+        "votes": 623,
+        "pct": 0.1
+      },
+      "VATAN": {
+        "votes": 471,
+        "pct": 0.07
+      },
+      "DP": {
+        "votes": 421,
+        "pct": 0.06
+      },
+      "EMEP": {
+        "votes": 396,
+        "pct": 0.06
+      },
+      "TKH": {
+        "votes": 338,
+        "pct": 0.05
+      },
+      "SOL": {
+        "votes": 301,
+        "pct": 0.05
+      },
+      "ABP": {
+        "votes": 157,
+        "pct": 0.02
+      },
+      "MILLIYOL": {
+        "votes": 98,
+        "pct": 0.02
+      },
+      "BAGIMSIZ": {
+        "votes": 28,
+        "pct": 0.0
+      }
+    },
+    "Tokat": {
+      "MHP": {
+        "votes": 121527,
+        "pct": 32.82
+      },
+      "AKP": {
+        "votes": 120133,
+        "pct": 32.45
+      },
+      "CHP": {
+        "votes": 77894,
+        "pct": 21.04
+      },
+      "IYI": {
+        "votes": 15932,
+        "pct": 4.3
+      },
+      "YRP": {
+        "votes": 15225,
+        "pct": 4.11
+      },
+      "BBP": {
+        "votes": 6199,
+        "pct": 1.67
+      },
+      "TIP": {
+        "votes": 3770,
+        "pct": 1.02
+      },
+      "SP": {
+        "votes": 3623,
+        "pct": 0.98
+      },
+      "MILLET": {
+        "votes": 1318,
+        "pct": 0.36
+      },
+      "BTP": {
+        "votes": 1053,
+        "pct": 0.28
+      },
+      "DEVA": {
+        "votes": 923,
+        "pct": 0.25
+      },
+      "ZAFER": {
+        "votes": 749,
+        "pct": 0.2
+      },
+      "HUDAPAR": {
+        "votes": 544,
+        "pct": 0.15
+      },
+      "SOL": {
+        "votes": 454,
+        "pct": 0.12
+      },
+      "VATAN": {
+        "votes": 328,
+        "pct": 0.09
+      },
+      "DEM": {
+        "votes": 291,
+        "pct": 0.08
+      },
+      "GELECEK": {
+        "votes": 111,
+        "pct": 0.03
+      },
+      "ANAP": {
+        "votes": 80,
+        "pct": 0.02
+      },
+      "DP": {
+        "votes": 62,
+        "pct": 0.02
+      },
+      "DSP": {
+        "votes": 41,
+        "pct": 0.01
+      }
+    },
+    "Trabzon": {
+      "AKP": {
+        "votes": 179825,
+        "pct": 39.82
+      },
+      "CHP": {
+        "votes": 118121,
+        "pct": 26.15
+      },
+      "YRP": {
+        "votes": 52514,
+        "pct": 11.63
+      },
+      "IYI": {
+        "votes": 30390,
+        "pct": 6.73
+      },
+      "SP": {
+        "votes": 18466,
+        "pct": 4.09
+      },
+      "MHP": {
+        "votes": 10713,
+        "pct": 2.37
+      },
+      "ZAFER": {
+        "votes": 7445,
+        "pct": 1.65
+      },
+      "DP": {
+        "votes": 6921,
+        "pct": 1.53
+      },
+      "BTP": {
+        "votes": 6794,
+        "pct": 1.5
+      },
+      "BBP": {
+        "votes": 6278,
+        "pct": 1.39
+      },
+      "BAGIMSIZ": {
+        "votes": 9075,
+        "pct": 2.01
+      },
+      "DEVA": {
+        "votes": 1043,
+        "pct": 0.23
+      },
+      "SOL": {
+        "votes": 968,
+        "pct": 0.21
+      },
+      "VATAN": {
+        "votes": 662,
+        "pct": 0.15
+      },
+      "HUDAPAR": {
+        "votes": 601,
+        "pct": 0.13
+      },
+      "TIP": {
+        "votes": 530,
+        "pct": 0.12
+      },
+      "TKP": {
+        "votes": 522,
+        "pct": 0.12
+      },
+      "MILLET": {
+        "votes": 294,
+        "pct": 0.07
+      },
+      "DSP": {
+        "votes": 232,
+        "pct": 0.05
+      },
+      "DEM": {
+        "votes": 124,
+        "pct": 0.03
+      },
+      "TKH": {
+        "votes": 84,
+        "pct": 0.02
+      },
+      "MILLIYOL": {
+        "votes": 24,
+        "pct": 0.01
+      }
+    },
+    "Tunceli": {
+      "CHP": {
+        "votes": 17693,
+        "pct": 35.05
+      },
+      "AKP": {
+        "votes": 8180,
+        "pct": 16.21
+      },
+      "DEM": {
+        "votes": 6941,
+        "pct": 13.75
+      },
+      "EMEP": {
+        "votes": 4123,
+        "pct": 8.17
+      },
+      "BAGIMSIZ": {
+        "votes": 7117,
+        "pct": 14.1
+      },
+      "MHP": {
+        "votes": 1927,
+        "pct": 3.82
+      },
+      "TIP": {
+        "votes": 870,
+        "pct": 1.72
+      },
+      "TKP": {
+        "votes": 607,
+        "pct": 1.2
+      },
+      "YRP": {
+        "votes": 597,
+        "pct": 1.18
+      },
+      "BTP": {
+        "votes": 423,
+        "pct": 0.84
+      },
+      "IYI": {
+        "votes": 398,
+        "pct": 0.79
+      },
+      "SOL": {
+        "votes": 298,
+        "pct": 0.59
+      },
+      "DEVA": {
+        "votes": 283,
+        "pct": 0.56
+      },
+      "ZAFER": {
+        "votes": 240,
+        "pct": 0.48
+      },
+      "BBP": {
+        "votes": 205,
+        "pct": 0.41
+      },
+      "DSP": {
+        "votes": 134,
+        "pct": 0.27
+      },
+      "HUDAPAR": {
+        "votes": 121,
+        "pct": 0.24
+      },
+      "VATAN": {
+        "votes": 107,
+        "pct": 0.21
+      },
+      "DP": {
+        "votes": 102,
+        "pct": 0.2
+      },
+      "SP": {
+        "votes": 101,
+        "pct": 0.2
+      },
+      "MILLET": {
+        "votes": 8,
+        "pct": 0.02
+      }
+    },
+    "Uşak": {
+      "CHP": {
+        "votes": 89508,
+        "pct": 39.66
+      },
+      "AKP": {
+        "votes": 64395,
+        "pct": 28.53
+      },
+      "MHP": {
+        "votes": 27868,
+        "pct": 12.35
+      },
+      "IYI": {
+        "votes": 25648,
+        "pct": 11.36
+      },
+      "YRP": {
+        "votes": 5841,
+        "pct": 2.59
+      },
+      "ZAFER": {
+        "votes": 2687,
+        "pct": 1.19
+      },
+      "SP": {
+        "votes": 1737,
+        "pct": 0.77
+      },
+      "BBP": {
+        "votes": 1652,
+        "pct": 0.73
+      },
+      "BTP": {
+        "votes": 977,
+        "pct": 0.43
+      },
+      "DEM": {
+        "votes": 975,
+        "pct": 0.43
+      },
+      "SOL": {
+        "votes": 881,
+        "pct": 0.39
+      },
+      "DEVA": {
+        "votes": 691,
+        "pct": 0.31
+      },
+      "DP": {
+        "votes": 510,
+        "pct": 0.23
+      },
+      "MILLET": {
+        "votes": 481,
+        "pct": 0.21
+      },
+      "TIP": {
+        "votes": 416,
+        "pct": 0.18
+      },
+      "EMEP": {
+        "votes": 401,
+        "pct": 0.18
+      },
+      "HUDAPAR": {
+        "votes": 307,
+        "pct": 0.14
+      },
+      "MEMLEKET": {
+        "votes": 301,
+        "pct": 0.13
+      },
+      "VATAN": {
+        "votes": 258,
+        "pct": 0.11
+      },
+      "DSP": {
+        "votes": 167,
+        "pct": 0.07
+      }
+    },
+    "Van": {
+      "DEM": {
+        "votes": 240288,
+        "pct": 55.17
+      },
+      "AKP": {
+        "votes": 121569,
+        "pct": 27.91
+      },
+      "YRP": {
+        "votes": 27313,
+        "pct": 6.27
+      },
+      "CHP": {
+        "votes": 13696,
+        "pct": 3.14
+      },
+      "HUDAPAR": {
+        "votes": 9212,
+        "pct": 2.11
+      },
+      "DEVA": {
+        "votes": 4481,
+        "pct": 1.03
+      },
+      "ZAFER": {
+        "votes": 3112,
+        "pct": 0.71
+      },
+      "IYI": {
+        "votes": 2422,
+        "pct": 0.56
+      },
+      "SP": {
+        "votes": 2365,
+        "pct": 0.54
+      },
+      "BBP": {
+        "votes": 1832,
+        "pct": 0.42
+      },
+      "GELECEK": {
+        "votes": 1753,
+        "pct": 0.4
+      },
+      "TKP": {
+        "votes": 1736,
+        "pct": 0.4
+      },
+      "BTP": {
+        "votes": 1712,
+        "pct": 0.39
+      },
+      "MEMLEKET": {
+        "votes": 910,
+        "pct": 0.21
+      },
+      "HAKPAR": {
+        "votes": 531,
+        "pct": 0.12
+      },
+      "EMEP": {
+        "votes": 309,
+        "pct": 0.07
+      },
+      "VATAN": {
+        "votes": 260,
+        "pct": 0.06
+      },
+      "BAGIMSIZ": {
+        "votes": 1649,
+        "pct": 0.38
+      },
+      "TKH": {
+        "votes": 248,
+        "pct": 0.06
+      },
+      "SOL": {
+        "votes": 144,
+        "pct": 0.03
+      },
+      "ABPARTI": {
+        "votes": 18,
+        "pct": 0.0
+      }
+    },
+    "Yalova": {
+      "CHP": {
+        "votes": 61893,
+        "pct": 41.04
+      },
+      "AKP": {
+        "votes": 55861,
+        "pct": 37.04
+      },
+      "MHP": {
+        "votes": 11371,
+        "pct": 7.54
+      },
+      "YRP": {
+        "votes": 4531,
+        "pct": 3.0
+      },
+      "ZAFER": {
+        "votes": 3945,
+        "pct": 2.62
+      },
+      "IYI": {
+        "votes": 3279,
+        "pct": 2.17
+      },
+      "SP": {
+        "votes": 1880,
+        "pct": 1.25
+      },
+      "MEMLEKET": {
+        "votes": 1627,
+        "pct": 1.08
+      },
+      "DEVA": {
+        "votes": 1225,
+        "pct": 0.81
+      },
+      "DP": {
+        "votes": 1141,
+        "pct": 0.76
+      },
+      "DEM": {
+        "votes": 845,
+        "pct": 0.56
+      },
+      "TIP": {
+        "votes": 725,
+        "pct": 0.48
+      },
+      "HUDAPAR": {
+        "votes": 567,
+        "pct": 0.38
+      },
+      "BBP": {
+        "votes": 421,
+        "pct": 0.28
+      },
+      "BTP": {
+        "votes": 392,
+        "pct": 0.26
+      },
+      "GELECEK": {
+        "votes": 295,
+        "pct": 0.2
+      },
+      "SOL": {
+        "votes": 289,
+        "pct": 0.19
+      },
+      "MILLET": {
+        "votes": 178,
+        "pct": 0.12
+      },
+      "VATAN": {
+        "votes": 132,
+        "pct": 0.09
+      },
+      "EMEP": {
+        "votes": 115,
+        "pct": 0.08
+      },
+      "TKP": {
+        "votes": 108,
+        "pct": 0.07
+      }
+    },
+    "Yozgat": {
+      "AKP": {
+        "votes": 83203,
+        "pct": 34.7
+      },
+      "MHP": {
+        "votes": 78675,
+        "pct": 32.81
+      },
+      "YRP": {
+        "votes": 27639,
+        "pct": 11.53
+      },
+      "CHP": {
+        "votes": 26640,
+        "pct": 11.11
+      },
+      "IYI": {
+        "votes": 11341,
+        "pct": 4.73
+      },
+      "BBP": {
+        "votes": 5829,
+        "pct": 2.43
+      },
+      "SP": {
+        "votes": 2244,
+        "pct": 0.94
+      },
+      "DEVA": {
+        "votes": 830,
+        "pct": 0.35
+      },
+      "BTP": {
+        "votes": 579,
+        "pct": 0.24
+      },
+      "MILLET": {
+        "votes": 545,
+        "pct": 0.23
+      },
+      "TIP": {
+        "votes": 421,
+        "pct": 0.18
+      },
+      "MEMLEKET": {
+        "votes": 383,
+        "pct": 0.16
+      },
+      "ZAFER": {
+        "votes": 287,
+        "pct": 0.12
+      },
+      "HUDAPAR": {
+        "votes": 254,
+        "pct": 0.11
+      },
+      "DSP": {
+        "votes": 250,
+        "pct": 0.1
+      },
+      "DP": {
+        "votes": 208,
+        "pct": 0.09
+      },
+      "SOL": {
+        "votes": 197,
+        "pct": 0.08
+      },
+      "VATAN": {
+        "votes": 98,
+        "pct": 0.04
+      },
+      "DEM": {
+        "votes": 73,
+        "pct": 0.03
+      },
+      "GELECEK": {
+        "votes": 70,
+        "pct": 0.03
+      }
+    },
+    "Zonguldak": {
+      "CHP": {
+        "votes": 141438,
+        "pct": 39.28
+      },
+      "AKP": {
+        "votes": 125466,
+        "pct": 34.84
+      },
+      "MHP": {
+        "votes": 27987,
+        "pct": 7.77
+      },
+      "IYI": {
+        "votes": 21722,
+        "pct": 6.03
+      },
+      "YRP": {
+        "votes": 21408,
+        "pct": 5.95
+      },
+      "SP": {
+        "votes": 6791,
+        "pct": 1.89
+      },
+      "ZAFER": {
+        "votes": 5574,
+        "pct": 1.55
+      },
+      "TIP": {
+        "votes": 2254,
+        "pct": 0.63
+      },
+      "BBP": {
+        "votes": 1406,
+        "pct": 0.39
+      },
+      "BTP": {
+        "votes": 1152,
+        "pct": 0.32
+      },
+      "DP": {
+        "votes": 898,
+        "pct": 0.25
+      },
+      "SOL": {
+        "votes": 814,
+        "pct": 0.23
+      },
+      "HUDAPAR": {
+        "votes": 649,
+        "pct": 0.18
+      },
+      "GELECEK": {
+        "votes": 580,
+        "pct": 0.16
+      },
+      "DSP": {
+        "votes": 537,
+        "pct": 0.15
+      },
+      "VATAN": {
+        "votes": 524,
+        "pct": 0.15
+      },
+      "DEVA": {
+        "votes": 468,
+        "pct": 0.13
+      },
+      "DEM": {
+        "votes": 122,
+        "pct": 0.03
+      },
+      "BAGIMSIZ": {
+        "votes": 103,
+        "pct": 0.03
+      },
+      "EMEP": {
+        "votes": 86,
+        "pct": 0.02
+      },
+      "MILLIYOL": {
+        "votes": 64,
+        "pct": 0.02
+      },
+      "MILLET": {
+        "votes": 37,
+        "pct": 0.01
+      }
+    }
+  }
+}
