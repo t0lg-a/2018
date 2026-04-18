@@ -137,6 +137,7 @@
     "type": "milletvekili",
     "label": "24 Haz 2018 Milletvekili Seçimi"
   },
+  {"id":"2024-03-yerel-meclis","date":"2024-03-31","type":"yerel","label":"31 Mart 2024 Yerel Meclis Seçimi"},
   {
     "id": "2018-06-cumhurbaskanligi",
     "date": "2018-06-24",
